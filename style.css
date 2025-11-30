@@ -695,3 +695,49 @@ a {
         justify-content: center;
     }
 }
+
+    /* Global Mobile Text Centering Fixes */
+    .hero-title, 
+    .project-title, 
+    .section-title,
+    .bio-text,
+    .description-text,
+    .work-content h3,
+    .work-content p,
+    .meta-item h3,
+    .meta-item p,
+    .section-heading,
+    .plugin-subtitle,
+    .plugin-name,
+    .plugin-description {
+        text-align: center !important;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Ensure containers don't shift content */
+    .bio-content,
+    .description-content,
+    .plugin-content,
+    .contact-content {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Fix specific flex/grid alignments */
+    .meta-grid,
+    .project-nav-grid {
+        justify-items: center;
+        text-align: center;
+    }
+
+    .meta-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+}
