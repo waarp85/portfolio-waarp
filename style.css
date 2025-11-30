@@ -666,7 +666,7 @@ a {
     .grid-section {
         /* Top: 2rem, Right: 1.5rem, Bottom: 2rem, Left: 0.5rem */
         /* More padding on right pushes center to the left */
-        padding: 2rem 1.2rem 2rem 0.8rem !important;
+        padding: 2rem 1rem 2rem 1rem !important;
     }
 
     /* 2. Typography Sizing (Drastically Reduced) */
@@ -752,6 +752,6 @@ a {
     
     /* Shift R&D content left too */
     .plugin-content, .plugin-card {
-        padding: 2rem 1.2rem 2rem 0.8rem !important;
+        padding: 2rem 1rem 2rem 1rem !important;
     }
 }
