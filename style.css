@@ -658,37 +658,51 @@ a {
     }
 }
 
-/* FINAL MOBILE FIXES */
+
+/* OPTIMIZED MOBILE TYPOGRAPHY & LAYOUT */
 @media (max-width: 768px) {
-    /* 1. Fix Layout & Padding */
+    /* 1. Layout & Padding */
     .grid-section {
         padding: 2rem 1rem !important;
     }
 
-    /* 2. Fix Hero Title Sizing & Alignment */
+    /* 2. Typography Sizing (Drastically Reduced) */
     .hero-title {
-        font-size: 14vw !important; /* Reduced from 18vw to prevent overflow */
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        justify-content: center !important;
-        width: 100% !important;
-        margin: 0 !important;
+        font-size: 12vw !important;
+        line-height: 1 !important;
     }
 
-    .line-wrapper {
-        width: 100% !important;
-        display: flex !important;
-        justify-content: center !important;
-        text-align: center !important;
+    .project-title {
+        font-size: 10vw !important;
+        line-height: 1 !important;
     }
 
-    /* 3. Force Text Centering Globally */
+    .section-title, 
+    .section-heading,
+    .plugin-name {
+        font-size: 2rem !important;
+        line-height: 1.2 !important;
+    }
+
+    .bio-text {
+        font-size: 1.2rem !important; /* Much smaller for readability */
+        line-height: 1.5 !important;
+        font-weight: 600 !important;
+    }
+
+    .description-text,
+    .plugin-description {
+        font-size: 1rem !important;
+        line-height: 1.6 !important;
+    }
+
+    /* 3. Force Centering & Alignment */
+    .hero-title, 
+    .project-title, 
+    .section-title,
     .bio-text,
     .description-text,
     .section-heading,
-    .project-title,
-    .section-title,
     .plugin-subtitle,
     .plugin-name,
     .plugin-description,
@@ -700,9 +714,19 @@ a {
         width: 100% !important;
         margin-left: auto !important;
         margin-right: auto !important;
+        word-wrap: break-word !important;
     }
 
-    /* 4. Fix Flex/Grid Alignment */
+    /* 4. Flexbox Alignment Fixes */
+    .hero-title,
+    .line-wrapper {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 100% !important;
+    }
+
     .meta-grid,
     .project-nav-grid,
     .socials-grid {
@@ -714,14 +738,12 @@ a {
         align-items: center !important;
         text-align: center !important;
     }
-
-    /* 5. R&D Specifics */
-    .plugin-content, .plugin-card {
-        padding: 2rem 1rem !important;
-    }
     
+    /* 5. Component Specifics */
     .download-btn {
         width: 100%;
         box-sizing: border-box;
+        font-size: 0.9rem !important;
+        padding: 15px !important;
     }
 }
