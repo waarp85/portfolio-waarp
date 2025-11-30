@@ -74,3 +74,34 @@ gsap.utils.toArray('.work-cell').forEach((cell, i) => {
         ease: 'power2.out'
     });
 });
+
+// Cookie Banner
+function initCookieBanner() {
+    const banner = document.querySelector('.cookie-banner');
+    const acceptBtn = document.querySelector('.cookie-btn');
+    
+    if (!banner || !acceptBtn) return;
+    
+    // Check if user already accepted
+    if (!localStorage.getItem('cookiesAccepted')) {
+        setTimeout(() => {
+            banner.classList.add('show');
+        }, 1000);
+    }
+    
+    // Accept button click
+    acceptBtn.addEventListener('click', () => {
+        localStorage.setItem('cookiesAccepted', 'true');
+        gsap.to(banner, {
+            y: 100,
+            opacity: 0,
+            duration: 0.5,
+            onComplete: () => {
+                banner.classList.remove('show');
+            }
+        });
+    });
+}
+
+// Initialize on load
+window.addEventListener('load', initCookieBanner);
