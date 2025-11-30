@@ -79,16 +79,16 @@ gsap.utils.toArray('.work-cell').forEach((cell, i) => {
 function initCookieBanner() {
     const banner = document.querySelector('.cookie-banner');
     const acceptBtn = document.querySelector('.cookie-btn');
-    
+
     if (!banner || !acceptBtn) return;
-    
+
     // Check if user already accepted
     if (!localStorage.getItem('cookiesAccepted')) {
         setTimeout(() => {
             banner.classList.add('show');
         }, 1000);
     }
-    
+
     // Accept button click
     acceptBtn.addEventListener('click', () => {
         localStorage.setItem('cookiesAccepted', 'true');
@@ -104,4 +104,35 @@ function initCookieBanner() {
 }
 
 // Initialize on load
+// Initialize on load
 window.addEventListener('load', initCookieBanner);
+
+// Technical UI Logic
+function updateSystemClock() {
+    const clock = document.getElementById('system-clock');
+    if (!clock) return;
+
+    const now = new Date();
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    const seconds = String(now.getSeconds()).padStart(2, '0');
+
+    // Optional: Add UTC time or milliseconds for more "tech" feel
+    // const ms = String(Math.floor(now.getMilliseconds() / 10)).padStart(2, '0');
+
+    clock.textContent = `LOC: ${hours}:${minutes}:${seconds}`;
+}
+
+setInterval(updateSystemClock, 1000);
+updateSystemClock(); // Initial call
+
+// Mouse Coordinates
+document.addEventListener('mousemove', (e) => {
+    const coords = document.getElementById('mouse-coords');
+    if (!coords) return;
+
+    const x = String(e.clientX).padStart(4, '0');
+    const y = String(e.clientY).padStart(4, '0');
+
+    coords.textContent = `POS: ${x} | ${y}`;
+});
