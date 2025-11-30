@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WAARP | Andrea Marcias</title>
+    <meta name="description" content="Portfolio of Andrea Marcias (Waarp), 3D Visual Artist & Graphic Designer.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;900&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- MAIN GRID CONTAINER -->
+    <div class="main-grid">
+
+        <!-- CORNER NAV (Fixed positions in grid) -->
+        <div class="nav-tl">WAARP</div>
+        <div class="nav-tr"><a href="rd.html">R&D</a></div>
+        <div class="nav-bl">3D VISUAL ARTIST</div>
+        <div class="nav-br"><a href="#contact">CONTACT</a></div>
+
+        <!-- HERO SECTION -->
+        <section id="hero" class="grid-section">
+            <h1 class="hero-title">
+                <div class="line-wrapper"><span class="line">DIGITAL</span></div>
+                <div class="line-wrapper"><span class="line">/</span></div>
+                <div class="line-wrapper"><span class="line">MATTER</span></div>
+            </h1>
+        </section>
+
+        <!-- BIO SECTION -->
+        <section id="bio" class="grid-section">
+            <div class="bio-content">
+                <p class="bio-text">
+                    My name is Andrea Marcias, known as <strong>Waarp</strong>, a 3d artist & graphic designer based in
+                    Italy, who is mainly creating content for the music industry, brands, agencies.
+                </p>
+            </div>
+        </section>
+
+        <!-- CLIENTS SECTION (Marquee) -->
+        <section id="clients" class="grid-section">
+            <div class="marquee-container">
+                <div class="marquee">
+                    <span>SWAROVSKI</span>
+                    <span>WARNER MUSIC</span>
+                    <span>PRIME VIDEO</span>
+                    <span>ROC NATION</span>
+                    <span>SONY MUSIC</span>
+                    <span>SPRITE</span>
+                    <span>UNIVERSAL</span>
+                    <span>MUSE</span>
+                    <span>PAPER MAGAZINE</span>
+                    <span>SALMO</span>
+                    <span>CHRISTINA AGUILERA</span>
+                    <span>MAHMOOD</span>
+                </div>
+                <div class="marquee" aria-hidden="true">
+                    <span>SWAROVSKI</span>
+                    <span>WARNER MUSIC</span>
+                    <span>PRIME VIDEO</span>
+                    <span>ROC NATION</span>
+                    <span>SONY MUSIC</span>
+                    <span>SPRITE</span>
+                    <span>UNIVERSAL</span>
+                    <span>MUSE</span>
+                    <span>PAPER MAGAZINE</span>
+                    <span>SALMO</span>
+                    <span>CHRISTINA AGUILERA</span>
+                    <span>MAHMOOD</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- WORK SECTION (Grid) -->
+        <section id="work" class="grid-section">
+            <div class="work-grid">
+                <a href="swarovski.html" class="work-cell">
+                    <div class="work-content">
+                        <h3>SWAROVSKI X ARIANA GRANDE</h3>
+                        <p>3D TREATMENTS - MODELING - RESEARCH</p>
+                    </div>
+                </a>
+                <a href="muse.html" class="work-cell">
+                    <div class="work-content">
+                        <h3>MUSE</h3>
+                        <p>3D ARTWORKS</p>
+                    </div>
+                </a>
+                <a href="feid.html" class="work-cell">
+                    <div class="work-content">
+                        <h3>FEID X SPRITE</h3>
+                        <p>3D - MOTION</p>
+                    </div>
+                </a>
+                <a href="christina.html" class="work-cell">
+                    <div class="work-content">
+                        <h3>CHRISTINA AGUILERA</h3>
+                        <p>3D - VISUALS</p>
+                    </div>
+                </a>
+                <a href="paper.html" class="work-cell">
+                    <div class="work-content">
+                        <h3>PAPER MAGAZINE</h3>
+                        <p>3D TREATMENTS</p>
+                    </div>
+                </a>
+                <a href="myke_towers.html" class="work-cell">
+                    <div class="work-content">
+                        <h3>MYKE TOWERS</h3>
+                        <p>ANIMATION</p>
+                    </div>
+                </a>
+                <a href="salmo_ranch.html" class="work-cell">
+                    <div class="work-content">
+                        <h3>SALMO - RANCH</h3>
+                        <p>3D</p>
+                    </div>
+                </a>
+                <a href="romancero.html" class="work-cell">
+                    <div class="work-content">
+                        <h3>ROMANCERO</h3>
+                        <p>3D</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="grid-section">
+            <div class="contact-content">
+                <h2>CONTACT.</h2>
+                <a href="mailto:andrea.marcias@hotmail.com" class="email-link">andrea.marcias@hotmail.com</a>
+                <div class="socials-grid">
+                    <a href="https://www.instagram.com/_waarp_/" target="_blank">INSTAGRAM</a>
+                    <a href="https://www.behance.net/waarp" target="_blank">BEHANCE</a>
+                </div>
+                <div class="footer-info">
+                    <p>&copy; 2025 ANDREA MARCIAS</p>
+                    <p>P.IVA 02900950904</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

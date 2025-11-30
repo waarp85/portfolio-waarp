@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FEID X SPRITE - Andrea Marcias</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- MAIN GRID CONTAINER -->
+    <div class="main-grid">
+
+        <!-- CORNER NAV (Fixed positions in grid) -->
+        <div class="nav-tl"><a href="index.html">← BACK</a></div>
+        <div class="nav-tr">FEID X SPRITE</div>
+        <div class="nav-bl">MUSIC VIDEO</div>
+        <div class="nav-br">SCROLL</div>
+
+        <!-- PROJECT HERO -->
+        <section id="project-hero" class="grid-section">
+            <h1 class="project-title">
+                <div class="line-wrapper"><span class="line">FEID X SPRITE</span></div>
+            </h1>
+            <p class="project-subtitle">LIMELIGHT SEASON 2</p>
+        </section>
+
+        <!-- PROJECT META -->
+        <section id="project-meta" class="grid-section">
+            <div class="meta-grid">
+                <div class="meta-item">
+                    <h3>CATEGORY</h3>
+                    <p>Music Video</p>
+                </div>
+                <div class="meta-item">
+                    <h3>CLIENT</h3>
+                    <p>Feid x Sprite</p>
+                </div>
+                <div class="meta-item">
+                    <h3>ROLE</h3>
+                    <p>3D Edit & Animation</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHAT I DID -->
+        <section id="project-description" class="grid-section">
+            <div class="description-content">
+                <h2 class="section-heading">THE PROJECT</h2>
+                <p class="description-text">
+                    The goal was to create a title that recalled the world of motorsport (metal, electricity,
+                    aggression). We mixed 3D and post in 2D for an effective rendering.
+                </p>
+                <br>
+                <h2 class="section-heading">CREDITS</h2>
+                <p class="description-text" style="font-size: 0.9rem; opacity: 0.7;">
+                    Director: ROGELIO, Executive Producer: Victor Mata, Producer: Sara Renteria, Production coordinator:
+                    Noemí Montero, Local Producers: 36 Grados & Le Producers, Line Producer: Elvira Londoño & Andrea
+                    Rodriguez, Producer assistant: Carlos Suarez, 1st AD: Valentina Carmona, Cinematographer: Uri
+                    Barcelona, Gaffer: Chris Stwart, Production Designers: Set Inventors a.k.a. Rita Villarroel, Stills
+                    Photographer: Felipe Molina Post, Production Coordinator: Marina M. Campomanes, Editor: Borja
+                    Bernal, Color and Online: Metropolitana, VFX: Glassworks, Sound mix: IXYXI, Title design: Luca
+                    Devinu and Andrea Marcias, Local production by 36 Grados & Le Producers, Produced by CANADA
+                </p>
+            </div>
+        </section>
+
+        <!-- VIDEO SECTION -->
+        <section id="project-video" class="grid-section" style="padding: 2rem 0;">
+            <div class="video-container" style="width: 100%; max-width: 100%;">
+                <video controls autoplay muted loop playsinline
+                    style="width: 100%; border-radius: 8px; box-shadow: 0 8px 32px rgba(0,0,0,0.3);">
+                    <source src="images/feid-video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
+
+        <!-- IMAGE GALLERY -->
+        <section id="project-gallery" class="grid-section" style="padding: 0;">
+            <div class="gallery-grid-full">
+                <div class="gallery-item-wide">
+                    <img src="images/feid-hq-1.png" alt="Feid x Sprite Title Design">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/feid-hq-2.png" alt="Feid x Sprite Still">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/feid-hq-3.jpg" alt="Feid x Sprite Can">
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECT NAVIGATION -->
+        <section id="project-nav" class="grid-section">
+            <div class="project-nav-grid">
+                <a href="swarovski.html" class="nav-link">← PREVIOUS</a>
+                <a href="index.html" class="nav-link">BACK TO HOME</a>
+                <a href="muse.html" class="nav-link">NEXT →</a>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
