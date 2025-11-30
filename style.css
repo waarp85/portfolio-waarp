@@ -696,48 +696,55 @@ a {
     }
 }
 
-    /* Global Mobile Text Centering Fixes */
+    
+/* Mobile Text Alignment & Padding Fixes */
+@media (max-width: 768px) {
+    /* Reduce container padding to prevent content squeeze/shift */
+    .grid-section {
+        padding: 1.5rem 1rem;
+    }
+
+    /* Force text centering on mobile */
     .hero-title, 
     .project-title, 
     .section-title,
     .bio-text,
     .description-text,
-    .work-content h3,
-    .work-content p,
-    .meta-item h3,
-    .meta-item p,
     .section-heading,
     .plugin-subtitle,
     .plugin-name,
-    .plugin-description {
-        text-align: center !important;
-        width: 100%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    /* Ensure containers don't shift content */
-    .bio-content,
-    .description-content,
-    .plugin-content,
-    .contact-content {
-        padding-left: 1rem;
-        padding-right: 1rem;
-        width: 100%;
-        max-width: 100%;
-    }
-
-    /* Fix specific flex/grid alignments */
-    .meta-grid,
-    .project-nav-grid {
-        justify-items: center;
+    .plugin-description,
+    .work-content h3,
+    .work-content p,
+    .meta-item h3,
+    .meta-item p {
         text-align: center;
+        width: 100%;
+    }
+
+    /* Center flex/grid items */
+    .meta-grid,
+    .project-nav-grid,
+    .socials-grid {
+        justify-items: center;
+        justify-content: center;
     }
 
     .meta-item {
+        align-items: center;
+    }
+
+    /* Ensure line-wrapper centers its content */
+    .line-wrapper {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    /* Fix Hero Title specifically */
+    .hero-title {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 100%;
     }
 }
