@@ -657,60 +657,38 @@ a {
         font-size: 0.6rem;
     }
 }
-/* R&D Mobile Fixes - Overrides */
+
+/* FINAL MOBILE FIXES */
 @media (max-width: 768px) {
-    .plugin-content {
-        padding: 2rem 1rem;
+    /* 1. Fix Layout & Padding */
+    .grid-section {
+        padding: 2rem 1rem !important;
     }
 
-    .plugin-card {
-        padding: 2rem 1rem;
-    }
-
-    .plugin-name {
-        font-size: 1.5rem;
-        word-break: break-word;
-    }
-
-    .download-btn {
-        padding: 15px 20px;
-        font-size: 0.9rem;
-        width: 100%;
-        box-sizing: border-box;
-        white-space: normal;
-    }
-
+    /* 2. Fix Hero Title Sizing & Alignment */
     .hero-title {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
+        font-size: 14vw !important; /* Reduced from 18vw to prevent overflow */
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 100% !important;
+        margin: 0 !important;
     }
 
     .line-wrapper {
-        width: 100%;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-    }
-}
-
-    
-/* Mobile Text Alignment & Padding Fixes */
-@media (max-width: 768px) {
-    /* Reduce container padding to prevent content squeeze/shift */
-    .grid-section {
-        padding: 1.5rem 1rem;
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
+        text-align: center !important;
     }
 
-    /* Force text centering on mobile */
-    .hero-title, 
-    .project-title, 
-    .section-title,
+    /* 3. Force Text Centering Globally */
     .bio-text,
     .description-text,
     .section-heading,
+    .project-title,
+    .section-title,
     .plugin-subtitle,
     .plugin-name,
     .plugin-description,
@@ -718,33 +696,32 @@ a {
     .work-content p,
     .meta-item h3,
     .meta-item p {
-        text-align: center;
-        width: 100%;
+        text-align: center !important;
+        width: 100% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
     }
 
-    /* Center flex/grid items */
+    /* 4. Fix Flex/Grid Alignment */
     .meta-grid,
     .project-nav-grid,
     .socials-grid {
-        justify-items: center;
-        justify-content: center;
+        justify-items: center !important;
+        justify-content: center !important;
     }
 
     .meta-item {
-        align-items: center;
+        align-items: center !important;
+        text-align: center !important;
     }
 
-    /* Ensure line-wrapper centers its content */
-    .line-wrapper {
-        display: flex;
-        justify-content: center;
-        width: 100%;
+    /* 5. R&D Specifics */
+    .plugin-content, .plugin-card {
+        padding: 2rem 1rem !important;
     }
     
-    /* Fix Hero Title specifically */
-    .hero-title {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    .download-btn {
+        width: 100%;
+        box-sizing: border-box;
     }
 }
