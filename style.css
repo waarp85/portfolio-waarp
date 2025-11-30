@@ -659,11 +659,14 @@ a {
 }
 
 
-/* OPTIMIZED MOBILE TYPOGRAPHY & LAYOUT */
+
+/* OPTIMIZED MOBILE TYPOGRAPHY & LAYOUT (Shifted Left) */
 @media (max-width: 768px) {
-    /* 1. Layout & Padding */
+    /* 1. Layout & Padding - Shifted Left */
     .grid-section {
-        padding: 2rem 1rem !important;
+        /* Top: 2rem, Right: 1.5rem, Bottom: 2rem, Left: 0.5rem */
+        /* More padding on right pushes center to the left */
+        padding: 2rem 1.5rem 2rem 0.5rem !important;
     }
 
     /* 2. Typography Sizing (Drastically Reduced) */
@@ -685,7 +688,7 @@ a {
     }
 
     .bio-text {
-        font-size: 1.2rem !important; /* Much smaller for readability */
+        font-size: 1.2rem !important;
         line-height: 1.5 !important;
         font-weight: 600 !important;
     }
@@ -745,5 +748,10 @@ a {
         box-sizing: border-box;
         font-size: 0.9rem !important;
         padding: 15px !important;
+    }
+    
+    /* Shift R&D content left too */
+    .plugin-content, .plugin-card {
+        padding: 2rem 1.5rem 2rem 0.5rem !important;
     }
 }
