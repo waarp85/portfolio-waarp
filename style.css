@@ -2,7 +2,7 @@
     --bg-color: #000000;
     --text-color: #ffffff;
     --grid-color: #333333;
-    --font-main: 'Inter', sans-serif;
+    --font-main: 'JetBrains Mono', monospace;
 }
 
 * {
@@ -137,6 +137,14 @@ a {
 .line {
     display: block;
     transform: translateY(100%);
+}
+
+.hero-logo {
+    width: 100%;
+    max-width: none;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 /* Bio Section */
