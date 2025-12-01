@@ -662,6 +662,7 @@ a {
 
 /* OPTIMIZED MOBILE TYPOGRAPHY & LAYOUT (Shifted Left) */
 @media (max-width: 768px) {
+
     /* 1. Layout & Padding - Shifted Left */
     .grid-section {
         /* Top: 2rem, Right: 1.5rem, Bottom: 2rem, Left: 0.5rem */
@@ -680,7 +681,7 @@ a {
         line-height: 1 !important;
     }
 
-    .section-title, 
+    .section-title,
     .section-heading,
     .plugin-name {
         font-size: 2rem !important;
@@ -700,8 +701,8 @@ a {
     }
 
     /* 3. Force Centering & Alignment */
-    .hero-title, 
-    .project-title, 
+    .hero-title,
+    .project-title,
     .section-title,
     .bio-text,
     .description-text,
@@ -741,7 +742,7 @@ a {
         align-items: center !important;
         text-align: center !important;
     }
-    
+
     /* 5. Component Specifics */
     .download-btn {
         width: 100%;
@@ -749,9 +750,29 @@ a {
         font-size: 0.9rem !important;
         padding: 15px !important;
     }
-    
+
     /* Shift R&D content left too */
-    .plugin-content, .plugin-card {
+    .plugin-content,
+    .plugin-card {
         padding: 2rem 1rem 2rem 1rem !important;
     }
+}
+
+/* Vertical Scroll Indicator */
+#scroll-indicator {
+    position: fixed;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+    z-index: 100;
+    mix-blend-mode: difference;
+    pointer-events: none;
+    white-space: nowrap;
+    letter-spacing: 1px;
 }

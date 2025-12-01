@@ -104,7 +104,6 @@ function initCookieBanner() {
 }
 
 // Initialize on load
-// Initialize on load
 window.addEventListener('load', initCookieBanner);
 
 // Technical UI Logic
@@ -116,9 +115,6 @@ function updateSystemClock() {
     const hours = String(now.getHours()).padStart(2, '0');
     const minutes = String(now.getMinutes()).padStart(2, '0');
     const seconds = String(now.getSeconds()).padStart(2, '0');
-
-    // Optional: Add UTC time or milliseconds for more "tech" feel
-    // const ms = String(Math.floor(now.getMilliseconds() / 10)).padStart(2, '0');
 
     clock.textContent = `LOC: ${hours}:${minutes}:${seconds}`;
 }
@@ -136,3 +132,38 @@ document.addEventListener('mousemove', (e) => {
 
     coords.textContent = `POS: ${x} | ${y}`;
 });
+
+// Scroll Progress Indicator
+function initScrollIndicator() {
+    // Create element if it doesn't exist
+    if (!document.getElementById('scroll-indicator')) {
+        const indicator = document.createElement('div');
+        indicator.id = 'scroll-indicator';
+        document.body.appendChild(indicator);
+    }
+}
+
+function updateScrollProgress() {
+    const indicator = document.getElementById('scroll-indicator');
+    if (!indicator) return;
+
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPercent = docHeight > 0 ? Math.round((scrollTop / docHeight) * 100) : 0;
+
+    // Create ASCII bar
+    const totalBars = 15; // Longer bar for vertical look
+    const filledBars = Math.round((scrollPercent / 100) * totalBars);
+    const emptyBars = totalBars - filledBars;
+
+    const bar = '|'.repeat(filledBars) + '.'.repeat(emptyBars);
+
+    // Format: SCROLL [|||||.....] 050%
+    indicator.textContent = `SCROLL [${bar}] ${String(scrollPercent).padStart(3, '0')}%`;
+}
+
+// Initialize
+initScrollIndicator();
+window.addEventListener('scroll', updateScrollProgress);
+window.addEventListener('resize', updateScrollProgress);
+updateScrollProgress();
