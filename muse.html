@@ -38,6 +38,27 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Structured Data / JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MusicAlbum",
+      "name": "Will Of The People",
+      "byArtist": {
+        "@type": "MusicGroup",
+        "name": "MUSE"
+      },
+      "image": "https://www.andreamarcias.com/images/muse-album-cover.png",
+      "genre": "Rock",
+      "author": {
+        "@type": "Person",
+        "name": "Andrea Marcias",
+        "url": "https://www.andreamarcias.com"
+      },
+      "description": "Album packaging and visual design for Muse's 9th album 'Will Of The People' by Andrea Marcias (Waarp)."
+    }
+    </script>
 </head>
 
 <body>
@@ -109,20 +130,20 @@
 
                 <!-- Vinyl Designs -->
                 <div class="gallery-item">
-                    <img src="images/muse-vinyl-1.jpg" alt="MUSE Vinyl Record Design">
+                    <img src="images/muse-vinyl-1.jpg" alt="MUSE Vinyl Record Design" loading="lazy">
                 </div>
                 <div class="gallery-item">
-                    <img src="images/muse-vinyl-2.jpg" alt="MUSE Vinyl Label">
+                    <img src="images/muse-vinyl-2.jpg" alt="MUSE Vinyl Label" loading="lazy">
                 </div>
 
                 <!-- Album Artwork -->
                 <div class="gallery-item-wide">
-                    <img src="images/muse-album-art.jpg" alt="MUSE Album Art">
+                    <img src="images/muse-album-art.jpg" alt="MUSE Album Art" loading="lazy">
                 </div>
 
                 <!-- MUSE Live Performance -->
                 <div class="gallery-item-wide">
-                    <img src="images/muse-live-performance.jpg" alt="MUSE Live Performance">
+                    <img src="images/muse-live-performance.jpg" alt="MUSE Live Performance" loading="lazy">
                 </div>
             </div>
         </section>

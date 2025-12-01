@@ -38,6 +38,28 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Structured Data / JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CreativeWork",
+      "name": "PAPER x GWEN STEFANI",
+      "headline": "PAPER x GWEN STEFANI | WAARP",
+      "description": "3D editing and visual design for Paper Magazine x Gwen Stefani by Andrea Marcias (Waarp).",
+      "image": "https://www.andreamarcias.com/images/paper-hq-3.jpg",
+      "author": {
+        "@type": "Person",
+        "name": "Andrea Marcias",
+        "url": "https://www.andreamarcias.com"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "Paper Magazine"
+      },
+      "genre": "Publishing"
+    }
+    </script>
 </head>
 
 <body>
@@ -121,7 +143,7 @@
 
                 <!-- Image 2 (Wide) -->
                 <div class="gallery-item-wide" style="aspect-ratio: 3.26/1;">
-                    <img src="images/paper-hq-3.jpg" alt="Paper Magazine Editorial">
+                    <img src="images/paper-hq-3.jpg" alt="Paper Magazine Editorial" loading="lazy">
                 </div>
             </div>
         </section>
