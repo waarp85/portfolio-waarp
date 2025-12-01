@@ -115,60 +115,6 @@ a {
 /* Hero Section */
 #hero {
     height: 90vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
-
-.hero-title {
-    font-size: 15vw;
-    font-weight: 900;
-    line-height: 0.8;
-    text-transform: uppercase;
-    text-align: center;
-    width: 100%;
-}
-
-.line-wrapper {
-    overflow: hidden;
-}
-
-.line {
-    display: block;
-    transform: translateY(100%);
-}
-
-/* Bio Section */
-#bio {
-    padding: 10rem 2rem;
-    display: grid;
-    place-items: center;
-}
-
-.bio-content {
-    max-width: 1200px;
-}
-
-.bio-text {
-    font-size: clamp(2rem, 4vw, 4rem);
-    line-height: 1.2;
-    font-weight: 400;
-}
-
-/* Clients Section (Marquee) */
-#clients {
-    padding: 0;
-    height: 15vh;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-}
-
-.marquee-container {
-    display: flex;
-    white-space: nowrap;
-    width: 100%;
 }
 
 .marquee {
@@ -614,7 +560,7 @@ a {
 
 #system-clock {
     position: fixed;
-    top: 30px;
+    top: 20px;
     left: 50%;
     transform: translateX(-50%);
     font-family: 'JetBrains Mono', monospace;
@@ -655,6 +601,8 @@ a {
         font-size: 0.6rem;
     }
 }
+
+
 
 /* OPTIMIZED MOBILE TYPOGRAPHY & LAYOUT (Shifted Left) */
 @media (max-width: 768px) {

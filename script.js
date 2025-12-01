@@ -3,19 +3,6 @@ const cursor = document.querySelector('.cursor');
 const follower = document.querySelector('.cursor-follower');
 const links = document.querySelectorAll('a, .work-cell');
 
-document.addEventListener('mousemove', (e) => {
-    gsap.to(cursor, {
-        x: e.clientX,
-        y: e.clientY,
-        duration: 0.1
-    });
-    gsap.to(follower, {
-        x: e.clientX,
-        y: e.clientY,
-        duration: 0.3
-    });
-});
-
 links.forEach(link => {
     link.addEventListener('mouseenter', () => {
         gsap.to(follower, {
@@ -122,15 +109,27 @@ function updateSystemClock() {
 setInterval(updateSystemClock, 1000);
 updateSystemClock(); // Initial call
 
-// Mouse Coordinates
+// Combined Mouse Coordinates and Custom Cursor
 document.addEventListener('mousemove', (e) => {
+    // Custom cursor
+    gsap.to(cursor, {
+        x: e.clientX,
+        y: e.clientY,
+        duration: 0.1
+    });
+    gsap.to(follower, {
+        x: e.clientX,
+        y: e.clientY,
+        duration: 0.3
+    });
+
+    // Coordinates display
     const coords = document.getElementById('mouse-coords');
-    if (!coords) return;
-
-    const x = String(e.clientX).padStart(4, '0');
-    const y = String(e.clientY).padStart(4, '0');
-
-    coords.textContent = `POS: ${x} | ${y}`;
+    if (coords) {
+        const x = String(e.clientX).padStart(4, '0');
+        const y = String(e.clientY).padStart(4, '0');
+        coords.textContent = `POS: ${x} | ${y}`;
+    }
 });
 
 // Scroll Progress Indicator
