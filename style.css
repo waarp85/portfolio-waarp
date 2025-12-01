@@ -154,7 +154,6 @@ a {
     font-size: clamp(2rem, 4vw, 4rem);
     line-height: 1.2;
     font-weight: 400;
-    text-transform: uppercase;
 }
 
 /* Clients Section (Marquee) */
@@ -237,7 +236,6 @@ a {
 
 .work-content p {
     font-size: 1rem;
-    text-transform: uppercase;
     opacity: 0.7;
 }
 
