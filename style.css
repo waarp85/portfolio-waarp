@@ -2,7 +2,7 @@
     --bg-color: #000000;
     --text-color: #ffffff;
     --grid-color: #333333;
-    --font-main: 'Inter', sans-serif;
+    --font-main: 'JetBrains Mono', monospace;
 }
 
 * {
@@ -122,12 +122,14 @@ a {
 }
 
 .hero-title {
+    font-family: 'Inter', sans-serif;
     font-size: 15vw;
     font-weight: 900;
     line-height: 0.8;
     text-transform: uppercase;
     text-align: center;
     width: 100%;
+    letter-spacing: -0.04em;
 }
 
 .line-wrapper {
@@ -137,6 +139,18 @@ a {
 .line {
     display: block;
     transform: translateY(100%);
+}
+
+/* Decode Animation Styles */
+.decode-line {
+    font-family: 'Inter', sans-serif;
+    display: block;
+    text-align: center;
+    font-size: 15vw;
+    font-weight: 900;
+    line-height: 0.8;
+    text-transform: uppercase;
+    letter-spacing: -0.04em;
 }
 
 /* Bio Section */
@@ -661,8 +675,6 @@ a {
 
     /* 1. Layout & Padding - Shifted Left */
     .grid-section {
-        /* Top: 2rem, Right: 1.5rem, Bottom: 2rem, Left: 0.5rem */
-        /* More padding on right pushes center to the left */
         padding: 2rem 1rem 2rem 1rem !important;
     }
 
