@@ -2,7 +2,7 @@
     --bg-color: #000000;
     --text-color: #ffffff;
     --grid-color: #333333;
-    --font-main: 'JetBrains Mono', monospace;
+    --font-main: 'Inter', sans-serif;
 }
 
 * {
@@ -122,14 +122,12 @@ a {
 }
 
 .hero-title {
-    font-family: 'Inter', sans-serif;
     font-size: 15vw;
     font-weight: 900;
     line-height: 0.8;
     text-transform: uppercase;
     text-align: center;
     width: 100%;
-    letter-spacing: -0.04em;
 }
 
 .line-wrapper {
@@ -139,18 +137,6 @@ a {
 .line {
     display: block;
     transform: translateY(100%);
-}
-
-/* Decode Animation Styles */
-.decode-line {
-    font-family: 'Inter', sans-serif;
-    display: block;
-    text-align: center;
-    font-size: 15vw;
-    font-weight: 900;
-    line-height: 0.8;
-    text-transform: uppercase;
-    letter-spacing: -0.04em;
 }
 
 /* Bio Section */
@@ -506,6 +492,51 @@ a {
     border-color: #fff;
 }
 
+/* Responsive */
+@media (max-width: 768px) {
+    .main-grid {
+        margin: 8px;
+        min-height: calc(100vh - 16px);
+    }
+
+    .nav-tl,
+    .nav-tr,
+    .nav-bl,
+    .nav-br {
+        font-size: 0.6rem;
+    }
+
+    .work-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .work-cell {
+        border-right: none;
+    }
+
+    .hero-title {
+        font-size: 18vw;
+    }
+
+    .project-title {
+        font-size: 13vw;
+    }
+
+    .meta-grid,
+    .project-nav-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-grid-full {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item-large,
+    .gallery-item-wide {
+        grid-column: span 1;
+    }
+}
+
 /* Cookie Banner */
 .cookie-banner {
     position: fixed;
@@ -613,9 +644,7 @@ a {
     z-index: 9001;
 }
 
-/* OPTIMIZED MOBILE TYPOGRAPHY & LAYOUT (Shifted Left) */
 @media (max-width: 768px) {
-
     #system-clock {
         top: 10px;
         font-size: 0.6rem;
@@ -625,27 +654,19 @@ a {
         bottom: 10px;
         font-size: 0.6rem;
     }
+}
 
-    .main-grid {
-        margin: 8px;
-        min-height: calc(100vh - 16px);
+/* OPTIMIZED MOBILE TYPOGRAPHY & LAYOUT (Shifted Left) */
+@media (max-width: 768px) {
+
+    /* 1. Layout & Padding - Shifted Left */
+    .grid-section {
+        /* Top: 2rem, Right: 1.5rem, Bottom: 2rem, Left: 0.5rem */
+        /* More padding on right pushes center to the left */
+        padding: 2rem 1rem 2rem 1rem !important;
     }
 
-    .nav-tl,
-    .nav-tr,
-    .nav-bl,
-    .nav-br {
-        font-size: 0.6rem;
-    }
-
-    .work-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .work-cell {
-        border-right: none;
-    }
-
+    /* 2. Typography Sizing (Drastically Reduced) */
     .hero-title {
         font-size: 12vw !important;
         line-height: 1 !important;
@@ -670,6 +691,15 @@ a {
     }
 
     .description-text,
+    .plugin-description {
+        font-size: 1rem !important;
+        line-height: 1.6 !important;
+    }
+
+    /* 3. Force Centering & Alignment */
+    .hero-title,
+    .project-title,
+    .section-title,
     .bio-text,
     .description-text,
     .section-heading,
@@ -721,15 +751,6 @@ a {
     .plugin-content,
     .plugin-card {
         padding: 2rem 1rem 2rem 1rem !important;
-    }
-
-    .gallery-grid-full {
-        grid-template-columns: 1fr;
-    }
-
-    .gallery-item-large,
-    .gallery-item-wide {
-        grid-column: span 1;
     }
 }
 

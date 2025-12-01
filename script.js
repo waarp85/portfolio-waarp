@@ -20,163 +20,16 @@ links.forEach(link => {
     });
 });
 
-// ==========================
-// HACKING DECODE ANIMATION
-// ==========================
-
-function hackingDecodeEffect() {
-    const title = document.getElementById('decode-title');
-    if (!title) return;
-
-    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%&*{}[]<>/\\|~';
-    const finalText = ['DIGITAL', '/', 'MATTER'];
-
-    // First: Animate WAARP sliding up with GSAP (like the original)
-    gsap.to('.line', {
-        y: 0,
-        duration: 1.5,
-        ease: 'power4.out',
-        delay: 0.5,
-        onComplete: () => {
-            // Wait 1 second after WAARP appears, then start decode
-            setTimeout(() => {
-                startDecodeSequence();
-            }, 1000);
-        }
-    });
-
-    function startDecodeSequence() {
-        const lineWrapper = title.querySelector('.line-wrapper');
-        const lineSpan = lineWrapper.querySelector('.line');
-
-        if (!lineSpan) return;
-
-        // Phase 1: Glitch WAARP
-        glitchText(lineSpan, 'WAARP', 1000, () => {
-            // Phase 2: Scramble and expand
-            scrambleAndExpand(title, () => {
-                // Phase 3: Decode to final text
-                decodeToFinal(title, finalText);
-            });
-        });
-    }
-
-    function glitchText(element, text, duration, callback) {
-        const iterations = 20;
-        const interval = duration / iterations;
-        let count = 0;
-
-        const glitchInterval = setInterval(() => {
-            element.innerHTML = text.split('').map((char, i) => {
-                if (Math.random() > 0.7) {
-                    return `<span style="opacity: 0.5">${chars[Math.floor(Math.random() * chars.length)]}</span>`;
-                }
-                return char;
-            }).join('');
-
-            count++;
-            if (count >= iterations) {
-                clearInterval(glitchInterval);
-                element.textContent = text;
-                if (callback) callback();
-            }
-        }, interval);
-    }
-
-    function scrambleAndExpand(element, callback) {
-        const targetLength = 'DIGITALMATTER'.length;
-        let scrambleCount = 0;
-        const maxScrambles = 30;
-
-        const scrambleInterval = setInterval(() => {
-            let scrambled = '';
-            for (let i = 0; i < targetLength; i++) {
-                scrambled += chars[Math.floor(Math.random() * chars.length)];
-            }
-            element.textContent = scrambled;
-            element.style.letterSpacing = '0.2em';
-
-            scrambleCount++;
-            if (scrambleCount >= maxScrambles) {
-                clearInterval(scrambleInterval);
-                if (callback) callback();
-            }
-        }, 50);
-    }
-
-    function decodeToFinal(element, targetLines) {
-        // Smoothly animate letter-spacing back to normal with GSAP
-        gsap.to(element, {
-            letterSpacing: '0em',
-            duration: 0.8,
-            ease: 'power2.out'
-        });
-
-        // Create line structure
-        element.innerHTML = targetLines.map(line =>
-            `<div class="decode-line">${'█'.repeat(line.length)}</div>`
-        ).join('');
-
-        const lines = element.querySelectorAll('.decode-line');
-
-        function decodeCharacter(lineIdx, charIdx, targetChar) {
-            const line = lines[lineIdx];
-            if (!line) return;
-
-            let iterations = 0;
-            const maxIterations = 15;
-
-            const charInterval = setInterval(() => {
-                const currentText = line.textContent.split('');
-
-                if (iterations < maxIterations - 1) {
-                    currentText[charIdx] = chars[Math.floor(Math.random() * chars.length)];
-                } else {
-                    currentText[charIdx] = targetChar;
-                    clearInterval(charInterval);
-                }
-
-                line.textContent = currentText.join('');
-                iterations++;
-            }, 30);
-        }
-
-        // Decode each character with cascading effect
-        let globalCharIndex = 0;
-        targetLines.forEach((lineText, lineIdx) => {
-            lineText.split('').forEach((char, charIdx) => {
-                setTimeout(() => {
-                    decodeCharacter(lineIdx, charIdx, char);
-                }, globalCharIndex * 40);
-                globalCharIndex++;
-            });
-        });
-
-        // Final cleanup - no need to set letter-spacing since GSAP already animated it
-        setTimeout(() => {
-            element.style.lineHeight = '0.8';
-        }, globalCharIndex * 40 + 500);
-    }
-}
-
-// Initialize decode effect when page loads
-window.addEventListener('load', () => {
-    hackingDecodeEffect();
-});
-
-// Hero Animation for other pages (standard slide-up)
+// Hero Animation
 const tl = gsap.timeline();
 
-// Only animate if NOT on index page with decode effect
-if (!document.getElementById('decode-title')) {
-    tl.to('.line', {
-        y: 0,
-        duration: 1.5,
-        stagger: 0.2,
-        ease: 'power4.out',
-        delay: 0.5
-    });
-}
+tl.to('.line', {
+    y: 0,
+    duration: 1.5,
+    stagger: 0.2,
+    ease: 'power4.out',
+    delay: 0.5
+});
 
 // Scroll Animations
 gsap.registerPlugin(ScrollTrigger);
@@ -204,7 +57,7 @@ gsap.utils.toArray('.work-cell').forEach((cell, i) => {
         y: 50,
         opacity: 0,
         duration: 0.8,
-        delay: i % 2 * 0.1,
+        delay: i % 2 * 0.1, // Stagger effect based on column
         ease: 'power2.out'
     });
 });
@@ -216,12 +69,14 @@ function initCookieBanner() {
 
     if (!banner || !acceptBtn) return;
 
+    // Check if user already accepted
     if (!localStorage.getItem('cookiesAccepted')) {
         setTimeout(() => {
             banner.classList.add('show');
         }, 1000);
     }
 
+    // Accept button click
     acceptBtn.addEventListener('click', () => {
         localStorage.setItem('cookiesAccepted', 'true');
         gsap.to(banner, {
@@ -235,6 +90,7 @@ function initCookieBanner() {
     });
 }
 
+// Initialize on load
 window.addEventListener('load', initCookieBanner);
 
 // Technical UI Logic
@@ -251,7 +107,7 @@ function updateSystemClock() {
 }
 
 setInterval(updateSystemClock, 1000);
-updateSystemClock();
+updateSystemClock(); // Initial call
 
 // Combined Mouse Coordinates and Custom Cursor
 document.addEventListener('mousemove', (e) => {
@@ -278,6 +134,7 @@ document.addEventListener('mousemove', (e) => {
 
 // Scroll Progress Indicator
 function initScrollIndicator() {
+    // Create element if it doesn't exist
     if (!document.getElementById('scroll-indicator')) {
         const indicator = document.createElement('div');
         indicator.id = 'scroll-indicator';
@@ -293,14 +150,18 @@ function updateScrollProgress() {
     const docHeight = document.documentElement.scrollHeight - window.innerHeight;
     const scrollPercent = docHeight > 0 ? Math.round((scrollTop / docHeight) * 100) : 0;
 
-    const totalBars = 15;
+    // Create ASCII bar
+    const totalBars = 15; // Longer bar for vertical look
     const filledBars = Math.round((scrollPercent / 100) * totalBars);
     const emptyBars = totalBars - filledBars;
 
     const bar = '|'.repeat(filledBars) + '.'.repeat(emptyBars);
+
+    // Format: SCROLL [|||||.....] 050%
     indicator.textContent = `SCROLL [${bar}] ${String(scrollPercent).padStart(3, '0')}%`;
 }
 
+// Initialize
 initScrollIndicator();
 window.addEventListener('scroll', updateScrollProgress);
 window.addEventListener('resize', updateScrollProgress);
