@@ -506,51 +506,6 @@ a {
     border-color: #fff;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .main-grid {
-        margin: 8px;
-        min-height: calc(100vh - 16px);
-    }
-
-    .nav-tl,
-    .nav-tr,
-    .nav-bl,
-    .nav-br {
-        font-size: 0.6rem;
-    }
-
-    .work-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .work-cell {
-        border-right: none;
-    }
-
-    .hero-title {
-        font-size: 18vw;
-    }
-
-    .project-title {
-        font-size: 13vw;
-    }
-
-    .meta-grid,
-    .project-nav-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .gallery-grid-full {
-        grid-template-columns: 1fr;
-    }
-
-    .gallery-item-large,
-    .gallery-item-wide {
-        grid-column: span 1;
-    }
-}
-
 /* Cookie Banner */
 .cookie-banner {
     position: fixed;
@@ -658,7 +613,9 @@ a {
     z-index: 9001;
 }
 
+/* OPTIMIZED MOBILE TYPOGRAPHY & LAYOUT (Shifted Left) */
 @media (max-width: 768px) {
+
     #system-clock {
         top: 10px;
         font-size: 0.6rem;
@@ -668,17 +625,27 @@ a {
         bottom: 10px;
         font-size: 0.6rem;
     }
-}
 
-/* OPTIMIZED MOBILE TYPOGRAPHY & LAYOUT (Shifted Left) */
-@media (max-width: 768px) {
-
-    /* 1. Layout & Padding - Shifted Left */
-    .grid-section {
-        padding: 2rem 1rem 2rem 1rem !important;
+    .main-grid {
+        margin: 8px;
+        min-height: calc(100vh - 16px);
     }
 
-    /* 2. Typography Sizing (Drastically Reduced) */
+    .nav-tl,
+    .nav-tr,
+    .nav-bl,
+    .nav-br {
+        font-size: 0.6rem;
+    }
+
+    .work-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .work-cell {
+        border-right: none;
+    }
+
     .hero-title {
         font-size: 12vw !important;
         line-height: 1 !important;
@@ -706,6 +673,11 @@ a {
     .plugin-description {
         font-size: 1rem !important;
         line-height: 1.6 !important;
+    }
+
+    /* 1. Layout & Padding - Shifted Left to fix alignment */
+    .grid-section {
+        padding: 2rem 1.5rem 2rem 0.5rem !important;
     }
 
     /* 3. Force Centering & Alignment */
@@ -763,6 +735,15 @@ a {
     .plugin-content,
     .plugin-card {
         padding: 2rem 1rem 2rem 1rem !important;
+    }
+
+    .gallery-grid-full {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item-large,
+    .gallery-item-wide {
+        grid-column: span 1;
     }
 }
 
