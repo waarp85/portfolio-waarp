@@ -645,14 +645,9 @@ a {
 }
 
 @media (max-width: 768px) {
-    #system-clock {
-        top: 10px;
-        font-size: 0.6rem;
-    }
-
+    #system-clock,
     #mouse-coords {
-        bottom: 10px;
-        font-size: 0.6rem;
+        display: none !important;
     }
 }
 
@@ -743,213 +738,38 @@ a {
     .download-btn {
         width: 100%;
         box-sizing: border-box;
-        animation: slideUp 0.5s ease-out;
+        font-size: 0.9rem !important;
+        padding: 15px !important;
     }
 
-    .cookie-banner.show {
-        display: block;
+    /* Shift R&D content left too */
+    .plugin-card {
+        padding: 2rem 1rem 2rem 1rem !important;
     }
+}
 
-    @keyframes slideUp {
-        from {
-            transform: translateY(100%);
-        }
+/* Vertical Scroll Indicator */
+#scroll-indicator {
+    position: fixed;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-family: 'JetBrains Mono',
+        monospace;
+    font-size: 0.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+    z-index: 100;
+    mix-blend-mode: difference;
+    pointer-events: none;
+    white-space: nowrap;
+    letter-spacing: 1px;
+}
 
-        to {
-            transform: translateY(0);
-        }
-    }
-
-    .cookie-content {
-        max-width: 1200px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 2rem;
-        flex-wrap: wrap;
-    }
-
-    .cookie-text {
-        flex: 1;
-        font-size: 0.9rem;
-        line-height: 1.6;
-        min-width: 300px;
-    }
-
-    .cookie-btn {
-        background-color: var(--text-color);
-        color: var(--bg-color);
-        border: none;
-        padding: 0.75rem 2rem;
-        font-family: var(--font-main);
-        font-weight: 700;
-        font-size: 0.9rem;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        cursor: pointer;
-        transition: all 0.3s;
-    }
-
-    .cookie-btn:hover {
-        background-color: var(--grid-color);
-        color: var(--text-color);
-    }
-
-    /* Technical UI Elements */
-    #tech-ui-layer {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        pointer-events: none;
-        z-index: 9000;
-    }
-
-    #system-clock {
-        position: fixed;
-        top: 30px;
-        left: 50%;
-        transform: translateX(-50%);
-        font-family: 'JetBrains Mono', monospace;
-        font-size: 0.7rem;
-        font-weight: 700;
-        color: #ffffff;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        mix-blend-mode: difference;
-        pointer-events: none;
-        z-index: 9001;
-    }
-
-    #mouse-coords {
-        position: fixed;
-        bottom: 20px;
-        left: 50%;
-        transform: translateX(-50%);
-        font-family: 'JetBrains Mono', monospace;
-        font-size: 0.7rem;
-        font-weight: 700;
-        color: #ffffff;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-
-        .grid-section {
-            /* Top: 2rem, Right: 1.5rem, Bottom: 2rem, Left: 0.5rem */
-            /* More padding on right pushes center to the left */
-            padding: 2rem 1rem 2rem 1rem !important;
-        }
-
-        /* 2. Typography Sizing (Drastically Reduced) */
-        .hero-title {
-            font-size: 12vw !important;
-            line-height: 1 !important;
-        }
-
-        .project-title {
-            font-size: 10vw !important;
-            line-height: 1 !important;
-        }
-
-        .section-title,
-        .section-heading,
-        .plugin-name {
-            font-size: 2rem !important;
-            line-height: 1.2 !important;
-        }
-
-        .bio-text {
-            font-size: 1.2rem !important;
-            line-height: 1.5 !important;
-            font-weight: 600 !important;
-        }
-
-        .description-text,
-        .plugin-description {
-            font-size: 1rem !important;
-            line-height: 1.6 !important;
-        }
-
-        /* 3. Force Centering & Alignment */
-        .hero-title,
-        .project-title,
-        .section-title,
-        .bio-text,
-        .description-text,
-        .section-heading,
-        .plugin-subtitle,
-        .plugin-name,
-        .plugin-description,
-        .work-content h3,
-        .work-content p,
-        .meta-item h3,
-        .meta-item p {
-            text-align: center !important;
-            width: 100% !important;
-            margin-left: auto !important;
-            margin-right: auto !important;
-            word-wrap: break-word !important;
-        }
-
-        /* 4. Flexbox Alignment Fixes */
-        .hero-title,
-        .line-wrapper {
-            display: flex !important;
-            flex-direction: column !important;
-            align-items: center !important;
-            justify-content: center !important;
-            width: 100% !important;
-        }
-
-        .meta-grid,
-        .project-nav-grid,
-        .socials-grid {
-            justify-items: center !important;
-            justify-content: center !important;
-        }
-
-        .meta-item {
-            align-items: center !important;
-            text-align: center !important;
-        }
-
-        /* 5. Component Specifics */
-        .download-btn {
-            width: 100%;
-            box-sizing: border-box;
-            font-size: 0.9rem !important;
-            padding: 15px !important;
-        }
-
-        /* Shift R&D content left too */
-        .plugin-card {
-            padding: 2rem 1rem 2rem 1rem !important;
-        }
-    }
-
-    /* Vertical Scroll Indicator */
+@media (max-width: 768px) {
     #scroll-indicator {
-        position: fixed;
-        right: 5px;
-        top: 50%;
-        transform: translateY(-50%);
-        writing-mode: vertical-rl;
-        text-orientation: mixed;
-        font-family: 'JetBrains Mono',
-            monospace;
-        font-size: 0.5rem;
-        font-weight: 700;
-        color: var(--text-color);
-        z-index: 100;
-        mix-blend-mode: difference;
-        pointer-events: none;
-        white-space: nowrap;
-        letter-spacing: 1px;
+        display: none !important;
     }
-
-    @media (max-width: 768px) {
-        #scroll-indicator {
-            display: none !important;
-        }
-    }
+}
