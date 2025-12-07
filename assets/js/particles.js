@@ -13,6 +13,10 @@ class InteractiveLogo {
     }
 
     init() {
+        // Responsive max-width: smaller on mobile
+        const isMobile = window.innerWidth <= 768;
+        const maxWidth = isMobile ? '70%' : '1440px';
+
         // Main wrapper
         this.wrapper = document.createElement('div');
         this.wrapper.style.cssText = `
@@ -21,7 +25,7 @@ class InteractiveLogo {
             left: 50%;
             transform: translate(-50%, -50%);
             width: 100%;
-            max-width: 1440px; /* +20% larger */
+            max-width: ${maxWidth};
             height: auto;
             z-index: 10;
             opacity: 0;
