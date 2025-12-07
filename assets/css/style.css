@@ -662,6 +662,7 @@ a {
 }
 
 @media (max-width: 768px) {
+
     #system-clock,
     #mouse-coords {
         display: none !important;
@@ -788,5 +789,64 @@ a {
 @media (max-width: 768px) {
     #scroll-indicator {
         display: none !important;
+    }
+}
+
+/* --- SERVICES SECTION (System Grid) --- */
+#services {
+    padding: 0;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+}
+
+.service-col {
+    border-right: 1px solid var(--grid-color);
+    padding: 2rem;
+}
+
+.service-col:last-child {
+    border-right: none;
+}
+
+.service-header {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.service-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.service-list li {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    line-height: 1.8;
+    color: #ccc;
+}
+
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-col {
+        border-right: none;
+        border-bottom: 1px solid var(--grid-color);
+        padding: 1.5rem;
+        text-align: center;
+    }
+
+    .service-col:last-child {
+        border-bottom: none;
     }
 }
