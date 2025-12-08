@@ -260,7 +260,7 @@ a {
     color: #000;
 }
 
-.work-content h4 {
+.work-content h3 {
     font-size: clamp(1.5rem, 3vw, 3rem);
     font-weight: 900;
     text-transform: uppercase;
