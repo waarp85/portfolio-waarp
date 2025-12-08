@@ -86,225 +86,239 @@
 </head>
 
 <body>
-    <div class="nav-tl">WAARP</div>
-    <div class="nav-tr"><a href="rd.html">R&D</a></div>
-    <div class="nav-bl">3D VISUAL ARTIST</div>
-    <div class="nav-br"><a href="#contact">CONTACT</a></div>
 
-    <!-- HERO SECTION -->
-    <section id="hero" class="grid-section">
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
 
-        <!-- SEO H1 (visually hidden but accessible to search engines) -->
-        <h1 class="sr-only">Andrea Marcias - 3D Visual Artist & Motion Designer | WAARP</h1>
+    <!-- TECHNICAL UI LAYER -->
+    <div id="tech-ui-layer">
+        <div id="system-clock">00:00:00</div>
+        <div id="mouse-coords">X: 0000 Y: 0000</div>
+    </div>
 
-        <!-- Decorative animated title -->
-        <div class="hero-title" aria-hidden="true">
-            <div class="line-wrapper"><span class="line">DIGITAL</span></div>
-            <div class="line-wrapper"><span class="line">/</span></div>
-            <div class="line-wrapper"><span class="line">MATTER</span></div>
-        </div>
-    </section>
+    <!-- MAIN GRID CONTAINER -->
+    <div class="main-grid">
 
-    <!-- BIO SECTION -->
-    <section id="bio" class="grid-section">
-        <div class="bio-content">
-            <p class="bio-text" id="bio-reveal">
-                <span class="word">My</span>
-                <span class="word">name</span>
-                <span class="word">is</span>
-                <span class="word">Andrea</span>
-                <span class="word">Marcias,</span>
-                <span class="word">known</span>
-                <span class="word">as</span>
-                <span class="word highlight">Waarp,</span>
-                <span class="word">a</span>
-                <span class="word">3D</span>
-                <span class="word">artist</span>
-                <span class="word">&</span>
-                <span class="word">graphic</span>
-                <span class="word">designer</span>
-                <span class="word">based</span>
-                <span class="word">in</span>
-                <span class="word">Italy,</span>
-                <span class="word">who</span>
-                <span class="word">is</span>
-                <span class="word">mainly</span>
-                <span class="word">creating</span>
-                <span class="word">content</span>
-                <span class="word">for</span>
-                <span class="word">the</span>
-                <span class="word highlight">music</span>
-                <span class="word highlight">industry,</span>
-                <span class="word highlight">brands,</span>
-                <span class="word highlight">agencies.</span>
-            </p>
-        </div>
-    </section>
+        <!-- CORNER NAV (Fixed positions in grid) -->
+        <div class="nav-tl">WAARP</div>
+        <div class="nav-tr"><a href="rd.html">R&D</a></div>
+        <div class="nav-bl">3D VISUAL ARTIST</div>
+        <div class="nav-br"><a href="#contact">CONTACT</a></div>
 
-    <!-- SERVICES SECTION (CAPABILITIES) -->
-    <section id="services" class="grid-section">
-        <div class="services-grid-new">
-            <!-- Card 1: 3D Visualization - Cube/Layers icon -->
-            <div class="service-card">
-                <div class="card-top">
-                    <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <path d="M12 2L2 7l10 5 10-5-10-5z" />
-                        <path d="M2 17l10 5 10-5" />
-                        <path d="M2 12l10 5 10-5" />
-                    </svg>
-                    <span class="card-number">01</span>
-                </div>
-                <h4 class="card-title">3D Visualization</h4>
-                <ul class="card-list">
-                    <li>Lookdev / Texturing</li>
-                    <li>Lighting Setup</li>
-                    <li>Product Viz</li>
-                    <li>Hyperrealism</li>
-                </ul>
+        <!-- HERO SECTION -->
+        <section id="hero" class="grid-section">
+
+            <!-- SEO H1 (visually hidden but accessible to search engines) -->
+            <h1 class="sr-only">Andrea Marcias - 3D Visual Artist & Motion Designer | WAARP</h1>
+
+            <!-- Decorative animated title -->
+            <div class="hero-title" aria-hidden="true">
+                <div class="line-wrapper"><span class="line">DIGITAL</span></div>
+                <div class="line-wrapper"><span class="line">/</span></div>
+                <div class="line-wrapper"><span class="line">MATTER</span></div>
             </div>
-            <!-- Card 2: Animation - Play icon -->
-            <div class="service-card">
-                <div class="card-top">
-                    <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <polygon points="5,3 19,12 5,21" />
-                    </svg>
-                    <span class="card-number">02</span>
-                </div>
-                <h4 class="card-title">Animation</h4>
-                <ul class="card-list">
-                    <li>Title Sequences</li>
-                    <li>Visuals</li>
-                    <li>Loop & Motion</li>
-                    <li>Simulations</li>
-                </ul>
-            </div>
-            <!-- Card 3: Applications - Grid icon -->
-            <div class="service-card">
-                <div class="card-top">
-                    <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <rect x="3" y="3" width="7" height="7" />
-                        <rect x="14" y="3" width="7" height="7" />
-                        <rect x="3" y="14" width="7" height="7" />
-                        <rect x="14" y="14" width="7" height="7" />
-                    </svg>
-                    <span class="card-number">03</span>
-                </div>
-                <h4 class="card-title">Applications</h4>
-                <ul class="card-list">
-                    <li>Music Visuals</li>
-                    <li>Fashion & Luxury</li>
-                    <li>Album Packaging</li>
-                    <li>Brand Identity</li>
-                </ul>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- CLIENTS SECTION (Marquee) -->
-    <section id="clients" class="grid-section">
-        <div class="marquee-container">
-            <div class="marquee">
-                <span>SWAROVSKI X ARIANA GRANDE</span>
-                <span class="dim">WARNER MUSIC</span>
-                <span>PRIME VIDEO</span>
-                <span class="dim">ROCNATION</span>
-                <span>SONY MUSIC</span>
-                <span class="dim">FEID X SPRITE</span>
-                <span>UNIVERSAL MUSIC</span>
-                <span class="dim">MUSE</span>
-                <span>PAPER X GWEN STEPHANI</span>
-                <span class="dim">SALMO</span>
-                <span>CHRISTINA AGUILERA</span>
-                <span class="dim">MAHMOOD</span>
-                <span>MYKE TOWERS</span>
+        <!-- BIO SECTION -->
+        <section id="bio" class="grid-section">
+            <div class="bio-content">
+                <p class="bio-text" id="bio-reveal">
+                    <span class="word">My</span>
+                    <span class="word">name</span>
+                    <span class="word">is</span>
+                    <span class="word">Andrea</span>
+                    <span class="word">Marcias,</span>
+                    <span class="word">known</span>
+                    <span class="word">as</span>
+                    <span class="word highlight">Waarp,</span>
+                    <span class="word">a</span>
+                    <span class="word">3D</span>
+                    <span class="word">artist</span>
+                    <span class="word">&</span>
+                    <span class="word">graphic</span>
+                    <span class="word">designer</span>
+                    <span class="word">based</span>
+                    <span class="word">in</span>
+                    <span class="word">Italy,</span>
+                    <span class="word">who</span>
+                    <span class="word">is</span>
+                    <span class="word">mainly</span>
+                    <span class="word">creating</span>
+                    <span class="word">content</span>
+                    <span class="word">for</span>
+                    <span class="word">the</span>
+                    <span class="word highlight">music</span>
+                    <span class="word highlight">industry,</span>
+                    <span class="word highlight">brands,</span>
+                    <span class="word highlight">agencies.</span>
+                </p>
             </div>
-            <div class="marquee" aria-hidden="true">
-                <span>SWAROVSKI X ARIANA GRANDE</span>
-                <span class="dim">WARNER MUSIC</span>
-                <span>PRIME VIDEO</span>
-                <span class="dim">ROCNATION</span>
-                <span>SONY MUSIC</span>
-                <span class="dim">FEID X SPRITE</span>
-                <span>UNIVERSAL MUSIC</span>
-                <span class="dim">MUSE</span>
-                <span>PAPER X GWEN STEPHANI</span>
-                <span class="dim">SALMO</span>
-                <span>CHRISTINA AGUILERA</span>
-                <span class="dim">MAHMOOD</span>
-                <span>MYKE TOWERS</span>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- WORK SECTION (Grid) -->
-    <section id="work" class="grid-section">
-        <div class="work-grid">
-            <a href="swarovski.html" class="work-cell">
-                <div class="work-content">
-                    <h3>SWAROVSKI X ARIANA GRANDE</h3>
-                    <p>3D Treatments - Modeling - Research</p>
+        <!-- SERVICES SECTION (CAPABILITIES) -->
+        <section id="services" class="grid-section">
+            <div class="services-grid-new">
+                <!-- Card 1: 3D Visualization - Cube/Layers icon -->
+                <div class="service-card">
+                    <div class="card-top">
+                        <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                            <path d="M2 17l10 5 10-5" />
+                            <path d="M2 12l10 5 10-5" />
+                        </svg>
+                        <span class="card-number">01</span>
+                    </div>
+                    <h4 class="card-title">3D Visualization</h4>
+                    <ul class="card-list">
+                        <li>Lookdev / Texturing</li>
+                        <li>Lighting Setup</li>
+                        <li>Product Viz</li>
+                        <li>Hyperrealism</li>
+                    </ul>
                 </div>
-            </a>
-            <a href="muse.html" class="work-cell">
-                <div class="work-content">
-                    <h3>MUSE</h3>
-                    <p>3D Artworks</p>
+                <!-- Card 2: Animation - Play icon -->
+                <div class="service-card">
+                    <div class="card-top">
+                        <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <polygon points="5,3 19,12 5,21" />
+                        </svg>
+                        <span class="card-number">02</span>
+                    </div>
+                    <h4 class="card-title">Animation</h4>
+                    <ul class="card-list">
+                        <li>Title Sequences</li>
+                        <li>Visuals</li>
+                        <li>Loop & Motion</li>
+                        <li>Simulations</li>
+                    </ul>
                 </div>
-            </a>
-            <a href="feid.html" class="work-cell">
-                <div class="work-content">
-                    <h3>FEID X SPRITE</h3>
-                    <p>3D - Motion</p>
+                <!-- Card 3: Applications - Grid icon -->
+                <div class="service-card">
+                    <div class="card-top">
+                        <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="3" y="3" width="7" height="7" />
+                            <rect x="14" y="3" width="7" height="7" />
+                            <rect x="3" y="14" width="7" height="7" />
+                            <rect x="14" y="14" width="7" height="7" />
+                        </svg>
+                        <span class="card-number">03</span>
+                    </div>
+                    <h4 class="card-title">Applications</h4>
+                    <ul class="card-list">
+                        <li>Music Visuals</li>
+                        <li>Fashion & Luxury</li>
+                        <li>Album Packaging</li>
+                        <li>Brand Identity</li>
+                    </ul>
                 </div>
-            </a>
-            <a href="christina.html" class="work-cell">
-                <div class="work-content">
-                    <h3>CHRISTINA AGUILERA</h3>
-                    <p>3D - Visuals</p>
-                </div>
-            </a>
-            <a href="paper.html" class="work-cell">
-                <div class="work-content">
-                    <h3>PAPER MAGAZINE</h3>
-                    <p>3D TREATMENTS</p>
-                </div>
-            </a>
-            <a href="myke_towers.html" class="work-cell">
-                <div class="work-content">
-                    <h3>MYKE TOWERS</h3>
-                    <p>Animation</p>
-                </div>
-            </a>
-            <a href="salmo_ranch.html" class="work-cell">
-                <div class="work-content">
-                    <h3>SALMO - RANCH</h3>
-                    <p>3D</p>
-                </div>
-            </a>
-            <a href="romancero.html" class="work-cell">
-                <div class="work-content">
-                    <h3>ROMANCERO</h3>
-                    <p>3D</p>
-                </div>
-            </a>
-        </div>
-    </section>
+            </div>
+        </section>
 
-    <!-- CONTACT SECTION -->
-    <section id="contact" class="grid-section">
-        <div class="contact-content">
-            <h2>CONTACT.</h2>
-            <a href="mailto:andrea.marcias@hotmail.com" class="email-link">andrea.marcias@hotmail.com</a>
-            <div class="socials-grid">
-                <a href="https://www.instagram.com/_waarp_/" target="_blank">INSTAGRAM</a>
-                <a href="https://www.behance.net/waarp" target="_blank">BEHANCE</a>
+        <!-- CLIENTS SECTION (Marquee) -->
+        <section id="clients" class="grid-section">
+            <div class="marquee-container">
+                <div class="marquee">
+                    <span>SWAROVSKI X ARIANA GRANDE</span>
+                    <span class="dim">WARNER MUSIC</span>
+                    <span>PRIME VIDEO</span>
+                    <span class="dim">ROCNATION</span>
+                    <span>SONY MUSIC</span>
+                    <span class="dim">FEID X SPRITE</span>
+                    <span>UNIVERSAL MUSIC</span>
+                    <span class="dim">MUSE</span>
+                    <span>PAPER X GWEN STEPHANI</span>
+                    <span class="dim">SALMO</span>
+                    <span>CHRISTINA AGUILERA</span>
+                    <span class="dim">MAHMOOD</span>
+                    <span>MYKE TOWERS</span>
+                </div>
+                <div class="marquee" aria-hidden="true">
+                    <span>SWAROVSKI X ARIANA GRANDE</span>
+                    <span class="dim">WARNER MUSIC</span>
+                    <span>PRIME VIDEO</span>
+                    <span class="dim">ROCNATION</span>
+                    <span>SONY MUSIC</span>
+                    <span class="dim">FEID X SPRITE</span>
+                    <span>UNIVERSAL MUSIC</span>
+                    <span class="dim">MUSE</span>
+                    <span>PAPER X GWEN STEPHANI</span>
+                    <span class="dim">SALMO</span>
+                    <span>CHRISTINA AGUILERA</span>
+                    <span class="dim">MAHMOOD</span>
+                    <span>MYKE TOWERS</span>
+                </div>
             </div>
-            <div class="footer-info">
-                <p>&copy; 2025 ANDREA MARCIAS</p>
-                <p>P.IVA 02900950904</p>
+        </section>
+
+        <!-- WORK SECTION (Grid) -->
+        <section id="work" class="grid-section">
+            <div class="work-grid">
+                <a href="swarovski.html" class="work-cell">
+                    <div class="work-content">
+                        <h3>SWAROVSKI X ARIANA GRANDE</h3>
+                        <p>3D Treatments - Modeling - Research</p>
+                    </div>
+                </a>
+                <a href="muse.html" class="work-cell">
+                    <div class="work-content">
+                        <h3>MUSE</h3>
+                        <p>3D Artworks</p>
+                    </div>
+                </a>
+                <a href="feid.html" class="work-cell">
+                    <div class="work-content">
+                        <h3>FEID X SPRITE</h3>
+                        <p>3D - Motion</p>
+                    </div>
+                </a>
+                <a href="christina.html" class="work-cell">
+                    <div class="work-content">
+                        <h3>CHRISTINA AGUILERA</h3>
+                        <p>3D - Visuals</p>
+                    </div>
+                </a>
+                <a href="paper.html" class="work-cell">
+                    <div class="work-content">
+                        <h3>PAPER MAGAZINE</h3>
+                        <p>3D TREATMENTS</p>
+                    </div>
+                </a>
+                <a href="myke_towers.html" class="work-cell">
+                    <div class="work-content">
+                        <h3>MYKE TOWERS</h3>
+                        <p>Animation</p>
+                    </div>
+                </a>
+                <a href="salmo_ranch.html" class="work-cell">
+                    <div class="work-content">
+                        <h3>SALMO - RANCH</h3>
+                        <p>3D</p>
+                    </div>
+                </a>
+                <a href="romancero.html" class="work-cell">
+                    <div class="work-content">
+                        <h3>ROMANCERO</h3>
+                        <p>3D</p>
+                    </div>
+                </a>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="grid-section">
+            <div class="contact-content">
+                <h2>CONTACT.</h2>
+                <a href="mailto:andrea.marcias@hotmail.com" class="email-link">andrea.marcias@hotmail.com</a>
+                <div class="socials-grid">
+                    <a href="https://www.instagram.com/_waarp_/" target="_blank">INSTAGRAM</a>
+                    <a href="https://www.behance.net/waarp" target="_blank">BEHANCE</a>
+                </div>
+                <div class="footer-info">
+                    <p>&copy; 2025 ANDREA MARCIAS</p>
+                    <p>P.IVA 02900950904</p>
+                </div>
+            </div>
+        </section>
 
     </div>
 
