@@ -212,7 +212,7 @@ a {
 }
 
 .marquee span.dim {
-    color: #555555;
+    color: #9a9a9a;
     /* Muted grey */
 }
 
@@ -269,7 +269,7 @@ a {
 
 .work-content p {
     font-size: 1rem;
-    opacity: 0.7;
+    color: #a0a0a0;
 }
 
 /* Contact Section */
@@ -317,7 +317,7 @@ a {
 
 .footer-info {
     font-size: 0.8rem;
-    opacity: 0.5;
+    color: #9a9a9a;
     text-transform: uppercase;
     display: flex;
     justify-content: space-between;
@@ -341,7 +341,7 @@ a {
     text-transform: uppercase;
     text-align: center;
     margin-bottom: 4rem;
-    opacity: 0.7;
+    color: #a0a0a0;
 }
 
 .plugin-content {
@@ -831,7 +831,7 @@ a {
 .service-header {
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.7rem;
-    color: #666;
+    color: #9a9a9a;
     margin-bottom: 1.5rem;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -855,7 +855,7 @@ a {
 .services-count {
     font-family: 'JetBrains Mono', 'Courier New', monospace;
     font-size: 0.8rem;
-    color: #666;
+    color: #9a9a9a;
 }
 
 .services-grid-new {
@@ -896,7 +896,7 @@ a {
 .card-number {
     font-family: 'JetBrains Mono', 'Courier New', monospace;
     font-size: 0.75rem;
-    color: #555;
+    color: #9a9a9a;
 }
 
 .card-title {
@@ -910,7 +910,7 @@ a {
 .card-desc {
     font-size: 0.85rem;
     line-height: 1.6;
-    color: #888;
+    color: #a0a0a0;
     margin-top: auto;
 }
 
@@ -931,7 +931,7 @@ a {
 .card-list li {
     font-size: 0.85rem;
     line-height: 1.8;
-    color: #888;
+    color: #a0a0a0;
 }
 
 @media (max-width: 900px) {
