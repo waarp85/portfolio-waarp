@@ -34,17 +34,34 @@ tl.to('.line', {
 // Scroll Animations
 gsap.registerPlugin(ScrollTrigger);
 
-// Bio Text Reveal
-gsap.from('.bio-text', {
-    scrollTrigger: {
-        trigger: '#bio',
-        start: 'top 80%',
-        end: 'bottom 20%',
-        scrub: true
-    },
-    opacity: 0.2,
-    y: 50,
-    duration: 1
+// Bio Text Reveal - Word by Word on Scroll (Fluid Cascade)
+const bioWords = gsap.utils.toArray('#bio-reveal .word');
+const totalWords = bioWords.length;
+
+bioWords.forEach((word, i) => {
+    // Calculate staggered start/end positions for each word
+    const startOffset = (i / totalWords) * 40; // Spread words across 40% of scroll range
+    const endOffset = startOffset + 10; // Each word animates over 10% of scroll
+
+    gsap.fromTo(word,
+        {
+            opacity: 0.1,
+            filter: 'blur(4px)',
+            y: 8
+        },
+        {
+            opacity: 1,
+            filter: 'blur(0px)',
+            y: 0,
+            scrollTrigger: {
+                trigger: '#bio',
+                start: `top ${90 - startOffset}%`,
+                end: `top ${60 - endOffset}%`,
+                scrub: 0.5, // Smooth scrubbing
+            },
+            ease: 'power2.out'
+        }
+    );
 });
 
 // Work Grid Reveal
@@ -57,7 +74,7 @@ gsap.utils.toArray('.work-cell').forEach((cell, i) => {
         y: 50,
         opacity: 0,
         duration: 0.8,
-        delay: i % 2 * 0.1, // Stagger effect based on column
+        delay: i % 2 * 0.1,
         ease: 'power2.out'
     });
 });
@@ -69,14 +86,12 @@ function initCookieBanner() {
 
     if (!banner || !acceptBtn) return;
 
-    // Check if user already accepted
     if (!localStorage.getItem('cookiesAccepted')) {
         setTimeout(() => {
             banner.classList.add('show');
         }, 1000);
     }
 
-    // Accept button click
     acceptBtn.addEventListener('click', () => {
         localStorage.setItem('cookiesAccepted', 'true');
         gsap.to(banner, {
@@ -90,7 +105,6 @@ function initCookieBanner() {
     });
 }
 
-// Initialize on load
 window.addEventListener('load', initCookieBanner);
 
 // Technical UI Logic
@@ -107,11 +121,10 @@ function updateSystemClock() {
 }
 
 setInterval(updateSystemClock, 1000);
-updateSystemClock(); // Initial call
+updateSystemClock();
 
-// Combined Mouse Coordinates and Custom Cursor
+// Mouse Coordinates and Custom Cursor
 document.addEventListener('mousemove', (e) => {
-    // Custom cursor
     gsap.to(cursor, {
         x: e.clientX,
         y: e.clientY,
@@ -123,7 +136,6 @@ document.addEventListener('mousemove', (e) => {
         duration: 0.3
     });
 
-    // Coordinates display
     const coords = document.getElementById('mouse-coords');
     if (coords) {
         const x = String(e.clientX).padStart(4, '0');
@@ -134,7 +146,6 @@ document.addEventListener('mousemove', (e) => {
 
 // Scroll Progress Indicator
 function initScrollIndicator() {
-    // Create element if it doesn't exist
     if (!document.getElementById('scroll-indicator')) {
         const indicator = document.createElement('div');
         indicator.id = 'scroll-indicator';
@@ -150,18 +161,14 @@ function updateScrollProgress() {
     const docHeight = document.documentElement.scrollHeight - window.innerHeight;
     const scrollPercent = docHeight > 0 ? Math.round((scrollTop / docHeight) * 100) : 0;
 
-    // Create ASCII bar
-    const totalBars = 15; // Longer bar for vertical look
+    const totalBars = 15;
     const filledBars = Math.round((scrollPercent / 100) * totalBars);
     const emptyBars = totalBars - filledBars;
 
     const bar = '|'.repeat(filledBars) + '.'.repeat(emptyBars);
-
-    // Format: SCROLL [|||||.....] 050%
     indicator.textContent = `SCROLL [${bar}] ${String(scrollPercent).padStart(3, '0')}%`;
 }
 
-// Initialize
 initScrollIndicator();
 window.addEventListener('scroll', updateScrollProgress);
 window.addEventListener('resize', updateScrollProgress);
