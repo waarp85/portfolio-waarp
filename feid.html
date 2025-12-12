@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"
+    class="scroll-smooth bg-neutral-950 text-white antialiased selection:bg-white selection:text-neutral-950">
 
 <head>
     <meta charset="UTF-8">
@@ -31,11 +32,6 @@
     <meta name="twitter:image" content="https://www.andreamarcias.com/assets/images/feid-hq-1.png">
     <meta name="twitter:creator" content="@_waarp_">
 
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-
     <!-- Structured Data / JSON-LD -->
     <script type="application/ld+json">
     {
@@ -56,140 +52,343 @@
       }
     }
     </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Tailwind (CDN for single file requirement) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        neutral: {
+                            850: '#1f1f1f',
+                            900: '#171717',
+                            950: '#0a0a0a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Utilities & Cursor */
+        body {
+            cursor: none;
+        }
+
+        .custom-cursor {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 12px;
+            height: 12px;
+            background-color: white;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            transform: translate(-50%, -50%);
+            mix-blend-mode: difference;
+            transition: width 0.2s, height 0.2s;
+        }
+
+        .custom-cursor.hovered {
+            width: 48px;
+            height: 48px;
+            opacity: 0.1;
+        }
+
+        /* Grid Background Pattern */
+        .bg-grid {
+            background-size: 40px 40px;
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        }
+
+        /* Hide Scrollbar */
+        ::-webkit-scrollbar {
+            width: 0px;
+            background: transparent;
+        }
+    </style>
 </head>
 
-<body>
-    <div class="cursor"></div>
-    <div class="cursor-follower"></div>
-    <!-- TECHNICAL UI LAYER -->
-    <div id="tech-ui-layer">
-        <div id="system-clock">00:00:00</div>
-        <div id="mouse-coords">X: 0000 Y: 0000</div>
+<body class="bg-neutral-950 text-neutral-200 relative overflow-x-hidden">
+
+    <!-- Cursor -->
+    <div id="cursor" class="custom-cursor hidden md:block"></div>
+
+    <!-- Background Grid -->
+    <div class="fixed inset-0 bg-grid pointer-events-none z-0"></div>
+
+    <!-- Technical UI Layer (Fixed) -->
+    <div
+        class="fixed inset-0 pointer-events-none z-50 p-6 flex flex-col justify-between font-mono text-xs text-neutral-500 uppercase tracking-widest mix-blend-difference">
+        <div class="flex justify-between items-start">
+            <a href="index.html"
+                class="font-bold text-white tracking-tighter pointer-events-auto hover:text-neutral-400 transition-colors">WAARP</a>
+            <div class="flex flex-col items-end gap-1">
+                <span id="system-clock">00:00:00</span>
+                <span id="mouse-coords" class="hidden md:block">X: 000 Y: 000</span>
+            </div>
+        </div>
+        <div class="flex justify-between items-end">
+            <span class="hidden md:block">FEID X SPRITE - LIMELIGHT SEASON 2</span>
+            <div class="flex gap-6 pointer-events-auto">
+                <a href="muse.html" class="hover:text-white transition-colors">PREVIOUS</a>
+                <a href="index.html" class="hover:text-white transition-colors">HOME</a>
+                <a href="christina.html" class="hover:text-white transition-colors">NEXT</a>
+            </div>
+        </div>
     </div>
-    <!-- MAIN GRID CONTAINER -->
-    <div class="main-grid">
 
-        <!-- CORNER NAV (Fixed positions in grid) -->
-        <div class="nav-tl"><a href="index.html">← BACK</a></div>
-        <div class="nav-tr">FEID X SPRITE</div>
-        <div class="nav-bl">MUSIC VIDEO</div>
-        <div class="nav-br">SCROLL</div>
+    <!-- Scroll Progress (Right Fixed) -->
+    <div
+        class="fixed right-6 top-1/2 -translate-y-1/2 flex flex-col items-center gap-2 hidden md:flex mix-blend-difference z-50">
+        <span id="scroll-text" class="font-mono text-xs text-neutral-500 font-bold"
+            style="writing-mode: vertical-rl; text-orientation: mixed;">0%</span>
+        <div class="h-24 w-[1px] bg-neutral-800 relative">
+            <div id="scroll-bar" class="absolute top-0 left-0 w-full bg-white transition-all duration-100"
+                style="height: 0%"></div>
+        </div>
+    </div>
 
-        <!-- PROJECT HERO -->
-        <section id="project-hero" class="grid-section">
-            <h1 class="project-title">
-                <div class="line-wrapper"><span class="line">FEID X SPRITE</span></div>
-            </h1>
-            <p class="project-subtitle">LIMELIGHT SEASON 2</p>
-        </section>
+    <!-- Main Content -->
+    <main class="relative z-10 pt-24 pb-24">
 
-        <!-- PROJECT META -->
-        <section id="project-meta" class="grid-section">
-            <div class="meta-grid">
-                <div class="meta-item">
-                    <h3>CATEGORY</h3>
-                    <p>Music Video</p>
-                </div>
-                <div class="meta-item">
-                    <h3>CLIENT</h3>
-                    <p>Feid x Sprite</p>
-                </div>
-                <div class="meta-item">
-                    <h3>ROLE</h3>
-                    <p>3D Edit & Animation</p>
-                </div>
+        <!-- Project Hero -->
+        <section class="min-h-[60vh] flex flex-col justify-center items-center px-6 border-b border-neutral-800">
+            <div class="relative z-10 text-center">
+                <h1
+                    class="text-4xl md:text-8xl font-semibold tracking-tighter leading-none text-white select-none mb-4">
+                    FEID X SPRITE
+                </h1>
+                <p class="text-xs font-mono uppercase tracking-widest text-neutral-500">LIMELIGHT SEASON 2</p>
             </div>
         </section>
 
-        <!-- WHAT I DID -->
-        <section id="project-description" class="grid-section">
-            <div class="description-content">
-                <h2 class="section-heading">THE PROJECT</h2>
-                <p class="description-text">
-                    The goal was to create a title that recalled the world of motorsport (metal, electricity,
-                    aggression). We mixed 3D and post in 2D for an effective rendering.
-                </p>
-                <br>
-                <h2 class="section-heading">CREDITS</h2>
-                <p class="description-text" style="font-size: 0.9rem; opacity: 0.7;">
-                    Director: ROGELIO, Executive Producer: Victor Mata, Producer: Sara Renteria, Production coordinator:
-                    Noemí Montero, Local Producers: 36 Grados & Le Producers, Line Producer: Elvira Londoño & Andrea
-                    Rodriguez, Producer assistant: Carlos Suarez, 1st AD: Valentina Carmona, Cinematographer: Uri
-                    Barcelona, Gaffer: Chris Stwart, Production Designers: Set Inventors a.k.a. Rita Villarroel, Stills
-                    Photographer: Felipe Molina Post, Production Coordinator: Marina M. Campomanes, Editor: Borja
-                    Bernal, Color and Online: Metropolitana, VFX: Glassworks, Sound mix: IXYXI, Title design: Luca
-                    Devinu and Andrea Marcias, Local production by 36 Grados & Le Producers, Produced by CANADA
-                </p>
+        <!-- Project Meta & Description -->
+        <section class="border-b border-neutral-800 bg-neutral-950/50 backdrop-blur-sm">
+            <div class="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-neutral-800">
+
+                <!-- Meta Columns -->
+                <div class="p-8 md:p-12 space-y-8">
+                    <div>
+                        <h3 class="text-xs font-mono text-neutral-500 uppercase tracking-widest mb-2">Client</h3>
+                        <p class="text-white text-lg">Feid x Sprite</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xs font-mono text-neutral-500 uppercase tracking-widest mb-2">Category</h3>
+                        <p class="text-white text-lg">Music Video</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xs font-mono text-neutral-500 uppercase tracking-widest mb-2">Role</h3>
+                        <p class="text-white text-lg">3D Edit & Animation</p>
+                    </div>
+                </div>
+
+                <!-- Description Column -->
+                <div class="p-8 md:p-12">
+                    <h3 class="text-xs font-mono text-neutral-500 uppercase tracking-widest mb-6">About</h3>
+                    <p class="text-neutral-400 font-light text-lg mb-8">
+                        The goal was to create a title that recalled the world of motorsport (metal, electricity,
+                        aggression). We mixed 3D and post in 2D for an effective rendering.
+                    </p>
+
+                    <h3 class="text-xs font-mono text-neutral-500 uppercase tracking-widest mb-6">Credits</h3>
+                    <div class="space-y-4 text-neutral-400 font-mono text-xs leading-relaxed">
+                        <p>Director: ROGELIO, Executive Producer: Victor Mata, Producer: Sara Renteria, Production
+                            coordinator: Noemí Montero</p>
+                        <p>Local Producers: 36 Grados & Le Producers, Line Producer: Elvira Londoño & Andrea Rodriguez
+                        </p>
+                        <p>Title design: <span class="text-white">Luca Devinu and Andrea Marcias</span></p>
+                        <p>VFX: Glassworks</p>
+                    </div>
+                </div>
+
             </div>
         </section>
 
-        <!-- VIDEO SECTION -->
-        <section id="project-video" class="grid-section" style="padding: 2rem 0;">
-            <div class="video-container" style="width: 100%; max-width: 100%;">
-                <video controls autoplay muted loop playsinline
-                    style="width: 100%; border-radius: 8px; box-shadow: 0 8px 32px rgba(0,0,0,0.3);">
+        <!-- Video Section -->
+        <section class="border-b border-neutral-800 p-6 md:p-12">
+            <div class="w-full max-w-7xl mx-auto rounded-lg overflow-hidden shadow-2xl border border-neutral-800">
+                <video controls autoplay muted loop playsinline class="w-full">
                     <source src="assets/images/feid-video.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
         </section>
 
-        <!-- IMAGE GALLERY -->
-        <section id="project-gallery" class="grid-section" style="padding: 0;">
-            <div class="gallery-grid-full">
+        <!-- Gallery -->
+        <section class="border-b border-neutral-800">
+            <div
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-neutral-800">
+
                 <!-- Main Visual -->
-                <div class="gallery-item-wide">
-                    <img src="assets/images/feid-hq-1.webp"
-                        alt="Feid x Sprite Limelight Season 2 3D Title - 3D Visual Artist Branding Motion Cinema 4D Octane Render After Effects Photoshop - by Waarp">
+                <div class="col-span-1 md:col-span-2 lg:col-span-3 p-0">
+                    <img src="assets/images/feid-hq-1.webp" alt="Feid x Sprite Main"
+                        class="w-full h-auto block grayscale hover:grayscale-0 transition-all duration-700">
                 </div>
 
-                <!-- Detail 1 -->
-                <div class="gallery-item">
-                    <img src="assets/images/feid-hq-2.webp"
-                        alt="Feid x Sprite Limelight Season 2 3D Animation Frame - 3D Visual Artist Branding Motion Cinema 4D Octane Render After Effects Photoshop - by Waarp"
-                        loading="lazy">
+                <!-- Details -->
+                <div class="col-span-1 border-b border-neutral-800 lg:border-b-0">
+                    <img src="assets/images/feid-hq-2.webp" alt="Animation Frame"
+                        class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700">
+                </div>
+                <div class="col-span-1 border-b border-neutral-800 lg:border-b-0">
+                    <img src="assets/images/feid-hq-3.webp" alt="VFX Detail"
+                        class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700">
                 </div>
 
-                <!-- Detail 2 -->
-                <div class="gallery-item">
-                    <img src="assets/images/feid-hq-3.webp"
-                        alt="Feid x Sprite Limelight Season 2 Visual Effects - 3D Visual Artist Branding Motion Cinema 4D Octane Render After Effects Photoshop - by Waarp"
-                        loading="lazy">
+                <!-- Placeholder for grid balance if needed, or leave as is -->
+                <div class="col-span-1 bg-neutral-900 border-neutral-800 flex items-center justify-center p-12">
+                    <span class="font-mono text-neutral-700 text-xs">WAARP / DIGITAL MATTER</span>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Footer / Contact -->
+        <section id="contact" class="min-h-[50vh] flex flex-col justify-between px-6 py-24 bg-neutral-950 relative">
+            <div class="max-w-4xl">
+                <h2 class="text-xs font-mono text-neutral-500 uppercase tracking-widest mb-8">Next Project</h2>
+                <a href="christina.html"
+                    class="text-4xl md:text-6xl font-semibold tracking-tighter text-white hover:text-neutral-400 transition-colors">
+                    CHRISTINA AGUILERA<br>→
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-24 pt-12 border-t border-neutral-800">
+                <div class="flex flex-col gap-4">
+                    <span class="text-xs font-mono text-neutral-500 uppercase tracking-widest">Socials</span>
+                    <div class="flex gap-6">
+                        <a href="https://www.instagram.com/_waarp_/" target="_blank"
+                            class="flex items-center gap-2 text-sm text-white hover:text-neutral-400 transition-colors">
+                            <i data-lucide="instagram" class="w-4 h-4 stroke-[1.5]"></i> Instagram
+                        </a>
+                        <a href="https://www.behance.net/waarp" target="_blank"
+                            class="flex items-center gap-2 text-sm text-white hover:text-neutral-400 transition-colors">
+                            <i data-lucide="briefcase" class="w-4 h-4 stroke-[1.5]"></i> Behance
+                        </a>
+                    </div>
+                </div>
+
+                <div class="flex flex-col md:items-end gap-1">
+                    <p class="text-xs text-neutral-600 font-mono">© 2025 Andrea Marcias</p>
+                    <p class="text-xs text-neutral-600 font-mono">P.IVA 02900950904</p>
                 </div>
             </div>
         </section>
 
-        <!-- PROJECT NAVIGATION -->
-        <section id="project-nav" class="grid-section">
-            <div class="project-nav-grid">
-                <a href="swarovski.html" class="nav-link">← PREVIOUS</a>
-                <a href="index.html" class="nav-link">BACK TO HOME</a>
-                <a href="christina.html" class="nav-link">NEXT →</a>
-            </div>
-        </section>
-
-        <!-- CONTACT SECTION -->
-        <section id="contact" class="grid-section">
-            <div class="contact-content">
-                <h2>CONTACT.</h2>
-                <a href="mailto:andrea.marcias@hotmail.com" class="email-link">andrea.marcias@hotmail.com</a>
-                <div class="socials-grid">
-                    <a href="https://www.instagram.com/_waarp_/" target="_blank">INSTAGRAM</a>
-                    <a href="https://www.behance.net/waarp" target="_blank">BEHANCE</a>
-                </div>
-                <div class="footer-info">
-                    <p>&copy; 2025 ANDREA MARCIAS</p>
-                    <p>P.IVA 02900950904</p>
-                </div>
-            </div>
-        </section>
-
-    </div>
+    </main>
 
     <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="assets/js/script.js"></script>
+
+    <!-- Interactive Scripts -->
+    <script>
+        // Init Icons
+        lucide.createIcons();
+
+        // Register GSAP
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Title Animation
+        gsap.from("h1", {
+            y: 100,
+            opacity: 0,
+            duration: 1.5,
+            ease: "power4.out",
+            delay: 0.2
+        });
+
+        // Clock Functionality
+        function updateClock() {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString('en-US', {
+                hour12: false,
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit'
+            });
+            document.getElementById('system-clock').textContent = timeString;
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+
+        // Mouse Tracker
+        const coords = document.getElementById('mouse-coords');
+        const cursor = document.getElementById('cursor');
+        const links = document.querySelectorAll('a');
+
+        document.addEventListener('mousemove', (e) => {
+            // Update Coords UI
+            const x = String(e.clientX).padStart(4, '0');
+            const y = String(e.clientY).padStart(4, '0');
+            if (coords) coords.textContent = `X: ${x} Y: ${y}`;
+
+            // Custom Cursor Movement
+            if (cursor) {
+                cursor.style.left = e.clientX + 'px';
+                cursor.style.top = e.clientY + 'px';
+            }
+        });
+
+        // Hover Effect on Cursor
+        links.forEach(link => {
+            link.addEventListener('mouseenter', () => cursor.classList.add('hovered'));
+            link.addEventListener('mouseleave', () => cursor.classList.remove('hovered'));
+        });
+
+        // Scroll Percentage
+        function updateScroll() {
+            // Robust cross-browser scroll position
+            const scrollTop = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop;
+
+            // Robust total height
+            const scrollHeight = Math.max(
+                document.body.scrollHeight, document.documentElement.scrollHeight,
+                document.body.offsetHeight, document.documentElement.offsetHeight,
+                document.body.clientHeight, document.documentElement.clientHeight
+            ) - document.documentElement.clientHeight;
+
+            let scrollPercent = 0;
+            if (scrollHeight > 0) {
+                scrollPercent = Math.round((scrollTop / scrollHeight) * 100);
+            }
+
+            // Safety check
+            if (!isFinite(scrollPercent) || isNaN(scrollPercent)) {
+                scrollPercent = 0;
+            }
+
+            const scrollText = document.getElementById('scroll-text');
+            const scrollBar = document.getElementById('scroll-bar');
+
+            if (scrollText) scrollText.textContent = scrollPercent + '%';
+            if (scrollBar) scrollBar.style.height = scrollPercent + '%';
+        }
+
+        window.addEventListener('scroll', updateScroll);
+        window.addEventListener('resize', updateScroll);
+        updateScroll();
+    </script>
+
 </body>
 
 </html>
