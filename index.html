@@ -618,13 +618,44 @@
 
 
     <!-- Cookie Banner -->
-    <div class="cookie-banner show">
-        <div class="cookie-content">
-            <p class="cookie-text">This website uses technical cookies to ensure proper functionality and enhance your
-                browsing experience. By continuing to use this site, you consent to the use of cookies.</p>
-            <button class="cookie-btn">Accept</button>
+    <div id="cookie-banner"
+        class="fixed bottom-0 left-0 right-0 z-[9999] bg-neutral-900 border-t border-neutral-700 p-4 transform transition-transform duration-300">
+        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p class="text-sm text-neutral-300 text-center sm:text-left">
+                This website uses technical cookies to ensure proper functionality and enhance your browsing experience.
+                By continuing to use this site, you consent to the use of cookies.
+            </p>
+            <button id="cookie-accept"
+                class="shrink-0 bg-white text-neutral-900 px-6 py-2 text-sm font-medium uppercase tracking-wider hover:bg-neutral-200 transition-colors">
+                Accept
+            </button>
         </div>
     </div>
+
+    <script>
+        // Cookie Banner Logic
+        (function () {
+            const banner = document.getElementById('cookie-banner');
+            const acceptBtn = document.getElementById('cookie-accept');
+
+            if (!banner || !acceptBtn) return;
+
+            // Check if already accepted
+            if (localStorage.getItem('cookiesAccepted') === 'true') {
+                banner.style.display = 'none';
+                return;
+            }
+
+            // Handle accept click
+            acceptBtn.addEventListener('click', function () {
+                localStorage.setItem('cookiesAccepted', 'true');
+                banner.style.transform = 'translateY(100%)';
+                setTimeout(function () {
+                    banner.style.display = 'none';
+                }, 300);
+            });
+        })();
+    </script>
 
 </body>
 
