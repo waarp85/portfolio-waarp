@@ -86,10 +86,10 @@ function initCookieBanner() {
 
     if (!banner || !acceptBtn) return;
 
-    if (!localStorage.getItem('cookiesAccepted')) {
-        setTimeout(() => {
-            banner.classList.add('show');
-        }, 1000);
+    // Hide banner if already accepted
+    if (localStorage.getItem('cookiesAccepted')) {
+        banner.classList.remove('show');
+        return;
     }
 
     acceptBtn.addEventListener('click', () => {
