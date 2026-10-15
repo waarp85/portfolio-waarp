@@ -5,8 +5,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WAARP | Andrea Marcias - 3D Visual Artist</title>
-    <meta name="description" content="Portfolio of Andrea Marcias (Waarp), 3D Visual Artist &amp; Motion Designer.">
+    <title>Andrea Marcias (Waarp) | 3D Artist &amp; Motion Designer</title>
+    <meta name="description" content="Andrea Marcias (Waarp) is an Italian 3D artist and motion designer creating CGI, 3D visuals and animation for music artists, luxury brands and agencies: Swarovski, Muse, Christina Aguilera, Prime Video and more.">
+    <meta name="author" content="Andrea Marcias">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.andreamarcias.com/">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.andreamarcias.com/">
+    <meta property="og:title" content="Andrea Marcias (Waarp) | 3D Artist &amp; Motion Designer">
+    <meta property="og:description" content="Andrea Marcias (Waarp) is an Italian 3D artist and motion designer creating CGI, 3D visuals and animation for music artists, luxury brands and agencies: Swarovski, Muse, Christina Aguilera, Prime Video and more.">
+    <meta property="og:image" content="https://www.andreamarcias.com/assets/images/og-image.jpg">
+    <meta property="og:site_name" content="WAARP Portfolio">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Andrea Marcias (Waarp) | 3D Artist &amp; Motion Designer">
+    <meta name="twitter:description" content="Andrea Marcias (Waarp) is an Italian 3D artist and motion designer creating CGI, 3D visuals and animation for music artists, luxury brands and agencies: Swarovski, Muse, Christina Aguilera, Prime Video and more.">
+    <meta name="twitter:image" content="https://www.andreamarcias.com/assets/images/og-image.jpg">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://www.andreamarcias.com/#person",
+          "name": "Andrea Marcias",
+          "alternateName": "Waarp",
+          "jobTitle": "3D Artist & Motion Designer",
+          "url": "https://www.andreamarcias.com/",
+          "image": "https://www.andreamarcias.com/assets/images/og-image.jpg",
+          "address": { "@type": "PostalAddress", "addressCountry": "IT" },
+          "knowsAbout": ["3D art", "CGI", "Motion design", "3D animation", "Product visualization", "Cinema 4D", "Octane Render"],
+          "sameAs": ["https://www.instagram.com/_waarp_/", "https://www.behance.net/waarp"]
+        },
+        {
+          "@type": "WebSite",
+          "url": "https://www.andreamarcias.com/",
+          "name": "WAARP | Andrea Marcias",
+          "author": { "@id": "https://www.andreamarcias.com/#person" }
+        }
+      ]
+    }
+    </script>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -142,14 +184,15 @@
         <section id="hero"
             class="min-h-[85vh] flex flex-col justify-center items-center px-6 border-b border-neutral-800">
             <div class="relative z-10 text-center">
-                <h1 class="text-6xl md:text-9xl font-semibold tracking-tighter leading-none text-white select-none">
+                <h1 class="sr-only">Andrea Marcias (Waarp), 3D Artist &amp; Motion Designer</h1>
+                <p id="hero-title" aria-hidden="true" class="text-6xl md:text-9xl font-semibold tracking-tighter leading-none text-white select-none">
                     DIGITAL<br>
                     <span class="text-neutral-800 relative">
                         /
                         <span class="absolute top-0 left-0 text-neutral-800 blur-sm">/</span>
                     </span>
                     MATTER
-                </h1>
+                </p>
             </div>
         </section>
 
@@ -501,7 +544,7 @@
                 <div class="flex flex-col md:items-end gap-1">
                     <a href="privacy.html"
                         class="text-xs text-neutral-500 font-mono hover:text-white transition-colors">Privacy Policy</a>
-                    <p class="text-xs text-neutral-600 font-mono">© 2025 Andrea Marcias</p>
+                    <p class="text-xs text-neutral-600 font-mono">© 2026 Andrea Marcias</p>
                     <p class="text-xs text-neutral-600 font-mono">P.IVA 02900950904</p>
                 </div>
             </div>
@@ -536,7 +579,7 @@
         });
 
         // Title Animation
-        gsap.from("#hero h1", {
+        gsap.from("#hero-title", {
             y: 100,
             opacity: 0,
             duration: 1.5,
