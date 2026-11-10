@@ -18,14 +18,14 @@
                 '': '/', '/about': '/', '/home': '/', '/work': '/#work', '/works': '/#work', '/projects': '/#work',
                 '/contact': '/#contact', '/contacts': '/#contact',
                 '/swarovski-arianagrande': '/swarovski.html', '/feid-x-sprite': '/feid.html',
-                '/christina-aguilera': '/christina.html', '/researchanddevelopment': '/rd.html', '/r-d': '/rd.html'
+                '/christina-aguilera': '/christina.html', '/researchanddevelopment': '/', '/r-d': '/'
             };
             var keys = [
                 ['mayhem', '/mayhem-ball.html'], ['gaga', '/mayhem-ball.html'], ['swarovski', '/swarovski.html'],
                 ['ariana', '/swarovski.html'], ['muse', '/muse.html'], ['feid', '/feid.html'], ['sprite', '/feid.html'],
                 ['christina', '/christina.html'], ['xtina', '/christina.html'], ['mahmood', '/mahmood.html'],
                 ['paper', '/paper.html'], ['gwen', '/paper.html'], ['romancero', '/romancero.html'],
-                ['research', '/rd.html'], ['colorizer', '/rd.html']
+                ['research', '/'], ['colorizer', '/']
             ];
             var to = map.hasOwnProperty(p) ? map[p] : null;
             if (!to) for (var i = 0; i < keys.length; i++) if (p.indexOf(keys[i][0]) !== -1) { to = keys[i][1]; break; }
