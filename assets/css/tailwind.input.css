@@ -12,3 +12,6 @@
 
 /* Immagini e video: niente trascinamento e niente menu "salva" con la pressione lunga su iPhone */
 img, video { -webkit-user-drag: none; -webkit-touch-callout: none; user-select: none; }
+
+/* Link interni (Work, About, Contact): la sezione non finisce sotto la barra in alto */
+section[id]{scroll-margin-top:3.5rem}
