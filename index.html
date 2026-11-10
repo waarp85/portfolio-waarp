@@ -177,14 +177,20 @@
             </div>
         </section>
 
-        <!-- Reel Teaser -->
-        <section id="reel" class="border-b border-neutral-800 bg-black">
-            <video controlsList="nodownload" disablePictureInPicture id="reel-teaser" class="block w-full h-auto" autoplay muted loop playsinline preload="auto"
-                poster="assets/images/reel/teaser-poster.jpg" width="1600" height="900"
-                aria-label="Showreel teaser: a selection of 3D and motion work by Andrea Marcias">
-                <source src="assets/images/reel/teaser-mobile.mp4" type="video/mp4" media="(max-width: 767px)">
-                <source src="assets/images/reel/teaser.mp4" type="video/mp4">
-            </video>
+        <!-- Reel Teaser: contained, not full width, so it stays sharp on large screens -->
+        <section id="reel" class="px-6 py-16 md:py-24 border-b border-neutral-800">
+            <div class="max-w-5xl mx-auto">
+                <video controlsList="nodownload" disablePictureInPicture id="reel-teaser" class="block w-full h-auto bg-black" autoplay muted loop playsinline preload="auto"
+                    poster="assets/images/reel/teaser-poster.jpg" width="1600" height="900"
+                    aria-label="Showreel teaser: a selection of 3D and motion work by Andrea Marcias">
+                    <source src="assets/images/reel/teaser-mobile.mp4" type="video/mp4" media="(max-width: 767px)">
+                    <source src="assets/images/reel/teaser.mp4" type="video/mp4">
+                </video>
+                <div class="mt-4 flex justify-between items-center font-mono text-xs uppercase tracking-widest text-neutral-500">
+                    <span>Showreel</span>
+                    <span>Selected work 2021-2026</span>
+                </div>
+            </div>
         </section>
 
         <!-- Clients Marquee -->
