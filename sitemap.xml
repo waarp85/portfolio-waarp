@@ -7,6 +7,12 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://www.andreamarcias.com/mayhem-ball.html</loc>
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.andreamarcias.com/swarovski.html</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>monthly</changefreq>
@@ -27,6 +33,12 @@
   <url>
     <loc>https://www.andreamarcias.com/christina.html</loc>
     <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.andreamarcias.com/mahmood.html</loc>
+    <lastmod>2026-11-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

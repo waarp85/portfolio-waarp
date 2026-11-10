@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Look "meno tech": nasconde gli elementi da interfaccia tecnica */
+.bg-grid{background-image:none!important}
+#mouse-coords,#system-clock{display:none!important}
+div:has(>#scroll-text){display:none!important}
+.custom-cursor{display:none!important}
+body{cursor:auto!important}
+
+/* Loop video sulle card dei lavori in homepage */
+.card-loop{opacity:0;transition:opacity .5s ease}
+.card-loop.is-playing{opacity:1}

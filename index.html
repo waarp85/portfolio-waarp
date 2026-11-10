@@ -17,7 +17,7 @@
     <meta property="og:title" content="Andrea Marcias (Waarp) | 3D Artist &amp; Motion Designer">
     <meta property="og:description" content="Andrea Marcias (Waarp) is an Italian 3D artist and motion designer creating CGI, 3D visuals and animation for music artists, luxury brands and agencies: Swarovski, Muse, Christina Aguilera, Prime Video and more.">
     <meta property="og:image" content="https://www.andreamarcias.com/assets/images/og-image.jpg">
-    <meta property="og:site_name" content="WAARP Portfolio">
+    <meta property="og:site_name" content="Andrea Marcias">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Andrea Marcias (Waarp) | 3D Artist &amp; Motion Designer">
     <meta name="twitter:description" content="Andrea Marcias (Waarp) is an Italian 3D artist and motion designer creating CGI, 3D visuals and animation for music artists, luxury brands and agencies: Swarovski, Muse, Christina Aguilera, Prime Video and more.">
@@ -43,7 +43,7 @@
         {
           "@type": "WebSite",
           "url": "https://www.andreamarcias.com/",
-          "name": "WAARP | Andrea Marcias",
+          "name": "Andrea Marcias (Waarp)",
           "author": { "@id": "https://www.andreamarcias.com/#person" }
         }
       ]
@@ -60,36 +60,6 @@
     <!-- Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
-    <!-- Tailwind (CDN for single file requirement) -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        mono: ['JetBrains Mono', 'monospace'],
-                    },
-                    colors: {
-                        neutral: {
-                            850: '#1f1f1f',
-                            900: '#171717',
-                            950: '#0a0a0a',
-                        }
-                    },
-                    animation: {
-                        'marquee': 'marquee 25s linear infinite',
-                    },
-                    keyframes: {
-                        marquee: {
-                            '0%': { transform: 'translateX(0%)' },
-                            '100%': { transform: 'translateX(-50%)' },
-                        }
-                    }
-                }
-            }
-        }
-    </script>
 
     <style>
         /* Custom Utilities & Cursor */
@@ -137,6 +107,7 @@
             backdrop-filter: blur(8px);
         }
     </style>
+    <link rel="stylesheet" href="assets/css/tailwind.css">
 </head>
 
 <body class="bg-neutral-950 text-neutral-200 relative overflow-x-hidden">
@@ -151,14 +122,14 @@
     <div
         class="fixed inset-0 pointer-events-none z-50 p-6 flex flex-col justify-between font-mono text-xs text-neutral-500 uppercase tracking-widest mix-blend-difference">
         <div class="flex justify-between items-start">
-            <span class="font-bold text-white tracking-tighter pointer-events-auto">WAARP</span>
+            <span class="font-bold text-white tracking-tighter pointer-events-auto">ANDREA MARCIAS</span>
             <div class="flex flex-col items-end gap-1">
                 <span id="system-clock">00:00:00</span>
                 <span id="mouse-coords" class="hidden md:block">X: 000 Y: 000</span>
             </div>
         </div>
         <div class="flex justify-between items-end">
-            <span class="hidden md:block">3D Visual Artist</span>
+            <span class="hidden md:block">3D Artist &amp; Motion Designer</span>
             <div class="flex gap-6 pointer-events-auto">
                 <a href="rd.html" class="hover:text-white transition-colors">R&amp;D</a>
                 <a href="#contact" class="hover:text-white transition-colors">Contact</a>
@@ -181,84 +152,40 @@
     <main class="relative z-10 pt-24 pb-24">
 
         <!-- Hero Section -->
-        <section id="hero"
-            class="min-h-[85vh] flex flex-col justify-center items-center px-6 border-b border-neutral-800">
-            <div class="relative z-10 text-center">
-                <h1 class="sr-only">Andrea Marcias (Waarp), 3D Artist &amp; Motion Designer</h1>
-                <p id="hero-title" aria-hidden="true" class="text-6xl md:text-9xl font-semibold tracking-tighter leading-none text-white select-none">
-                    DIGITAL<br>
-                    <span class="text-neutral-800 relative">
-                        /
-                        <span class="absolute top-0 left-0 text-neutral-800 blur-sm">/</span>
-                    </span>
-                    MATTER
+        <section id="hero" class="px-6 pt-8 pb-16 md:pt-16 md:pb-24 border-b border-neutral-800">
+            <div class="max-w-6xl">
+                <h1 id="hero-title" class="text-5xl md:text-8xl font-semibold tracking-tighter leading-none text-white">
+                    Andrea Marcias
+                </h1>
+                <p class="mt-4 md:mt-6 text-2xl md:text-5xl font-light tracking-tight leading-tight text-neutral-500">
+                    3D Artist &amp; Motion Designer
                 </p>
+                <p class="mt-8 max-w-2xl text-base md:text-lg leading-relaxed text-neutral-400">
+                    CGI, 3D visuals and title design for <span class="text-white">music artists</span>,
+                    <span class="text-white">luxury brands</span> and <span class="text-white">agencies</span>.
+                    Also known as Waarp. Based in Italy, available for freelance projects worldwide.
+                </p>
+                <div class="mt-10 flex flex-wrap items-center gap-8">
+                    <a href="#contact"
+                        class="inline-block bg-white text-neutral-950 px-6 py-3 text-sm font-bold uppercase tracking-widest hover:bg-neutral-200 transition-colors">
+                        Get In Touch
+                    </a>
+                    <a href="#work"
+                        class="inline-flex items-center gap-2 text-sm uppercase tracking-widest text-neutral-400 hover:text-white transition-colors">
+                        View Work <i data-lucide="arrow-down" class="w-4 h-4"></i>
+                    </a>
+                </div>
             </div>
         </section>
 
-        <!-- Bio Section -->
-        <section id="bio" class="px-6 py-24 md:py-32 border-b border-neutral-800 bg-neutral-950/50 backdrop-blur-sm">
-            <div class="max-w-4xl mx-auto">
-                <p class="text-2xl md:text-4xl leading-tight font-light text-neutral-500 tracking-tight">
-                    My name is Andrea Marcias, known as <span class="text-white font-medium">Waarp</span>.
-                    I am a 3D artist &amp; graphic designer based in Italy, crafting digital matter for the
-                    <span class="text-white font-medium">music industry</span>,
-                    <span class="text-white font-medium">luxury brands</span>, and
-                    <span class="text-white font-medium">agencies</span>.
-                </p>
-            </div>
-        </section>
-
-        <!-- Services Grid -->
-        <section id="services" class="border-b border-neutral-800">
-            <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-neutral-800">
-
-                <!-- Service 01 -->
-                <div class="group p-8 md:p-12 hover:bg-neutral-900/50 transition-colors duration-500">
-                    <div class="flex justify-between items-start mb-12">
-                        <i data-lucide="layers" class="text-neutral-500 w-6 h-6 stroke-[1.5]"></i>
-                        <span class="font-mono text-xs text-neutral-600">01</span>
-                    </div>
-                    <h3 class="text-xl font-medium text-white mb-4 tracking-tight">3D Visualization</h3>
-                    <ul class="space-y-2 text-sm text-neutral-400 font-mono">
-                        <li>Lookdev / Texturing</li>
-                        <li>Lighting Setup</li>
-                        <li>Product Viz</li>
-                        <li>Hyperrealism</li>
-                    </ul>
-                </div>
-
-                <!-- Service 02 -->
-                <div class="group p-8 md:p-12 hover:bg-neutral-900/50 transition-colors duration-500">
-                    <div class="flex justify-between items-start mb-12">
-                        <i data-lucide="play-circle" class="text-neutral-500 w-6 h-6 stroke-[1.5]"></i>
-                        <span class="font-mono text-xs text-neutral-600">02</span>
-                    </div>
-                    <h3 class="text-xl font-medium text-white mb-4 tracking-tight">Animation</h3>
-                    <ul class="space-y-2 text-sm text-neutral-400 font-mono">
-                        <li>Title Sequences</li>
-                        <li>Visual Loops</li>
-                        <li>Motion Graphics</li>
-                        <li>Simulations</li>
-                    </ul>
-                </div>
-
-                <!-- Service 03 -->
-                <div class="group p-8 md:p-12 hover:bg-neutral-900/50 transition-colors duration-500">
-                    <div class="flex justify-between items-start mb-12">
-                        <i data-lucide="layout-grid" class="text-neutral-500 w-6 h-6 stroke-[1.5]"></i>
-                        <span class="font-mono text-xs text-neutral-600">03</span>
-                    </div>
-                    <h3 class="text-xl font-medium text-white mb-4 tracking-tight">Applications</h3>
-                    <ul class="space-y-2 text-sm text-neutral-400 font-mono">
-                        <li>Music Visuals</li>
-                        <li>Fashion &amp; Luxury</li>
-                        <li>Album Packaging</li>
-                        <li>Brand Identity</li>
-                    </ul>
-                </div>
-
-            </div>
+        <!-- Reel Teaser -->
+        <section id="reel" class="border-b border-neutral-800 bg-black">
+            <video id="reel-teaser" class="block w-full h-auto" autoplay muted loop playsinline preload="auto"
+                poster="assets/images/reel/teaser-poster.jpg" width="1600" height="900"
+                aria-label="Showreel teaser: a selection of 3D and motion work by Andrea Marcias">
+                <source src="assets/images/reel/teaser-mobile.mp4" type="video/mp4" media="(max-width: 767px)">
+                <source src="assets/images/reel/teaser.mp4" type="video/mp4">
+            </video>
         </section>
 
         <!-- Clients Marquee -->
@@ -266,12 +193,16 @@
             <div class="flex whitespace-nowrap overflow-hidden w-full relative">
                 <div class="flex animate-marquee gap-16 items-center">
                     <span
-                        class="text-lg md:text-xl font-mono text-neutral-500 uppercase tracking-widest flex items-center gap-16">
+                        class="text-lg md:text-xl font-sans text-neutral-500 uppercase tracking-widest flex items-center gap-16">
+                        <span>Lady Gaga</span>
+                        <span class="text-neutral-700">//</span>
                         <span>Swarovski x Ariana Grande</span>
                         <span class="text-neutral-700">//</span>
                         <span>Warner Music</span>
                         <span class="text-neutral-700">//</span>
                         <span>Salmo</span>
+                        <span class="text-neutral-700">//</span>
+                        <span>Myke Towers</span>
                         <span class="text-neutral-700">//</span>
                         <span>Prime Video</span>
                         <span class="text-neutral-700">//</span>
@@ -281,7 +212,7 @@
                         <span class="text-neutral-700">//</span>
                         <span>Sony Music</span>
                         <span class="text-neutral-700">//</span>
-                        <span>Paper x Gwen Stephani</span>
+                        <span>Paper x Gwen Stefani</span>
                         <span class="text-neutral-700">//</span>
                         <span>Feid x Sprite</span>
                         <span class="text-neutral-700">//</span>
@@ -293,13 +224,17 @@
                         <span class="text-neutral-700">//</span>
                     </span>
                     <span
-                        class="text-lg md:text-xl font-mono text-neutral-500 uppercase tracking-widest flex items-center gap-16"
+                        class="text-lg md:text-xl font-sans text-neutral-500 uppercase tracking-widest flex items-center gap-16"
                         aria-hidden="true">
+                        <span>Lady Gaga</span>
+                        <span class="text-neutral-700">//</span>
                         <span>Swarovski x Ariana Grande</span>
                         <span class="text-neutral-700">//</span>
                         <span>Warner Music</span>
                         <span class="text-neutral-700">//</span>
                         <span>Salmo</span>
+                        <span class="text-neutral-700">//</span>
+                        <span>Myke Towers</span>
                         <span class="text-neutral-700">//</span>
                         <span>Prime Video</span>
                         <span class="text-neutral-700">//</span>
@@ -309,7 +244,7 @@
                         <span class="text-neutral-700">//</span>
                         <span>Sony Music</span>
                         <span class="text-neutral-700">//</span>
-                        <span>Paper x Gwen Stephani</span>
+                        <span>Paper x Gwen Stefani</span>
                         <span class="text-neutral-700">//</span>
                         <span>Feid x Sprite</span>
                         <span class="text-neutral-700">//</span>
@@ -329,15 +264,41 @@
             <!-- Header for section -->
             <div class="px-6 py-6 border-b border-neutral-800 flex justify-between items-center">
                 <h2 class="text-sm font-mono text-neutral-500 uppercase tracking-widest">Selected Works</h2>
-                <span class="text-xs text-neutral-600 font-mono">INDEX 2023-2025</span>
+                <span class="text-xs text-neutral-600 font-mono">INDEX 2023-2026</span>
             </div>
 
             <div
                 class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-neutral-800">
 
                 <!-- Work Item 1 -->
+                <a href="mayhem-ball.html"
+                    class="group block relative h-[400px] overflow-hidden bg-neutral-900/20 hover:bg-neutral-900/40 transition-colors">
+                    <img loading="lazy" decoding="async" src="assets/images/thumbs/mayhem-ball.webp" alt="Lady Gaga The Mayhem Ball, 3D title card" width="900" height="900"
+                        class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-out">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-black/30 pointer-events-none"></div>
+                    <div class="absolute inset-0 p-6 flex flex-col justify-between z-10">
+                        <div
+                            class="flex justify-between items-start opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <span
+                                class="text-xs font-mono border border-neutral-700 rounded-full px-2 py-1 text-neutral-400">Music</span>
+                            <i data-lucide="arrow-up-right" class="w-4 h-4 text-white"></i>
+                        </div>
+                        <div>
+                            <h3
+                                class="text-lg font-medium text-white tracking-tight mb-1 group-hover:translate-x-1 transition-transform duration-300">
+                                Lady Gaga - The Mayhem Ball</h3>
+                            <p class="text-xs text-neutral-300 font-mono">Title Cards - 3D Modeling</p>
+                        </div>
+                    </div>
+                    <!-- Abstract Placeholder for Image -->
+                </a>
+
+                <!-- Work Item 2 -->
                 <a href="swarovski.html"
                     class="group block relative h-[400px] overflow-hidden bg-neutral-900/20 hover:bg-neutral-900/40 transition-colors">
+                    <img loading="lazy" decoding="async" src="assets/images/thumbs/swarovski.webp" alt="Swarovski x Ariana Grande, 3D crystal monogram" width="900" height="900"
+                        class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-out">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-black/30 pointer-events-none"></div>
                     <div class="absolute inset-0 p-6 flex flex-col justify-between z-10">
                         <div
                             class="flex justify-between items-start opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -349,18 +310,18 @@
                             <h3
                                 class="text-lg font-medium text-white tracking-tight mb-1 group-hover:translate-x-1 transition-transform duration-300">
                                 Swarovski x Ariana Grande</h3>
-                            <p class="text-xs text-neutral-500 font-mono">3D Treatments - Modeling</p>
+                            <p class="text-xs text-neutral-300 font-mono">3D Treatments - Modeling</p>
                         </div>
                     </div>
                     <!-- Abstract Placeholder for Image -->
-                    <div
-                        class="absolute inset-0 bg-gradient-to-tr from-neutral-900 via-neutral-900 to-neutral-800 opacity-50 group-hover:scale-105 transition-transform duration-700 ease-out">
-                    </div>
                 </a>
 
-                <!-- Work Item 2 -->
+                <!-- Work Item 3 -->
                 <a href="muse.html"
                     class="group block relative h-[400px] overflow-hidden bg-neutral-900/20 hover:bg-neutral-900/40 transition-colors">
+                    <img loading="lazy" decoding="async" src="assets/images/thumbs/muse.webp" alt="Muse, Will of the People album packaging" width="900" height="900"
+                        class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-out">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-black/30 pointer-events-none"></div>
                     <div class="absolute inset-0 p-6 flex flex-col justify-between z-10">
                         <div
                             class="flex justify-between items-start opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -372,17 +333,19 @@
                             <h3
                                 class="text-lg font-medium text-white tracking-tight mb-1 group-hover:translate-x-1 transition-transform duration-300">
                                 Muse</h3>
-                            <p class="text-xs text-neutral-500 font-mono">Album Artworks</p>
+                            <p class="text-xs text-neutral-300 font-mono">Album Artworks</p>
                         </div>
-                    </div>
-                    <div
-                        class="absolute inset-0 bg-gradient-to-tl from-neutral-900 via-neutral-900 to-neutral-800 opacity-50 group-hover:scale-105 transition-transform duration-700 ease-out">
                     </div>
                 </a>
 
-                <!-- Work Item 3 -->
+                <!-- Work Item 4 -->
                 <a href="feid.html"
                     class="group block relative h-[400px] overflow-hidden bg-neutral-900/20 hover:bg-neutral-900/40 transition-colors">
+                    <img loading="lazy" decoding="async" src="assets/images/thumbs/feid.webp" alt="Feid x Sprite, 3D chrome lettering" width="900" height="900"
+                        class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-out">
+                    <video class="card-loop absolute inset-0 w-full h-full object-cover pointer-events-none" src="assets/images/loops/feid.mp4"
+                        muted loop playsinline preload="none" aria-hidden="true"></video>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-black/30 pointer-events-none"></div>
                     <div class="absolute inset-0 p-6 flex flex-col justify-between z-10">
                         <div
                             class="flex justify-between items-start opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -394,17 +357,19 @@
                             <h3
                                 class="text-lg font-medium text-white tracking-tight mb-1 group-hover:translate-x-1 transition-transform duration-300">
                                 Feid x Sprite</h3>
-                            <p class="text-xs text-neutral-500 font-mono">3D Animation</p>
+                            <p class="text-xs text-neutral-300 font-mono">3D Animation</p>
                         </div>
-                    </div>
-                    <div
-                        class="absolute inset-0 bg-gradient-to-br from-neutral-900 via-neutral-900 to-neutral-800 opacity-50 group-hover:scale-105 transition-transform duration-700 ease-out">
                     </div>
                 </a>
 
-                <!-- Work Item 4 -->
+                <!-- Work Item 5 -->
                 <a href="christina.html"
                     class="group block relative h-[400px] overflow-hidden bg-neutral-900/20 hover:bg-neutral-900/40 transition-colors">
+                    <img loading="lazy" decoding="async" src="assets/images/thumbs/christina.webp" alt="Christina Aguilera residency, 3D crystal star" width="900" height="900"
+                        class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-out">
+                    <video class="card-loop absolute inset-0 w-full h-full object-cover pointer-events-none" src="assets/images/loops/christina.mp4"
+                        muted loop playsinline preload="none" aria-hidden="true"></video>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-black/30 pointer-events-none"></div>
                     <div class="absolute inset-0 p-6 flex flex-col justify-between z-10">
                         <div
                             class="flex justify-between items-start opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -416,39 +381,17 @@
                             <h3
                                 class="text-lg font-medium text-white tracking-tight mb-1 group-hover:translate-x-1 transition-transform duration-300">
                                 Christina Aguilera</h3>
-                            <p class="text-xs text-neutral-500 font-mono">Stage Visuals</p>
+                            <p class="text-xs text-neutral-300 font-mono">Stage Visuals</p>
                         </div>
-                    </div>
-                    <div
-                        class="absolute inset-0 bg-gradient-to-bl from-neutral-900 via-neutral-900 to-neutral-800 opacity-50 group-hover:scale-105 transition-transform duration-700 ease-out">
-                    </div>
-                </a>
-
-                <!-- Work Item 5 -->
-                <a href="paper.html"
-                    class="group block relative h-[400px] overflow-hidden bg-neutral-900/20 hover:bg-neutral-900/40 transition-colors">
-                    <div class="absolute inset-0 p-6 flex flex-col justify-between z-10">
-                        <div
-                            class="flex justify-between items-start opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <span
-                                class="text-xs font-mono border border-neutral-700 rounded-full px-2 py-1 text-neutral-400">Editorial</span>
-                            <i data-lucide="arrow-up-right" class="w-4 h-4 text-white"></i>
-                        </div>
-                        <div>
-                            <h3
-                                class="text-lg font-medium text-white tracking-tight mb-1 group-hover:translate-x-1 transition-transform duration-300">
-                                Paper x Gwen Stephani</h3>
-                            <p class="text-xs text-neutral-500 font-mono">3D Treatments</p>
-                        </div>
-                    </div>
-                    <div
-                        class="absolute inset-0 bg-gradient-to-t from-neutral-900 via-neutral-900 to-neutral-800 opacity-50 group-hover:scale-105 transition-transform duration-700 ease-out">
                     </div>
                 </a>
 
                 <!-- Work Item 6 -->
-                <a href="myke_towers.html"
+                <a href="mahmood.html"
                     class="group block relative h-[400px] overflow-hidden bg-neutral-900/20 hover:bg-neutral-900/40 transition-colors">
+                    <img loading="lazy" decoding="async" src="assets/images/thumbs/mahmood.webp" alt="Mahmood Ra Ta Ta, title animation" width="900" height="900"
+                        class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-out">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-black/30 pointer-events-none"></div>
                     <div class="absolute inset-0 p-6 flex flex-col justify-between z-10">
                         <div
                             class="flex justify-between items-start opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -459,40 +402,43 @@
                         <div>
                             <h3
                                 class="text-lg font-medium text-white tracking-tight mb-1 group-hover:translate-x-1 transition-transform duration-300">
-                                Myke Towers</h3>
-                            <p class="text-xs text-neutral-500 font-mono">Animation</p>
+                                Mahmood</h3>
+                            <p class="text-xs text-neutral-300 font-mono">Titles - Animation</p>
                         </div>
                     </div>
-                    <div
-                        class="absolute inset-0 bg-gradient-to-b from-neutral-900 via-neutral-900 to-neutral-800 opacity-50 group-hover:scale-105 transition-transform duration-700 ease-out">
-                    </div>
+                    <!-- Abstract Placeholder for Image -->
                 </a>
 
                 <!-- Work Item 7 -->
-                <a href="salmo_ranch.html"
+                <a href="paper.html"
                     class="group block relative h-[400px] overflow-hidden bg-neutral-900/20 hover:bg-neutral-900/40 transition-colors">
+                    <img loading="lazy" decoding="async" src="assets/images/thumbs/paper.webp" alt="Paper Magazine x Gwen Stefani cover lettering" width="900" height="900"
+                        class="absolute inset-0 w-full h-full object-cover object-top opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-out">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-black/30 pointer-events-none"></div>
                     <div class="absolute inset-0 p-6 flex flex-col justify-between z-10">
                         <div
                             class="flex justify-between items-start opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                             <span
-                                class="text-xs font-mono border border-neutral-700 rounded-full px-2 py-1 text-neutral-400">Concept</span>
+                                class="text-xs font-mono border border-neutral-700 rounded-full px-2 py-1 text-neutral-400">Editorial</span>
                             <i data-lucide="arrow-up-right" class="w-4 h-4 text-white"></i>
                         </div>
                         <div>
                             <h3
                                 class="text-lg font-medium text-white tracking-tight mb-1 group-hover:translate-x-1 transition-transform duration-300">
-                                Salmo - Ranch</h3>
-                            <p class="text-xs text-neutral-500 font-mono">3D Environment</p>
+                                Paper x Gwen Stefani</h3>
+                            <p class="text-xs text-neutral-300 font-mono">3D Treatments</p>
                         </div>
-                    </div>
-                    <div
-                        class="absolute inset-0 bg-gradient-to-r from-neutral-900 via-neutral-900 to-neutral-800 opacity-50 group-hover:scale-105 transition-transform duration-700 ease-out">
                     </div>
                 </a>
 
                 <!-- Work Item 8 -->
                 <a href="romancero.html"
                     class="group block relative h-[400px] overflow-hidden bg-neutral-900/20 hover:bg-neutral-900/40 transition-colors">
+                    <img loading="lazy" decoding="async" src="assets/images/thumbs/romancero.webp" alt="Romancero, 3D title design" width="900" height="900"
+                        class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-out">
+                    <video class="card-loop absolute inset-0 w-full h-full object-cover pointer-events-none" src="assets/images/loops/romancero.mp4"
+                        muted loop playsinline preload="none" aria-hidden="true"></video>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-black/30 pointer-events-none"></div>
                     <div class="absolute inset-0 p-6 flex flex-col justify-between z-10">
                         <div
                             class="flex justify-between items-start opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -504,11 +450,8 @@
                             <h3
                                 class="text-lg font-medium text-white tracking-tight mb-1 group-hover:translate-x-1 transition-transform duration-300">
                                 Romancero</h3>
-                            <p class="text-xs text-neutral-500 font-mono">3D</p>
+                            <p class="text-xs text-neutral-300 font-mono">3D</p>
                         </div>
-                    </div>
-                    <div
-                        class="absolute inset-0 bg-gradient-to-l from-neutral-900 via-neutral-900 to-neutral-800 opacity-50 group-hover:scale-105 transition-transform duration-700 ease-out">
                     </div>
                 </a>
 
@@ -524,6 +467,12 @@
                     class="inline-block bg-white text-neutral-950 px-8 py-4 text-lg md:text-xl font-bold uppercase tracking-widest hover:bg-neutral-200 transition-colors">
                     Get In Touch
                 </a>
+                <p class="mt-6">
+                    <a href="mailto:andrea.marcias@hotmail.com"
+                        class="text-lg md:text-2xl font-light tracking-tight text-neutral-400 hover:text-white transition-colors break-words">
+                        andrea.marcias@hotmail.com
+                    </a>
+                </p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-24 pt-12 border-t border-neutral-800">
@@ -564,28 +513,48 @@
         // Register GSAP
         gsap.registerPlugin(ScrollTrigger);
 
-        // Bio Animation
-        gsap.from("#bio p", {
-            scrollTrigger: {
-                trigger: "#bio",
-                start: "top 80%",
-                end: "center center",
-                scrub: true
-            },
+        // Title Animation
+        gsap.from("#hero > div > *", {
+            y: 40,
             opacity: 0,
-            filter: "blur(10px)",
-            y: 50,
-            duration: 1
+            duration: 1.2,
+            ease: "power4.out",
+            stagger: 0.12,
+            delay: 0.1
         });
 
-        // Title Animation
-        gsap.from("#hero-title", {
-            y: 100,
-            opacity: 0,
-            duration: 1.5,
-            ease: "power4.out",
-            delay: 0.2
-        });
+        // Reel teaser: stay still for visitors who prefer reduced motion
+        (function () {
+            const v = document.getElementById('reel-teaser');
+            if (v && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                v.removeAttribute('autoplay');
+                v.pause();
+            }
+        })();
+
+        // Video loops on work cards: hover on desktop, in view on touch screens
+        (function () {
+            const loops = document.querySelectorAll('.card-loop');
+            if (!loops.length || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+            const play = (v) => {
+                v.preload = 'auto';
+                const p = v.play();
+                if (p) p.then(() => v.classList.add('is-playing')).catch(() => {});
+            };
+            const stop = (v) => { v.classList.remove('is-playing'); v.pause(); };
+            if (window.matchMedia('(hover: hover)').matches) {
+                loops.forEach((v) => {
+                    const card = v.closest('a');
+                    card.addEventListener('mouseenter', () => play(v));
+                    card.addEventListener('mouseleave', () => stop(v));
+                });
+            } else if ('IntersectionObserver' in window) {
+                const io = new IntersectionObserver((entries) => {
+                    entries.forEach((e) => (e.intersectionRatio >= 0.6 ? play(e.target) : stop(e.target)));
+                }, { threshold: [0, 0.6] });
+                loops.forEach((v) => io.observe(v));
+            }
+        })();
 
         // Clock Functionality
         function updateClock() {

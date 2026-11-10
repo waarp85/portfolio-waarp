@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en"
+    class="scroll-smooth bg-neutral-950 text-white antialiased selection:bg-white selection:text-neutral-950">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LADY GAGA - The Mayhem Ball Title Cards | Andrea Marcias - 3D Modeling</title>
+    <meta name="description"
+        content="3D modeling of the title cards for Lady Gaga's world tour The Mayhem Ball, by Andrea Marcias (Waarp). Design by Luca Devinu for Human Person.">
+    <meta name="keywords"
+        content="Lady Gaga, The Mayhem Ball, title cards, tour visuals, 3D modeling, Human Person, Luca Devinu, Waarp, Andrea Marcias, Cinema 4D">
+    <meta name="author" content="Andrea Marcias">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.andreamarcias.com/mayhem-ball.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.andreamarcias.com/mayhem-ball.html">
+    <meta property="og:title" content="LADY GAGA - The Mayhem Ball | Andrea Marcias">
+    <meta property="og:description"
+        content="3D modeling of the title cards for Lady Gaga's world tour The Mayhem Ball, by Andrea Marcias (Waarp). Design by Luca Devinu for Human Person.">
+    <meta property="og:image" content="https://www.andreamarcias.com/assets/images/mayhem-ball-og.jpg">
+    <meta property="og:site_name" content="Andrea Marcias">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.andreamarcias.com/mayhem-ball.html">
+    <meta name="twitter:title" content="LADY GAGA - The Mayhem Ball | Andrea Marcias">
+    <meta name="twitter:description"
+        content="3D modeling of the title cards for Lady Gaga's world tour The Mayhem Ball, by Andrea Marcias (Waarp). Design by Luca Devinu for Human Person.">
+    <meta name="twitter:image" content="https://www.andreamarcias.com/assets/images/mayhem-ball-og.jpg">
+    <meta name="twitter:creator" content="@_waarp_">
+
+    <!-- Structured Data / JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "VisualArtwork",
+      "name": "Lady Gaga - The Mayhem Ball, Title Cards",
+      "description": "3D modeling of the title cards for Lady Gaga's world tour The Mayhem Ball, by Andrea Marcias (Waarp). Design by Luca Devinu for Human Person.",
+      "image": "https://www.andreamarcias.com/assets/images/mayhem-ball-og.jpg",
+      "author": {
+        "@type": "Person",
+        "name": "Andrea Marcias",
+        "url": "https://www.andreamarcias.com"
+      },
+      "artform": "3D Visuals"
+    }
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+
+    <style>
+        /* Custom Utilities & Cursor */
+        body {
+            cursor: none;
+        }
+
+        .custom-cursor {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 12px;
+            height: 12px;
+            background-color: white;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            transform: translate(-50%, -50%);
+            mix-blend-mode: difference;
+            transition: width 0.2s, height 0.2s;
+        }
+
+        .custom-cursor.hovered {
+            width: 48px;
+            height: 48px;
+            opacity: 0.1;
+        }
+
+        /* Grid Background Pattern */
+        .bg-grid {
+            background-size: 40px 40px;
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        }
+
+        /* Hide Scrollbar */
+        ::-webkit-scrollbar {
+            width: 0px;
+            background: transparent;
+        }
+    </style>
+    <link rel="stylesheet" href="assets/css/tailwind.css">
+</head>
+
+<body class="bg-neutral-950 text-neutral-200 relative overflow-x-hidden">
+
+    <!-- Cursor -->
+    <div id="cursor" class="custom-cursor hidden md:block"></div>
+
+    <!-- Background Grid -->
+    <div class="fixed inset-0 bg-grid pointer-events-none z-0"></div>
+
+    <!-- Technical UI Layer (Fixed) -->
+    <div
+        class="fixed inset-0 pointer-events-none z-50 p-6 flex flex-col justify-between font-mono text-xs text-neutral-500 uppercase tracking-widest mix-blend-difference">
+        <div class="flex justify-between items-start">
+            <a href="index.html"
+                class="font-bold text-white tracking-tighter pointer-events-auto hover:text-neutral-400 transition-colors">ANDREA MARCIAS</a>
+            <div class="flex flex-col items-end gap-1">
+                <span id="system-clock">00:00:00</span>
+                <span id="mouse-coords" class="hidden md:block">X: 000 Y: 000</span>
+            </div>
+        </div>
+        <div class="flex justify-between items-end">
+            <span></span>
+            <div class="flex gap-6 pointer-events-auto">
+                <a href="rd.html" class="hover:text-white transition-colors">PREVIOUS</a>
+                <a href="index.html" class="hover:text-white transition-colors">HOME</a>
+                <a href="mahmood.html" class="hover:text-white transition-colors">NEXT</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll Progress (Right Fixed) -->
+    <div
+        class="fixed right-6 top-1/2 -translate-y-1/2 flex flex-col items-center gap-2 hidden md:flex mix-blend-difference z-50">
+        <span id="scroll-text" class="font-mono text-xs text-neutral-500 font-bold"
+            style="writing-mode: vertical-rl; text-orientation: mixed;">0%</span>
+        <div class="h-24 w-[1px] bg-neutral-800 relative">
+            <div id="scroll-bar" class="absolute top-0 left-0 w-full bg-white transition-all duration-100"
+                style="height: 0%"></div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="relative z-10 pt-24 pb-24">
+
+        <!-- Project Hero -->
+        <section class="min-h-[60vh] flex flex-col justify-center items-center px-6 border-b border-neutral-800">
+            <div class="relative z-10 text-center">
+                <h1
+                    class="text-4xl md:text-8xl font-semibold tracking-tighter leading-none text-white select-none mb-4">
+                    LADY GAGA<br>
+                    <span class="text-neutral-500">THE MAYHEM BALL</span>
+                </h1>
+                <p class="text-xs font-mono uppercase tracking-widest text-neutral-500">TITLE CARDS</p>
+            </div>
+        </section>
+
+        <!-- Project Meta & Description -->
+        <section class="border-b border-neutral-800 bg-neutral-950/50 backdrop-blur-sm">
+            <div class="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-neutral-800">
+
+                <!-- Meta Columns -->
+                <div class="p-8 md:p-12 space-y-8">
+                    <div>
+                        <h3 class="text-xs font-mono text-neutral-500 uppercase tracking-widest mb-2">Client</h3>
+                        <p class="text-white text-lg">Human Person x Lady Gaga</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xs font-mono text-neutral-500 uppercase tracking-widest mb-2">Category</h3>
+                        <p class="text-white text-lg">Music, World Tour</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xs font-mono text-neutral-500 uppercase tracking-widest mb-2">Type</h3>
+                        <p class="text-white text-lg">Title Cards, 3D Modeling</p>
+                    </div>
+                </div>
+
+                <!-- Description Column -->
+                <div class="p-8 md:p-12">
+                    <h3 class="text-xs font-mono text-neutral-500 uppercase tracking-widest mb-6">Credits</h3>
+                    <div class="space-y-4 text-neutral-400 font-light text-lg">
+                        <p><strong class="text-white font-medium">Title Cards 3D Modeling:</strong> Andrea Marcias</p>
+                        <p><strong class="text-white font-medium">Title Cards Design:</strong> Luca Devinu</p>
+                        <p><strong class="text-white font-medium">Creative Direction, Show Direction &amp; Video Content:</strong> Human Person</p>
+
+                        <p class="mt-8 text-neutral-500 text-sm">
+                            3D modeling of the title cards that open each act of Lady Gaga's world tour The Mayhem Ball,
+                            designed by Luca Devinu for Human Person.
+                        </p>
+
+                        <details class="mt-6 text-sm text-neutral-500 group/credits">
+                            <summary class="cursor-pointer text-xs font-mono uppercase tracking-widest text-neutral-400 hover:text-white transition-colors">Full credits</summary>
+                            <div class="mt-4 space-y-2">
+                            <p><span class="text-neutral-300">Human Person:</span> Ben Dalgleish, Ian Valentine, Frances Waite, Molly Leishman, Bora Lee, Matt Cummer, Phoebe Morris, Ash Smith, Tim Marriott, Mads Engel, Miron Malejki, Ny Mayes, Stephen Hedges</p>
+                            <p><span class="text-neutral-300">Creative Direction &amp; Choreography:</span> Parris Goebel</p>
+                            <p><span class="text-neutral-300">Show Director:</span> Ben Dalgleish</p>
+                            <p><span class="text-neutral-300">Content Director:</span> Ian Valentine</p>
+                            <p><span class="text-neutral-300">Art Director:</span> Frances Waite</p>
+                            <p><span class="text-neutral-300">Creative Producers:</span> Bora Lee, Molly Leishman</p>
+                            <p><span class="text-neutral-300">Concept Artist &amp; Storyboarding:</span> Phoebe Morris</p>
+                            <p><span class="text-neutral-300">Technical Director:</span> Stephen Hedges</p>
+                            <p><span class="text-neutral-300">Media Director:</span> Matt Cummer</p>
+                            <p><span class="text-neutral-300">Content Art Directors:</span> Tim Marriott, Miron Malejki, Phoebe Morris</p>
+                            <p><span class="text-neutral-300">Project Coordinator:</span> Ny Mayes</p>
+                            <p><span class="text-neutral-300">Editors:</span> Mads Engel, Drew Horen, Elliot Barbernell, Taylor Ward</p>
+                            <p><span class="text-neutral-300">Additional Animation Team:</span> Sobe Okoye, Linus Kraemer, Shane Deptula, Yan Paul Dubbelman, Timm Daza, Harley Johnson, Mark Reynolds, Javad Sadeqi, Drew Tyndell</p>
+                            <p><span class="text-neutral-300">Notch &amp; Snapchat Integration:</span> Ryan Sheppard, Adam Fontana</p>
+                            <p><span class="text-neutral-300">Stage Design:</span> Es Devlin, Jason Ardizzone-West</p>
+                            <p><span class="text-neutral-300">Lighting Design:</span> Fragment Nine, Jeremy Lechterman</p>
+                            <p><span class="text-neutral-300">Musical Direction:</span> Kris Pooley, Natural</p>
+                            <p><span class="text-neutral-300">D3 Programming:</span> Loren Barton, James Gallo, Dan Scully, Ben Roy, Kayla Humphries, Solotech</p>
+                            <p><span class="text-neutral-300">Shoot:</span> 6degrees Films, Black Lake, Daniella Pluchino</p>
+                            <p><span class="text-neutral-300">Fan Activation:</span> Yung Studio</p>
+                            <p><span class="text-neutral-300">Film Photos:</span> Ian Valentine</p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Gallery -->
+        <section class="border-b border-neutral-800">
+            <figure class="border-b border-neutral-800 bg-black">
+                <img src="assets/images/mayhem-ball/web/00-lady-gaga-presents.webp" width="2000" height="1125"
+                    alt="Lady Gaga The Mayhem Ball, 3D title card: Lady Gaga Presents" class="w-full h-auto block">
+                <figcaption class="px-6 py-4 flex justify-between text-xs font-mono uppercase tracking-widest text-neutral-500">
+                    <span>Lady Gaga Presents</span><span>Opening</span>
+                </figcaption>
+            </figure>
+            <figure class="border-b border-neutral-800 bg-black">
+                <img loading="lazy" decoding="async" src="assets/images/mayhem-ball/web/01-the-art-of-personal-chaos.webp" width="2000" height="1125"
+                    alt="Lady Gaga The Mayhem Ball, 3D title card: The Art of Personal Chaos" class="w-full h-auto block">
+                <figcaption class="px-6 py-4 flex justify-between text-xs font-mono uppercase tracking-widest text-neutral-500">
+                    <span>The Art of Personal Chaos</span><span>Opening</span>
+                </figcaption>
+            </figure>
+            <figure class="border-b border-neutral-800 bg-black">
+                <img loading="lazy" decoding="async" src="assets/images/mayhem-ball/web/02-and-she-fell-into-a-gothic-dream.webp" width="2000" height="1125"
+                    alt="Lady Gaga The Mayhem Ball, 3D title card: And She Fell Into a Gothic Dream" class="w-full h-auto block">
+                <figcaption class="px-6 py-4 flex justify-between text-xs font-mono uppercase tracking-widest text-neutral-500">
+                    <span>And She Fell Into a Gothic Dream</span><span>Act II</span>
+                </figcaption>
+            </figure>
+            <figure class="border-b border-neutral-800 bg-black">
+                <img loading="lazy" decoding="async" src="assets/images/mayhem-ball/web/03-the-beautiful-nightmare-that-knows-her-name.webp" width="2000" height="1125"
+                    alt="Lady Gaga The Mayhem Ball, 3D title card: The Beautiful Nightmare That Knows Her Name" class="w-full h-auto block">
+                <figcaption class="px-6 py-4 flex justify-between text-xs font-mono uppercase tracking-widest text-neutral-500">
+                    <span>The Beautiful Nightmare That Knows Her Name</span><span>Act III</span>
+                </figcaption>
+            </figure>
+            <figure class="border-b border-neutral-800 bg-black">
+                <img loading="lazy" decoding="async" src="assets/images/mayhem-ball/web/04-every-chessboard-has-two-queens.webp" width="2000" height="1125"
+                    alt="Lady Gaga The Mayhem Ball, 3D title card: Every Chessboard Has Two Queens" class="w-full h-auto block">
+                <figcaption class="px-6 py-4 flex justify-between text-xs font-mono uppercase tracking-widest text-neutral-500">
+                    <span>Every Chessboard Has Two Queens</span><span>Act IV</span>
+                </figcaption>
+            </figure>
+            <figure class="border-b border-neutral-800 bg-black">
+                <img loading="lazy" decoding="async" src="assets/images/mayhem-ball/web/05-eternal-aria-of-the-monster-heart.webp" width="2000" height="1125"
+                    alt="Lady Gaga The Mayhem Ball, 3D title card: Eternal Aria of the Monster Heart" class="w-full h-auto block">
+                <figcaption class="px-6 py-4 flex justify-between text-xs font-mono uppercase tracking-widest text-neutral-500">
+                    <span>Eternal Aria of the Monster Heart</span><span>Finale</span>
+                </figcaption>
+            </figure>
+        </section>
+
+
+        <!-- Footer / Contact -->
+        <section id="contact" class="min-h-[50vh] flex flex-col justify-between px-6 py-24 bg-neutral-950 relative">
+            <div class="max-w-4xl">
+                <h2 class="text-xs font-mono text-neutral-500 uppercase tracking-widest mb-8">Next Project</h2>
+                <a href="mahmood.html"
+                    class="text-4xl md:text-6xl font-semibold tracking-tighter text-white hover:text-neutral-400 transition-colors">
+                    MAHMOOD<br>→
+                </a>
+            </div>
+
+            <div class="mt-24 max-w-4xl">
+                <h2 class="text-xs font-mono text-neutral-500 uppercase tracking-widest mb-6">Start a Project</h2>
+                <a href="mailto:andrea.marcias@hotmail.com"
+                    class="text-2xl md:text-4xl font-light tracking-tight text-white hover:text-neutral-400 transition-colors break-words">
+                    andrea.marcias@hotmail.com
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-24 pt-12 border-t border-neutral-800">
+                <div class="flex flex-col gap-4">
+                    <span class="text-xs font-mono text-neutral-500 uppercase tracking-widest">Socials</span>
+                    <div class="flex gap-6">
+                        <a href="https://www.instagram.com/_waarp_/" target="_blank"
+                            class="flex items-center gap-2 text-sm text-white hover:text-neutral-400 transition-colors">
+                            <i data-lucide="instagram" class="w-4 h-4 stroke-[1.5]"></i> Instagram
+                        </a>
+                        <a href="https://www.behance.net/waarp" target="_blank"
+                            class="flex items-center gap-2 text-sm text-white hover:text-neutral-400 transition-colors">
+                            <i data-lucide="briefcase" class="w-4 h-4 stroke-[1.5]"></i> Behance
+                        </a>
+                    </div>
+                </div>
+
+                <div class="flex flex-col md:items-end gap-1">
+                    <p class="text-xs text-neutral-600 font-mono">© 2026 Andrea Marcias</p>
+                    <p class="text-xs text-neutral-600 font-mono">P.IVA 02900950904</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Interactive Scripts -->
+    <script>
+        // Init Icons
+        lucide.createIcons();
+
+        // Register GSAP
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Title Animation
+        gsap.from("h1", {
+            y: 100,
+            opacity: 0,
+            duration: 1.5,
+            ease: "power4.out",
+            delay: 0.2
+        });
+
+        // Clock Functionality
+        function updateClock() {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString('en-US', {
+                hour12: false,
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit'
+            });
+            document.getElementById('system-clock').textContent = timeString;
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+
+        // Mouse Tracker
+        const coords = document.getElementById('mouse-coords');
+        const cursor = document.getElementById('cursor');
+        const links = document.querySelectorAll('a');
+
+        document.addEventListener('mousemove', (e) => {
+            // Update Coords UI
+            const x = String(e.clientX).padStart(4, '0');
+            const y = String(e.clientY).padStart(4, '0');
+            if (coords) coords.textContent = `X: ${x} Y: ${y}`;
+
+            // Custom Cursor Movement
+            if (cursor) {
+                cursor.style.left = e.clientX + 'px';
+                cursor.style.top = e.clientY + 'px';
+            }
+        });
+
+        // Hover Effect on Cursor
+        links.forEach(link => {
+            link.addEventListener('mouseenter', () => cursor.classList.add('hovered'));
+            link.addEventListener('mouseleave', () => cursor.classList.remove('hovered'));
+        });
+
+        // Scroll Percentage
+        function updateScroll() {
+            // Robust cross-browser scroll position
+            const scrollTop = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop;
+
+            // Robust total height
+            const scrollHeight = Math.max(
+                document.body.scrollHeight, document.documentElement.scrollHeight,
+                document.body.offsetHeight, document.documentElement.offsetHeight,
+                document.body.clientHeight, document.documentElement.clientHeight
+            ) - document.documentElement.clientHeight;
+
+            let scrollPercent = 0;
+            if (scrollHeight > 0) {
+                scrollPercent = Math.round((scrollTop / scrollHeight) * 100);
+            }
+
+            // Safety check
+            if (!isFinite(scrollPercent) || isNaN(scrollPercent)) {
+                scrollPercent = 0;
+            }
+
+            const scrollText = document.getElementById('scroll-text');
+            const scrollBar = document.getElementById('scroll-bar');
+
+            if (scrollText) scrollText.textContent = scrollPercent + '%';
+            if (scrollBar) scrollBar.style.height = scrollPercent + '%';
+        }
+
+        window.addEventListener('scroll', updateScroll);
+        window.addEventListener('resize', updateScroll);
+        updateScroll();
+    </script>
+
+</body>
+
+</html>

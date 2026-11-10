@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ROMANCERO - Prime Video | WAARP</title>
+    <title>ROMANCERO - Prime Video | Andrea Marcias</title>
     <meta name="description"
         content="Title design and 3D visuals for the Prime Video series 'Romancero' by Andrea Marcias (Waarp).">
     <meta name="keywords"
@@ -17,19 +17,19 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://www.andreamarcias.com/romancero.html">
-    <meta property="og:title" content="ROMANCERO - Prime Video | WAARP">
+    <meta property="og:title" content="ROMANCERO - Prime Video | Andrea Marcias">
     <meta property="og:description"
         content="Title design and 3D visuals for the Prime Video series 'Romancero' by Andrea Marcias (Waarp).">
-    <meta property="og:image" content="https://www.andreamarcias.com/assets/images/romancero/romancero-1.png">
-    <meta property="og:site_name" content="WAARP Portfolio">
+    <meta property="og:image" content="https://www.andreamarcias.com/assets/images/romancero/romancero-og.jpg">
+    <meta property="og:site_name" content="Andrea Marcias">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://www.andreamarcias.com/romancero.html">
-    <meta name="twitter:title" content="ROMANCERO - Prime Video | WAARP">
+    <meta name="twitter:title" content="ROMANCERO - Prime Video | Andrea Marcias">
     <meta name="twitter:description"
         content="Title design and 3D visuals for the Prime Video series 'Romancero' by Andrea Marcias (Waarp).">
-    <meta name="twitter:image" content="https://www.andreamarcias.com/assets/images/romancero/romancero-1.png">
+    <meta name="twitter:image" content="https://www.andreamarcias.com/assets/images/romancero/romancero-og.jpg">
     <meta name="twitter:creator" content="@_waarp_">
 
     <!-- Structured Data / JSON-LD -->
@@ -39,7 +39,7 @@
       "@type": "TVSeries",
       "name": "ROMANCERO",
       "description": "Title design and 3D visuals for the Prime Video series 'Romancero' by Andrea Marcias (Waarp).",
-      "image": "https://www.andreamarcias.com/assets/images/romancero/romancero-1.png",
+      "image": "https://www.andreamarcias.com/assets/images/romancero/romancero-og.jpg",
       "author": {
         "@type": "Person",
         "name": "Andrea Marcias",
@@ -63,27 +63,6 @@
     <!-- Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
-    <!-- Tailwind (CDN for single file requirement) -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        mono: ['JetBrains Mono', 'monospace'],
-                    },
-                    colors: {
-                        neutral: {
-                            850: '#1f1f1f',
-                            900: '#171717',
-                            950: '#0a0a0a',
-                        }
-                    }
-                }
-            }
-        }
-    </script>
 
     <style>
         /* Custom Utilities & Cursor */
@@ -125,6 +104,7 @@
             background: transparent;
         }
     </style>
+    <link rel="stylesheet" href="assets/css/tailwind.css">
 </head>
 
 <body class="bg-neutral-950 text-neutral-200 relative overflow-x-hidden">
@@ -140,16 +120,16 @@
         class="fixed inset-0 pointer-events-none z-50 p-6 flex flex-col justify-between font-mono text-xs text-neutral-500 uppercase tracking-widest mix-blend-difference">
         <div class="flex justify-between items-start">
             <a href="index.html"
-                class="font-bold text-white tracking-tighter pointer-events-auto hover:text-neutral-400 transition-colors">WAARP</a>
+                class="font-bold text-white tracking-tighter pointer-events-auto hover:text-neutral-400 transition-colors">ANDREA MARCIAS</a>
             <div class="flex flex-col items-end gap-1">
                 <span id="system-clock">00:00:00</span>
                 <span id="mouse-coords" class="hidden md:block">X: 000 Y: 000</span>
             </div>
         </div>
         <div class="flex justify-between items-end">
-            <span class="hidden md:block">ROMANCERO</span>
+            <span></span>
             <div class="flex gap-6 pointer-events-auto">
-                <a href="salmo_ranch.html" class="hover:text-white transition-colors">PREVIOUS</a>
+                <a href="paper.html" class="hover:text-white transition-colors">PREVIOUS</a>
                 <a href="index.html" class="hover:text-white transition-colors">HOME</a>
                 <a href="rd.html" class="hover:text-white transition-colors">NEXT</a>
             </div>
@@ -227,42 +207,42 @@
                 <!-- Video 1 -->
                 <div class="col-span-1 p-0">
                     <video autoplay loop muted playsinline
-                        class="w-full h-auto block grayscale hover:grayscale-0 transition-all duration-700">
+                        class="w-full h-auto block">
                         <source src="assets/images/romancero/romancero-video-1.mp4" type="video/mp4">
                     </video>
                 </div>
                 <!-- Video 2 -->
                 <div class="col-span-1 p-0">
                     <video autoplay loop muted playsinline
-                        class="w-full h-auto block grayscale hover:grayscale-0 transition-all duration-700">
+                        class="w-full h-auto block">
                         <source src="assets/images/romancero/romancero-video-2.mp4" type="video/mp4">
                     </video>
                 </div>
                 <!-- Video 3 -->
                 <div class="col-span-1 p-0 border-t border-neutral-800">
                     <video autoplay loop muted playsinline
-                        class="w-full h-auto block grayscale hover:grayscale-0 transition-all duration-700">
+                        class="w-full h-auto block">
                         <source src="assets/images/romancero/romancero-video-3.mp4" type="video/mp4">
                     </video>
                 </div>
                 <!-- Video 4 -->
                 <div class="col-span-1 p-0 border-t border-neutral-800">
                     <video autoplay loop muted playsinline
-                        class="w-full h-auto block grayscale hover:grayscale-0 transition-all duration-700">
+                        class="w-full h-auto block">
                         <source src="assets/images/romancero/romancero-video-4.mp4" type="video/mp4">
                     </video>
                 </div>
                 <!-- Video 5 -->
                 <div class="col-span-1 p-0 border-t border-neutral-800">
                     <video autoplay loop muted playsinline
-                        class="w-full h-auto block grayscale hover:grayscale-0 transition-all duration-700">
+                        class="w-full h-auto block">
                         <source src="assets/images/romancero/romancero-video-5.mp4" type="video/mp4">
                     </video>
                 </div>
                 <!-- Video 6 -->
                 <div class="col-span-1 p-0 border-t border-neutral-800">
                     <video autoplay loop muted playsinline
-                        class="w-full h-auto block grayscale hover:grayscale-0 transition-all duration-700">
+                        class="w-full h-auto block">
                         <source src="assets/images/romancero/romancero-video-6.mp4" type="video/mp4">
                     </video>
                 </div>
@@ -277,29 +257,29 @@
 
                 <div class="col-span-1 lg:col-span-3 p-0 border-b border-neutral-800">
                     <img src="assets/images/romancero/romancero-1.webp" alt="Romancero (Prime Video), 3D title design by Andrea Marcias"
-                        class="w-full h-auto block grayscale hover:grayscale-0 transition-all duration-700">
+                        class="w-full h-auto block">
                 </div>
 
                 <div class="col-span-1">
                     <img loading="lazy" decoding="async" src="assets/images/romancero/romancero-2.webp" alt="Romancero (Prime Video), 3D title design still 1"
-                        class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700">
+                        class="w-full h-full object-cover">
                 </div>
                 <div class="col-span-1">
                     <img loading="lazy" decoding="async" src="assets/images/romancero/romancero-3.webp" alt="Romancero (Prime Video), 3D title design still 2"
-                        class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700">
+                        class="w-full h-full object-cover">
                 </div>
                 <div class="col-span-1">
                     <img loading="lazy" decoding="async" src="assets/images/romancero/romancero-4.webp" alt="Romancero (Prime Video), 3D title design still 3"
-                        class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700">
+                        class="w-full h-full object-cover">
                 </div>
 
                 <div class="col-span-1 lg:col-span-2">
                     <img loading="lazy" decoding="async" src="assets/images/romancero/romancero-12.webp" alt="Romancero (Prime Video), 3D title design still 4"
-                        class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700">
+                        class="w-full h-full object-cover">
                 </div>
                 <div class="col-span-1">
                     <img loading="lazy" decoding="async" src="assets/images/romancero/romancero-13.webp" alt="Romancero (Prime Video), 3D title design still 5"
-                        class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700">
+                        class="w-full h-full object-cover">
                 </div>
 
             </div>
@@ -312,6 +292,14 @@
                 <a href="rd.html"
                     class="text-4xl md:text-6xl font-semibold tracking-tighter text-white hover:text-neutral-400 transition-colors">
                     RD (RESEARCH)<br>→
+                </a>
+            </div>
+
+            <div class="mt-24 max-w-4xl">
+                <h2 class="text-xs font-mono text-neutral-500 uppercase tracking-widest mb-6">Start a Project</h2>
+                <a href="mailto:andrea.marcias@hotmail.com"
+                    class="text-2xl md:text-4xl font-light tracking-tight text-white hover:text-neutral-400 transition-colors break-words">
+                    andrea.marcias@hotmail.com
                 </a>
             </div>
 
@@ -331,7 +319,7 @@
                 </div>
 
                 <div class="flex flex-col md:items-end gap-1">
-                    <p class="text-xs text-neutral-600 font-mono">© 2025 Andrea Marcias</p>
+                    <p class="text-xs text-neutral-600 font-mono">© 2026 Andrea Marcias</p>
                     <p class="text-xs text-neutral-600 font-mono">P.IVA 02900950904</p>
                 </div>
             </div>
