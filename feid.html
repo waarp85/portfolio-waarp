@@ -206,7 +206,7 @@
         <!-- Video Section -->
         <section class="border-b border-neutral-800 p-6 md:p-12">
             <div class="w-full max-w-7xl mx-auto rounded-lg overflow-hidden shadow-2xl border border-neutral-800">
-                <video controls autoplay muted loop playsinline class="w-full">
+                <video controlsList="nodownload" disablePictureInPicture controls autoplay muted loop playsinline class="w-full">
                     <source src="assets/images/feid-video.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
@@ -375,6 +375,16 @@
         window.addEventListener('scroll', updateScroll);
         window.addEventListener('resize', updateScroll);
         updateScroll();
+    </script>
+
+    <script>
+        // Discourage saving images and videos: no right-click menu or dragging on media (links keep working)
+        document.addEventListener('contextmenu', function (e) {
+            if (e.target.closest && e.target.closest('img, video, picture')) e.preventDefault();
+        });
+        document.addEventListener('dragstart', function (e) {
+            if (e.target.closest && e.target.closest('img, video')) e.preventDefault();
+        });
     </script>
 
 </body>

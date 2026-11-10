@@ -206,42 +206,42 @@
 
                 <!-- Video 1 -->
                 <div class="col-span-1 p-0">
-                    <video autoplay loop muted playsinline
+                    <video controlsList="nodownload" disablePictureInPicture autoplay loop muted playsinline
                         class="w-full h-auto block">
                         <source src="assets/images/romancero/romancero-video-1.mp4" type="video/mp4">
                     </video>
                 </div>
                 <!-- Video 2 -->
                 <div class="col-span-1 p-0">
-                    <video autoplay loop muted playsinline
+                    <video controlsList="nodownload" disablePictureInPicture autoplay loop muted playsinline
                         class="w-full h-auto block">
                         <source src="assets/images/romancero/romancero-video-2.mp4" type="video/mp4">
                     </video>
                 </div>
                 <!-- Video 3 -->
                 <div class="col-span-1 p-0 border-t border-neutral-800">
-                    <video autoplay loop muted playsinline
+                    <video controlsList="nodownload" disablePictureInPicture autoplay loop muted playsinline
                         class="w-full h-auto block">
                         <source src="assets/images/romancero/romancero-video-3.mp4" type="video/mp4">
                     </video>
                 </div>
                 <!-- Video 4 -->
                 <div class="col-span-1 p-0 border-t border-neutral-800">
-                    <video autoplay loop muted playsinline
+                    <video controlsList="nodownload" disablePictureInPicture autoplay loop muted playsinline
                         class="w-full h-auto block">
                         <source src="assets/images/romancero/romancero-video-4.mp4" type="video/mp4">
                     </video>
                 </div>
                 <!-- Video 5 -->
                 <div class="col-span-1 p-0 border-t border-neutral-800">
-                    <video autoplay loop muted playsinline
+                    <video controlsList="nodownload" disablePictureInPicture autoplay loop muted playsinline
                         class="w-full h-auto block">
                         <source src="assets/images/romancero/romancero-video-5.mp4" type="video/mp4">
                     </video>
                 </div>
                 <!-- Video 6 -->
                 <div class="col-span-1 p-0 border-t border-neutral-800">
-                    <video autoplay loop muted playsinline
+                    <video controlsList="nodownload" disablePictureInPicture autoplay loop muted playsinline
                         class="w-full h-auto block">
                         <source src="assets/images/romancero/romancero-video-6.mp4" type="video/mp4">
                     </video>
@@ -418,6 +418,16 @@
         window.addEventListener('scroll', updateScroll);
         window.addEventListener('resize', updateScroll);
         updateScroll();
+    </script>
+
+    <script>
+        // Discourage saving images and videos: no right-click menu or dragging on media (links keep working)
+        document.addEventListener('contextmenu', function (e) {
+            if (e.target.closest && e.target.closest('img, video, picture')) e.preventDefault();
+        });
+        document.addEventListener('dragstart', function (e) {
+            if (e.target.closest && e.target.closest('img, video')) e.preventDefault();
+        });
     </script>
 
 </body>

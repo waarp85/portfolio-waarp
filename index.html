@@ -179,7 +179,7 @@
 
         <!-- Reel Teaser -->
         <section id="reel" class="border-b border-neutral-800 bg-black">
-            <video id="reel-teaser" class="block w-full h-auto" autoplay muted loop playsinline preload="auto"
+            <video controlsList="nodownload" disablePictureInPicture id="reel-teaser" class="block w-full h-auto" autoplay muted loop playsinline preload="auto"
                 poster="assets/images/reel/teaser-poster.jpg" width="1600" height="900"
                 aria-label="Showreel teaser: a selection of 3D and motion work by Andrea Marcias">
                 <source src="assets/images/reel/teaser-mobile.mp4" type="video/mp4" media="(max-width: 767px)">
@@ -342,7 +342,7 @@
                     class="group block relative h-[400px] overflow-hidden bg-neutral-900/20 hover:bg-neutral-900/40 transition-colors">
                     <img loading="lazy" decoding="async" src="assets/images/thumbs/feid.webp" alt="Feid x Sprite, 3D chrome lettering" width="900" height="900"
                         class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-out">
-                    <video class="card-loop absolute inset-0 w-full h-full object-cover pointer-events-none" src="assets/images/loops/feid.mp4"
+                    <video controlsList="nodownload" disablePictureInPicture class="card-loop absolute inset-0 w-full h-full object-cover pointer-events-none" src="assets/images/loops/feid.mp4"
                         muted loop playsinline preload="none" aria-hidden="true"></video>
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-black/30 pointer-events-none"></div>
                     <div class="absolute inset-0 p-6 flex flex-col justify-between z-10">
@@ -366,7 +366,7 @@
                     class="group block relative h-[400px] overflow-hidden bg-neutral-900/20 hover:bg-neutral-900/40 transition-colors">
                     <img loading="lazy" decoding="async" src="assets/images/thumbs/christina.webp" alt="Christina Aguilera residency, 3D crystal star" width="900" height="900"
                         class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-out">
-                    <video class="card-loop absolute inset-0 w-full h-full object-cover pointer-events-none" src="assets/images/loops/christina.mp4"
+                    <video controlsList="nodownload" disablePictureInPicture class="card-loop absolute inset-0 w-full h-full object-cover pointer-events-none" src="assets/images/loops/christina.mp4"
                         muted loop playsinline preload="none" aria-hidden="true"></video>
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-black/30 pointer-events-none"></div>
                     <div class="absolute inset-0 p-6 flex flex-col justify-between z-10">
@@ -435,7 +435,7 @@
                     class="group block relative h-[400px] overflow-hidden bg-neutral-900/20 hover:bg-neutral-900/40 transition-colors">
                     <img loading="lazy" decoding="async" src="assets/images/thumbs/romancero.webp" alt="Romancero, 3D title design" width="900" height="900"
                         class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-out">
-                    <video class="card-loop absolute inset-0 w-full h-full object-cover pointer-events-none" src="assets/images/loops/romancero.mp4"
+                    <video controlsList="nodownload" disablePictureInPicture class="card-loop absolute inset-0 w-full h-full object-cover pointer-events-none" src="assets/images/loops/romancero.mp4"
                         muted loop playsinline preload="none" aria-hidden="true"></video>
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-black/30 pointer-events-none"></div>
                     <div class="absolute inset-0 p-6 flex flex-col justify-between z-10">
@@ -668,6 +668,16 @@
                 }, 300);
             });
         })();
+    </script>
+
+    <script>
+        // Discourage saving images and videos: no right-click menu or dragging on media (links keep working)
+        document.addEventListener('contextmenu', function (e) {
+            if (e.target.closest && e.target.closest('img, video, picture')) e.preventDefault();
+        });
+        document.addEventListener('dragstart', function (e) {
+            if (e.target.closest && e.target.closest('img, video')) e.preventDefault();
+        });
     </script>
 
 </body>
