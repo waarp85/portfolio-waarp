@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-neutral-950 text-white antialiased selection:bg-white selection:text-neutral-950">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page not found | Andrea Marcias</title>
+    <meta name="robots" content="noindex">
+
+    <script>
+        // Old addresses (previous Wix site, /it/ pages, renamed files) -> new pages
+        (function () {
+            var p = location.pathname.toLowerCase()
+                .replace(/^\/(it|en)(\/|$)/, '/')
+                .replace(/\.html?$/, '')
+                .replace(/\/+$/, '');
+            var map = {
+                '': '/', '/about': '/', '/home': '/', '/work': '/#work', '/works': '/#work', '/projects': '/#work',
+                '/contact': '/#contact', '/contacts': '/#contact',
+                '/swarovski-arianagrande': '/swarovski.html', '/feid-x-sprite': '/feid.html',
+                '/christina-aguilera': '/christina.html', '/researchanddevelopment': '/rd.html', '/r-d': '/rd.html'
+            };
+            var keys = [
+                ['mayhem', '/mayhem-ball.html'], ['gaga', '/mayhem-ball.html'], ['swarovski', '/swarovski.html'],
+                ['ariana', '/swarovski.html'], ['muse', '/muse.html'], ['feid', '/feid.html'], ['sprite', '/feid.html'],
+                ['christina', '/christina.html'], ['xtina', '/christina.html'], ['mahmood', '/mahmood.html'],
+                ['paper', '/paper.html'], ['gwen', '/paper.html'], ['romancero', '/romancero.html'],
+                ['research', '/rd.html'], ['colorizer', '/rd.html']
+            ];
+            var to = map.hasOwnProperty(p) ? map[p] : null;
+            if (!to) for (var i = 0; i < keys.length; i++) if (p.indexOf(keys[i][0]) !== -1) { to = keys[i][1]; break; }
+            if (to) location.replace(to);
+        })();
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/tailwind.css">
+</head>
+
+<body class="bg-neutral-950 text-neutral-200 font-sans min-h-screen flex flex-col">
+
+    <header class="px-6 py-6">
+        <a href="/" class="font-mono text-xs font-bold uppercase tracking-widest text-white hover:text-neutral-400 transition-colors">Andrea Marcias</a>
+    </header>
+
+    <main class="flex-1 px-6 pt-12 pb-24">
+        <div class="max-w-4xl">
+            <p class="font-mono text-xs uppercase tracking-widest text-neutral-500 mb-6">Error 404</p>
+            <h1 class="text-5xl md:text-8xl font-semibold tracking-tighter leading-none text-white">Page not found</h1>
+            <p class="mt-8 max-w-2xl text-base md:text-lg leading-relaxed text-neutral-400">
+                This address belongs to the old version of the site or no longer exists.
+                All projects are on the homepage.
+            </p>
+            <div class="mt-10 flex flex-wrap items-center gap-8">
+                <a href="/"
+                    class="inline-block bg-white text-neutral-950 px-6 py-3 text-sm font-bold uppercase tracking-widest hover:bg-neutral-200 transition-colors">
+                    Go to Homepage
+                </a>
+                <a href="/#contact"
+                    class="text-sm uppercase tracking-widest text-neutral-400 hover:text-white transition-colors">
+                    Contact
+                </a>
+            </div>
+        </div>
+
+        <nav class="mt-24 max-w-4xl border-t border-neutral-800 pt-8" aria-label="Selected works">
+            <h2 class="font-mono text-xs uppercase tracking-widest text-neutral-500 mb-6">Selected Works</h2>
+            <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 text-lg">
+                <li><a href="/mayhem-ball.html" class="text-white hover:text-neutral-400 transition-colors">Lady Gaga - The Mayhem Ball</a></li>
+                <li><a href="/swarovski.html" class="text-white hover:text-neutral-400 transition-colors">Swarovski x Ariana Grande</a></li>
+                <li><a href="/muse.html" class="text-white hover:text-neutral-400 transition-colors">Muse</a></li>
+                <li><a href="/feid.html" class="text-white hover:text-neutral-400 transition-colors">Feid x Sprite</a></li>
+                <li><a href="/christina.html" class="text-white hover:text-neutral-400 transition-colors">Christina Aguilera</a></li>
+                <li><a href="/mahmood.html" class="text-white hover:text-neutral-400 transition-colors">Mahmood</a></li>
+                <li><a href="/paper.html" class="text-white hover:text-neutral-400 transition-colors">Paper x Gwen Stefani</a></li>
+                <li><a href="/romancero.html" class="text-white hover:text-neutral-400 transition-colors">Romancero</a></li>
+            </ul>
+        </nav>
+    </main>
+
+    <footer class="px-6 py-8 border-t border-neutral-800 flex flex-col md:flex-row justify-between gap-2">
+        <a href="mailto:andrea.marcias@hotmail.com" class="text-sm text-neutral-400 hover:text-white transition-colors">andrea.marcias@hotmail.com</a>
+        <p class="text-xs text-neutral-600 font-mono">© 2026 Andrea Marcias</p>
+    </footer>
+
+</body>
+
+</html>
