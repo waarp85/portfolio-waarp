@@ -6,6 +6,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Andrea Marcias (Waarp) | 3D Artist &amp; Motion Designer</title>
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <meta name="description" content="Andrea Marcias (Waarp), Italian 3D artist and motion designer. CGI, 3D visuals and title design for Lady Gaga, Swarovski, Muse, Christina Aguilera and more.">
     <meta name="author" content="Andrea Marcias">
     <meta name="robots" content="index, follow">
@@ -51,50 +54,9 @@
     </script>
 
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&amp;display=swap"
-        rel="stylesheet">
-
-    <!-- Icons -->
-    <script src="https://unpkg.com/lucide@1.71.0/dist/umd/lucide.min.js"></script>
-
+    <link rel="preload" href="assets/fonts/geist-latin.woff2" as="font" type="font/woff2" crossorigin>
 
     <style>
-        /* Custom Utilities & Cursor */
-        body {
-            cursor: none;
-        }
-
-        .custom-cursor {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 12px;
-            height: 12px;
-            background-color: white;
-            border-radius: 50%;
-            pointer-events: none;
-            z-index: 9999;
-            transform: translate(-50%, -50%);
-            mix-blend-mode: difference;
-            transition: width 0.2s, height 0.2s;
-        }
-
-        .custom-cursor.hovered {
-            width: 48px;
-            height: 48px;
-            opacity: 0.1;
-        }
-
-        /* Grid Background Pattern */
-        .bg-grid {
-            background-size: 40px 40px;
-            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-                linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-        }
-
         /* Hide Scrollbar */
         ::-webkit-scrollbar {
             width: 0px;
@@ -112,12 +74,6 @@
 
 <body class="bg-neutral-950 text-neutral-200 relative overflow-x-hidden">
 
-    <!-- Cursor -->
-    <div id="cursor" class="custom-cursor hidden md:block"></div>
-
-    <!-- Background Grid -->
-    <div class="fixed inset-0 bg-grid pointer-events-none z-0"></div>
-
     <!-- Top bar -->
     <header class="fixed top-0 inset-x-0 z-50 px-6 py-4 flex justify-between items-center text-sm bg-neutral-950/85 backdrop-blur-md">
         <a href="#hero" class="font-medium tracking-tight text-white hover:text-neutral-500 transition-colors">Andrea Marcias</a>
@@ -125,46 +81,34 @@
             <a href="#work" class="text-neutral-500 hover:text-white transition-colors">Work</a>
             <a href="#contact" class="text-neutral-500 hover:text-white transition-colors">Contact</a>
         </nav>
-        <span id="system-clock" hidden></span><span id="mouse-coords" hidden></span>
     </header>
 
-    <!-- Scroll Progress (Right Fixed) -->
-    <div
-        class="fixed right-6 top-1/2 -translate-y-1/2 flex flex-col items-center gap-2 hidden md:flex mix-blend-difference z-50">
-        <span id="scroll-text" class="text-sm text-neutral-500 font-bold"
-            style="writing-mode: vertical-rl; text-orientation: mixed;">0%</span>
-        <div class="h-24 w-[1px] bg-neutral-800 relative">
-            <div id="scroll-bar" class="absolute top-0 left-0 w-full bg-white transition-all duration-100"
-                style="height: 0%"></div>
-        </div>
-    </div>
-
     <!-- Main Content -->
-    <main class="relative z-10 pt-24 pb-24">
+    <main class="relative z-10 pt-20 pb-24">
 
         <!-- Hero Section -->
-        <section id="hero" class="px-6 pt-8 pb-16 md:pt-16 md:pb-24 border-b border-neutral-800">
+        <section id="hero" class="px-6 pt-6 pb-12 md:pt-8 md:pb-12 border-b border-neutral-800">
             <div class="max-w-6xl">
-                <h1 id="hero-title" class="max-w-5xl text-3xl md:text-6xl font-normal tracking-tight leading-tight text-white">
+                <h1 id="hero-title" class="max-w-5xl text-3xl md:text-5xl font-normal tracking-tight leading-tight text-white">
                     Andrea Marcias <span class="text-neutral-500">is a 3D artist and motion designer creating CGI, title design
                     and visuals for music artists, luxury brands and agencies.</span>
                 </h1>
                 <p class="mt-6 text-base md:text-lg text-neutral-500">Also known as Waarp. Based in Italy, available for freelance projects worldwide.</p>
-                <div class="mt-10 flex flex-wrap items-center gap-8">
+                <div class="mt-8 flex flex-wrap items-center gap-8">
                     <a href="#contact"
                         class="inline-block bg-white text-neutral-950 px-6 py-3 text-sm font-bold hover:bg-neutral-200 transition-colors">
                         Get In Touch
                     </a>
                     <a href="#work"
                         class="inline-flex items-center gap-2 text-sm text-neutral-400 hover:text-white transition-colors">
-                        View Work <i data-lucide="arrow-down" class="w-4 h-4"></i>
+                        View Work <svg class="w-4 h-4" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
                     </a>
                 </div>
             </div>
         </section>
 
         <!-- Reel Teaser: contained, not full width, so it stays sharp on large screens -->
-        <section id="reel" class="px-6 py-16 md:py-24 border-b border-neutral-800">
+        <section id="reel" class="px-6 pt-10 pb-16 md:pt-12 md:pb-24 border-b border-neutral-800">
             <div class="max-w-5xl mx-auto">
                 <video controlsList="nodownload" disablePictureInPicture id="reel-teaser" class="block w-full h-auto bg-black" autoplay muted loop playsinline preload="auto"
                     poster="assets/images/reel/teaser-poster.jpg" width="1600" height="900"
@@ -199,7 +143,7 @@
                         <span class="text-neutral-700">//</span>
                         <span>Mahmood</span>
                         <span class="text-neutral-700">//</span>
-                        <span>Rocnation</span>
+                        <span>Roc Nation</span>
                         <span class="text-neutral-700">//</span>
                         <span>Sony Music</span>
                         <span class="text-neutral-700">//</span>
@@ -231,7 +175,7 @@
                         <span class="text-neutral-700">//</span>
                         <span>Mahmood</span>
                         <span class="text-neutral-700">//</span>
-                        <span>Rocnation</span>
+                        <span>Roc Nation</span>
                         <span class="text-neutral-700">//</span>
                         <span>Sony Music</span>
                         <span class="text-neutral-700">//</span>
@@ -255,7 +199,7 @@
             <!-- Header for section -->
             <div class="px-6 py-6 border-b border-neutral-800 flex justify-between items-center">
                 <h2 class="text-sm text-neutral-500">Selected Works</h2>
-                <span class="text-sm text-neutral-600">Index 2021-2026</span>
+                <span class="text-sm text-neutral-500">Index 2021-2026</span>
             </div>
 
             <div
@@ -392,11 +336,11 @@
                     <div class="flex gap-6">
                         <a href="https://www.instagram.com/_waarp_/" target="_blank"
                             class="flex items-center gap-2 text-sm text-white hover:text-neutral-400 transition-colors">
-                            <i data-lucide="instagram" class="w-4 h-4 stroke-[1.5]"></i> Instagram
+                            <svg class="w-4 h-4" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></svg> Instagram
                         </a>
                         <a href="https://www.behance.net/waarp" target="_blank"
                             class="flex items-center gap-2 text-sm text-white hover:text-neutral-400 transition-colors">
-                            <i data-lucide="briefcase" class="w-4 h-4 stroke-[1.5]"></i> Behance
+                            <svg class="w-4 h-4" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.969 16.927a2.561 2.561 0 0 0 1.901.677 2.501 2.501 0 0 0 1.531-.475c.362-.235.636-.584.779-.99h2.585a5.091 5.091 0 0 1-1.9 2.896 5.292 5.292 0 0 1-3.091.88 5.839 5.839 0 0 1-2.284-.433 4.871 4.871 0 0 1-1.723-1.211 5.657 5.657 0 0 1-1.08-1.874 7.057 7.057 0 0 1-.383-2.393c-.005-.8.129-1.595.396-2.349a5.313 5.313 0 0 1 5.088-3.604 4.87 4.87 0 0 1 2.376.563c.661.362 1.231.87 1.668 1.485a6.2 6.2 0 0 1 .943 2.133c.194.821.263 1.666.205 2.508h-7.699c-.063.79.184 1.574.688 2.187ZM6.947 4.084a8.065 8.065 0 0 1 1.928.198 4.29 4.29 0 0 1 1.49.638c.418.303.748.711.958 1.182.241.579.357 1.203.341 1.83a3.506 3.506 0 0 1-.506 1.961 3.726 3.726 0 0 1-1.503 1.287 3.588 3.588 0 0 1 2.027 1.437c.464.747.697 1.615.67 2.494a4.593 4.593 0 0 1-.423 2.032 3.945 3.945 0 0 1-1.163 1.413 5.114 5.114 0 0 1-1.683.807 7.135 7.135 0 0 1-1.928.259H0V4.084h6.947Zm-.235 12.9c.308.004.616-.029.916-.099a2.18 2.18 0 0 0 .766-.332c.228-.158.411-.371.534-.619.142-.317.208-.663.191-1.009a2.08 2.08 0 0 0-.642-1.715 2.618 2.618 0 0 0-1.696-.505h-3.54v4.279h3.471Zm13.635-5.967a2.13 2.13 0 0 0-1.654-.619 2.336 2.336 0 0 0-1.163.259 2.474 2.474 0 0 0-.738.62 2.359 2.359 0 0 0-.396.792c-.074.239-.12.485-.137.734h4.769a3.239 3.239 0 0 0-.679-1.785l-.002-.001Zm-13.813-.648a2.254 2.254 0 0 0 1.423-.433c.399-.355.607-.88.56-1.413a1.916 1.916 0 0 0-.178-.891 1.298 1.298 0 0 0-.495-.533 1.851 1.851 0 0 0-.711-.274 3.966 3.966 0 0 0-.835-.073H3.241v3.631h3.293v-.014ZM21.62 5.122h-5.976v1.527h5.976V5.122Z"/></svg> Behance
                         </a>
                     </div>
                 </div>
@@ -404,8 +348,8 @@
                 <div class="flex flex-col md:items-end gap-1">
                     <a href="privacy.html"
                         class="text-sm text-neutral-500 hover:text-white transition-colors">Privacy Policy</a>
-                    <p class="text-sm text-neutral-600">© 2026 Andrea Marcias</p>
-                    <p class="text-sm text-neutral-600">P.IVA 02900950904</p>
+                    <p class="text-sm text-neutral-500">© 2026 Andrea Marcias</p>
+                    <p class="text-sm text-neutral-500">P.IVA 02900950904</p>
                 </div>
             </div>
         </section>
@@ -413,14 +357,11 @@
     </main>
 
     <!-- GSAP -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="assets/js/gsap.min.js"></script>
+    <script src="assets/js/ScrollTrigger.min.js"></script>
 
     <!-- Interactive Scripts -->
     <script>
-        // Init Icons
-        lucide.createIcons();
-
         // Register GSAP
         gsap.registerPlugin(ScrollTrigger);
 
@@ -467,120 +408,8 @@
             }
         })();
 
-        // Clock Functionality
-        function updateClock() {
-            const now = new Date();
-            const timeString = now.toLocaleTimeString('en-US', {
-                hour12: false,
-                hour: '2-digit',
-                minute: '2-digit',
-                second: '2-digit'
-            });
-            document.getElementById('system-clock').textContent = timeString;
-        }
-        setInterval(updateClock, 1000);
-        updateClock();
-
-        // Mouse Tracker
-        const coords = document.getElementById('mouse-coords');
-        const cursor = document.getElementById('cursor');
-        const links = document.querySelectorAll('a');
-
-        document.addEventListener('mousemove', (e) => {
-            // Update Coords UI
-            const x = String(e.clientX).padStart(4, '0');
-            const y = String(e.clientY).padStart(4, '0');
-            if (coords) coords.textContent = `X: ${x} Y: ${y}`;
-
-            // Custom Cursor Movement
-            if (cursor) {
-                cursor.style.left = e.clientX + 'px';
-                cursor.style.top = e.clientY + 'px';
-            }
-        });
-
-        // Hover Effect on Cursor
-        links.forEach(link => {
-            link.addEventListener('mouseenter', () => cursor.classList.add('hovered'));
-            link.addEventListener('mouseleave', () => cursor.classList.remove('hovered'));
-        });
-
-        // Scroll Percentage
-        // Scroll Percentage
-        // Scroll Percentage
-        function updateScroll() {
-            // Robust cross-browser scroll position
-            const scrollTop = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop;
-
-            // Robust total height
-            const scrollHeight = Math.max(
-                document.body.scrollHeight, document.documentElement.scrollHeight,
-                document.body.offsetHeight, document.documentElement.offsetHeight,
-                document.body.clientHeight, document.documentElement.clientHeight
-            ) - document.documentElement.clientHeight;
-
-            let scrollPercent = 0;
-            if (scrollHeight > 0) {
-                scrollPercent = Math.round((scrollTop / scrollHeight) * 100);
-            }
-
-            // Safety check
-            if (!isFinite(scrollPercent) || isNaN(scrollPercent)) {
-                scrollPercent = 0;
-            }
-
-            const scrollText = document.getElementById('scroll-text');
-            const scrollBar = document.getElementById('scroll-bar');
-
-            if (scrollText) scrollText.textContent = scrollPercent + '%';
-            if (scrollBar) scrollBar.style.height = scrollPercent + '%';
-        }
-
-        window.addEventListener('scroll', updateScroll);
-        window.addEventListener('resize', updateScroll);
-        updateScroll();
     </script>
 
-
-    <!-- Cookie Banner -->
-    <div id="cookie-banner"
-        class="fixed bottom-0 left-0 right-0 z-[9999] bg-neutral-900 border-t border-neutral-700 p-4 transform transition-transform duration-300">
-        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p class="text-sm text-neutral-300 text-center sm:text-left">
-                This website uses technical cookies to ensure proper functionality and enhance your browsing experience.
-                By continuing to use this site, you consent to the use of cookies.
-            </p>
-            <button id="cookie-accept"
-                class="shrink-0 bg-white text-neutral-900 px-6 py-2 text-sm font-medium uppercase tracking-wider hover:bg-neutral-200 transition-colors">
-                Accept
-            </button>
-        </div>
-    </div>
-
-    <script>
-        // Cookie Banner Logic
-        (function () {
-            const banner = document.getElementById('cookie-banner');
-            const acceptBtn = document.getElementById('cookie-accept');
-
-            if (!banner || !acceptBtn) return;
-
-            // Check if already accepted
-            if (localStorage.getItem('cookiesAccepted') === 'true') {
-                banner.style.display = 'none';
-                return;
-            }
-
-            // Handle accept click
-            acceptBtn.addEventListener('click', function () {
-                localStorage.setItem('cookiesAccepted', 'true');
-                banner.style.transform = 'translateY(100%)';
-                setTimeout(function () {
-                    banner.style.display = 'none';
-                }, 300);
-            });
-        })();
-    </script>
 
     <script>
         // Discourage saving images and videos: no right-click menu or dragging on media (links keep working)
