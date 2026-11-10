@@ -53,7 +53,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap"
+        href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&amp;display=swap"
         rel="stylesheet">
 
     <!-- Icons -->
@@ -111,31 +111,21 @@
     <!-- Background Grid -->
     <div class="fixed inset-0 bg-grid pointer-events-none z-0"></div>
 
-    <!-- Technical UI Layer (Fixed) -->
-    <div
-        class="fixed inset-0 pointer-events-none z-50 p-6 flex flex-col justify-between font-mono text-xs text-neutral-500 uppercase tracking-widest mix-blend-difference">
-        <div class="flex justify-between items-start">
-            <a href="index.html"
-                class="font-bold text-white tracking-tighter pointer-events-auto hover:text-neutral-400 transition-colors">ANDREA MARCIAS</a>
-            <div class="flex flex-col items-end gap-1">
-                <span id="system-clock">00:00:00</span>
-                <span id="mouse-coords" class="hidden md:block">X: 000 Y: 000</span>
-            </div>
-        </div>
-        <div class="flex justify-between items-end">
-            <span></span>
-            <div class="flex gap-6 pointer-events-auto">
-                <a href="romancero.html" class="hover:text-white transition-colors">PREVIOUS</a>
-                <a href="index.html" class="hover:text-white transition-colors">HOME</a>
-                <a href="mahmood.html" class="hover:text-white transition-colors">NEXT</a>
-            </div>
-        </div>
-    </div>
+    <!-- Top bar -->
+    <header class="fixed top-0 inset-x-0 z-50 px-6 py-4 flex justify-between items-center text-sm bg-neutral-950/85 backdrop-blur-md">
+        <a href="index.html" class="font-medium tracking-tight text-white hover:text-neutral-500 transition-colors">Andrea Marcias</a>
+        <nav class="flex gap-6">
+            <a href="romancero.html" class="text-neutral-500 hover:text-white transition-colors">Previous</a>
+            <a href="index.html" class="text-neutral-500 hover:text-white transition-colors">Home</a>
+            <a href="mahmood.html" class="text-neutral-500 hover:text-white transition-colors">Next</a>
+        </nav>
+        <span id="system-clock" hidden></span><span id="mouse-coords" hidden></span>
+    </header>
 
     <!-- Scroll Progress (Right Fixed) -->
     <div
         class="fixed right-6 top-1/2 -translate-y-1/2 flex flex-col items-center gap-2 hidden md:flex mix-blend-difference z-50">
-        <span id="scroll-text" class="font-mono text-xs text-neutral-500 font-bold"
+        <span id="scroll-text" class="text-sm text-neutral-500 font-bold"
             style="writing-mode: vertical-rl; text-orientation: mixed;">0%</span>
         <div class="h-24 w-[1px] bg-neutral-800 relative">
             <div id="scroll-bar" class="absolute top-0 left-0 w-full bg-white transition-all duration-100"
@@ -154,7 +144,7 @@
                     LADY GAGA<br>
                     <span class="text-neutral-500">THE MAYHEM BALL</span>
                 </h1>
-                <p class="text-xs font-mono uppercase tracking-widest text-neutral-500">TITLE CARDS</p>
+                <p class="text-sm text-neutral-500">Title Cards</p>
             </div>
         </section>
 
@@ -165,26 +155,26 @@
                 <!-- Meta Columns -->
                 <div class="p-8 md:p-12 space-y-8">
                     <div>
-                        <h3 class="text-xs font-mono text-neutral-500 uppercase tracking-widest mb-2">Client</h3>
+                        <h3 class="text-sm text-neutral-500 mb-2">Client</h3>
                         <p class="text-white text-lg">Human Person x Lady Gaga</p>
                     </div>
                     <div>
-                        <h3 class="text-xs font-mono text-neutral-500 uppercase tracking-widest mb-2">Category</h3>
+                        <h3 class="text-sm text-neutral-500 mb-2">Category</h3>
                         <p class="text-white text-lg">Music, World Tour</p>
                     </div>
                     <div>
-                        <h3 class="text-xs font-mono text-neutral-500 uppercase tracking-widest mb-2">Type</h3>
+                        <h3 class="text-sm text-neutral-500 mb-2">Type</h3>
                         <p class="text-white text-lg">Title Cards, 3D Modeling</p>
                     </div>
                     <div>
-                        <h3 class="text-xs font-mono text-neutral-500 uppercase tracking-widest mb-2">Year</h3>
+                        <h3 class="text-sm text-neutral-500 mb-2">Year</h3>
                         <p class="text-white text-lg">2026</p>
                     </div>
                 </div>
 
                 <!-- Description Column -->
                 <div class="p-8 md:p-12">
-                    <h3 class="text-xs font-mono text-neutral-500 uppercase tracking-widest mb-6">Credits</h3>
+                    <h3 class="text-sm text-neutral-500 mb-6">Credits</h3>
                     <div class="space-y-4 text-neutral-400 font-light text-lg">
                         <p><strong class="text-white font-medium">Title Cards 3D Modeling:</strong> Andrea Marcias</p>
                         <p><strong class="text-white font-medium">Title Cards Design:</strong> Luca Devinu</p>
@@ -196,7 +186,7 @@
                         </p>
 
                         <details class="mt-6 text-sm text-neutral-500 group/credits">
-                            <summary class="cursor-pointer text-xs font-mono uppercase tracking-widest text-neutral-400 hover:text-white transition-colors">Full credits</summary>
+                            <summary class="cursor-pointer text-sm text-neutral-400 hover:text-white transition-colors">Full credits</summary>
                             <div class="mt-4 space-y-2">
                             <p><span class="text-neutral-300">Human Person:</span> Ben Dalgleish, Ian Valentine, Frances Waite, Molly Leishman, Bora Lee, Matt Cummer, Phoebe Morris, Ash Smith, Tim Marriott, Mads Engel, Miron Malejki, Ny Mayes, Stephen Hedges</p>
                             <p><span class="text-neutral-300">Creative Direction &amp; Choreography:</span> Parris Goebel</p>
@@ -232,42 +222,42 @@
             <figure class="border-b border-neutral-800 bg-black">
                 <img src="assets/images/mayhem-ball/web/00-lady-gaga-presents.webp" width="2000" height="1125"
                     alt="Lady Gaga The Mayhem Ball, 3D title card: Lady Gaga Presents" class="w-full h-auto block">
-                <figcaption class="px-6 py-4 flex justify-between text-xs font-mono uppercase tracking-widest text-neutral-500">
+                <figcaption class="px-6 py-4 flex justify-between text-sm text-neutral-500">
                     <span>Lady Gaga Presents</span><span>Opening</span>
                 </figcaption>
             </figure>
             <figure class="border-b border-neutral-800 bg-black">
                 <img loading="lazy" decoding="async" src="assets/images/mayhem-ball/web/01-the-art-of-personal-chaos.webp" width="2000" height="1125"
                     alt="Lady Gaga The Mayhem Ball, 3D title card: The Art of Personal Chaos" class="w-full h-auto block">
-                <figcaption class="px-6 py-4 flex justify-between text-xs font-mono uppercase tracking-widest text-neutral-500">
+                <figcaption class="px-6 py-4 flex justify-between text-sm text-neutral-500">
                     <span>The Art of Personal Chaos</span><span>Opening</span>
                 </figcaption>
             </figure>
             <figure class="border-b border-neutral-800 bg-black">
                 <img loading="lazy" decoding="async" src="assets/images/mayhem-ball/web/02-and-she-fell-into-a-gothic-dream.webp" width="2000" height="1125"
                     alt="Lady Gaga The Mayhem Ball, 3D title card: And She Fell Into a Gothic Dream" class="w-full h-auto block">
-                <figcaption class="px-6 py-4 flex justify-between text-xs font-mono uppercase tracking-widest text-neutral-500">
+                <figcaption class="px-6 py-4 flex justify-between text-sm text-neutral-500">
                     <span>And She Fell Into a Gothic Dream</span><span>Act II</span>
                 </figcaption>
             </figure>
             <figure class="border-b border-neutral-800 bg-black">
                 <img loading="lazy" decoding="async" src="assets/images/mayhem-ball/web/03-the-beautiful-nightmare-that-knows-her-name.webp" width="2000" height="1125"
                     alt="Lady Gaga The Mayhem Ball, 3D title card: The Beautiful Nightmare That Knows Her Name" class="w-full h-auto block">
-                <figcaption class="px-6 py-4 flex justify-between text-xs font-mono uppercase tracking-widest text-neutral-500">
+                <figcaption class="px-6 py-4 flex justify-between text-sm text-neutral-500">
                     <span>The Beautiful Nightmare That Knows Her Name</span><span>Act III</span>
                 </figcaption>
             </figure>
             <figure class="border-b border-neutral-800 bg-black">
                 <img loading="lazy" decoding="async" src="assets/images/mayhem-ball/web/04-every-chessboard-has-two-queens.webp" width="2000" height="1125"
                     alt="Lady Gaga The Mayhem Ball, 3D title card: Every Chessboard Has Two Queens" class="w-full h-auto block">
-                <figcaption class="px-6 py-4 flex justify-between text-xs font-mono uppercase tracking-widest text-neutral-500">
+                <figcaption class="px-6 py-4 flex justify-between text-sm text-neutral-500">
                     <span>Every Chessboard Has Two Queens</span><span>Act IV</span>
                 </figcaption>
             </figure>
             <figure class="border-b border-neutral-800 bg-black">
                 <img loading="lazy" decoding="async" src="assets/images/mayhem-ball/web/05-eternal-aria-of-the-monster-heart.webp" width="2000" height="1125"
                     alt="Lady Gaga The Mayhem Ball, 3D title card: Eternal Aria of the Monster Heart" class="w-full h-auto block">
-                <figcaption class="px-6 py-4 flex justify-between text-xs font-mono uppercase tracking-widest text-neutral-500">
+                <figcaption class="px-6 py-4 flex justify-between text-sm text-neutral-500">
                     <span>Eternal Aria of the Monster Heart</span><span>Finale</span>
                 </figcaption>
             </figure>
@@ -277,7 +267,7 @@
         <!-- Footer / Contact -->
         <section id="contact" class="min-h-[50vh] flex flex-col justify-between px-6 py-24 bg-neutral-950 relative">
             <div class="max-w-4xl">
-                <h2 class="text-xs font-mono text-neutral-500 uppercase tracking-widest mb-8">Next Project</h2>
+                <h2 class="text-sm text-neutral-500 mb-8">Next Project</h2>
                 <a href="mahmood.html"
                     class="text-4xl md:text-6xl font-semibold tracking-tighter text-white hover:text-neutral-400 transition-colors">
                     MAHMOOD<br>→
@@ -285,7 +275,7 @@
             </div>
 
             <div class="mt-24 max-w-4xl">
-                <h2 class="text-xs font-mono text-neutral-500 uppercase tracking-widest mb-6">Start a Project</h2>
+                <h2 class="text-sm text-neutral-500 mb-6">Start a Project</h2>
                 <a href="mailto:andrea.marcias@hotmail.com"
                     class="text-2xl md:text-4xl font-light tracking-tight text-white hover:text-neutral-400 transition-colors break-words">
                     andrea.marcias@hotmail.com
@@ -294,7 +284,7 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-24 pt-12 border-t border-neutral-800">
                 <div class="flex flex-col gap-4">
-                    <span class="text-xs font-mono text-neutral-500 uppercase tracking-widest">Socials</span>
+                    <span class="text-sm text-neutral-500">Socials</span>
                     <div class="flex gap-6">
                         <a href="https://www.instagram.com/_waarp_/" target="_blank"
                             class="flex items-center gap-2 text-sm text-white hover:text-neutral-400 transition-colors">
@@ -308,8 +298,8 @@
                 </div>
 
                 <div class="flex flex-col md:items-end gap-1">
-                    <p class="text-xs text-neutral-600 font-mono">© 2026 Andrea Marcias</p>
-                    <p class="text-xs text-neutral-600 font-mono">P.IVA 02900950904</p>
+                    <p class="text-sm text-neutral-600">© 2026 Andrea Marcias</p>
+                    <p class="text-sm text-neutral-600">P.IVA 02900950904</p>
                 </div>
             </div>
         </section>
