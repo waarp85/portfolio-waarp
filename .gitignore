@@ -15,7 +15,6 @@ Thumbs.db
 # File non usati dal sito, tenuti da parte
 _da_cancellare/
 Claude outputs/
-_drafts/
 
 # Originali del materiale nuovo (sul sito vanno le versioni web in .webp)
 assets/images/mayhem-ball/*.jpg
@@ -24,5 +23,5 @@ assets/images/mahmood/*.jpg
 assets/images/mahmood/*.png
 _site_*.tgz
 
-_video_originali/
+_ORIGINALI/
 _token.txt

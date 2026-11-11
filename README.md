@@ -1,34 +1,27 @@
-# WAARP Portfolio - Project Context & Rules
+# andreamarcias.com - come e' organizzata la cartella
 
-## 1. Project Philosophy
-- **Style:** Tecnico-Brutalista. Minimalist, raw, high-performance.
-- **Goal:** Showcase 3D and Motion Design work.
-- **Constraint:** **NO VISUAL CHANGES** allowed during technical optimizations unless explicitly requested.
+Sito statico (HTML + CSS + JS), pubblicato con GitHub Pages dal repo waarp85/portfolio-waarp, branch main.
+Per pubblicare: doppio clic su `Claude outputs/pubblica-sito.bat` (fa il push su GitHub).
 
-## 2. Technical Stack
-- **Core:** HTML5, CSS3, Vanilla JavaScript.
-- **No Frameworks:** No React, Vue, or complex build tools for the site itself.
-- **Hosting:** GitHub Pages.
+## Cosa va online (non spostare: gli indirizzi delle pagine dipendono da qui)
 
-## 3. Workflows
-### Development vs. Production
-- **Development (Sandbox):** `c:\Users\andre\.gemini\antigravity\scratch`
-    - ALL changes, experiments, and fixes happen here first.
-    - Verify locally using the browser.
-- **Production (Live):** `C:\Users\andre\projects\portfolio-waarp`
-    - **ONLY** copy files here when the user says "Lancialo" or "Deploy".
-    - Never work directly in this folder.
+| Cosa | Dove |
+|---|---|
+| Pagine del sito | i file `.html` nella cartella principale (index, swarovski, mahmood, christina, mayhem-ball, feid, romancero, muse, paper...) |
+| Pagine servizi per Google | `3d-title-animation.html`, `3d-logo-treatments.html`, `album-artwork.html` |
+| Pagine nascoste (non indicizzate) | `rd.html`, `myke_towers.html`, `salmo_ranch.html`, `privacy.html`, `404.html` |
+| Vecchi indirizzi che rimandano alle pagine nuove | `about`, `contact`, `work`, `christina-aguilera`, `feid-x-sprite`, `swarovski-arianagrande`, `researchanddevelopment` e la cartella `it/` |
+| Immagini e video del sito | `assets/images/` |
+| Stile, font, script | `assets/css/`, `assets/fonts/`, `assets/js/` |
+| Plugin da scaricare | `assets/files/` |
+| File tecnici | `CNAME` (dominio), `robots.txt`, `sitemap.xml`, favicon, `tailwind.config.js` |
 
-### Deployment Process
-1.  Verify changes in `scratch`.
-2.  Copy files to `portfolio-waarp`.
-3.  Git commit and push from `portfolio-waarp`.
+L'elenco completo di quali file usa ogni pagina e' in `Claude outputs/ASSET USATI DAL SITO.txt`.
 
-## 4. Key Features
-- **SEO:** JSON-LD structured data on all project pages.
-- **Performance:** `loading="lazy"` on all gallery images below the fold.
-- **Navigation:** Grid-based layout with fixed corner navigation.
+## Cosa NON va online (escluso da GitHub)
 
-## 5. Known Issues / History
-- **Corruption:** Project pages were previously corrupted during batch edits. Always verify full file content after large "multi_replace" operations.
-- **Restoration:** Files were manually restored on 2025-12-01.
+| Cartella | Cosa c'e' |
+|---|---|
+| `Claude outputs/` | `pubblica-sito.bat`, anteprime delle pagine, controlli del reel, bozze dei testi |
+| `_ORIGINALI/` | materiale sorgente: VIDEO TEASER REEL (clip numerate + indice), FOTO MAHMOOD, FOTO MAYHEM BALL |
+| `_da_cancellare/` | cose non piu' usate, da eliminare quando vuoi |
