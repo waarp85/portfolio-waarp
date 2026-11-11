@@ -112,9 +112,11 @@
         <section id="reel" class="px-6 pt-10 pb-16 md:pt-12 md:pb-24 border-b border-neutral-800">
             <div class="max-w-5xl mx-auto">
                 <video controlsList="nodownload" disablePictureInPicture id="reel-teaser" class="block w-full h-auto bg-black" autoplay muted loop playsinline preload="auto"
-                    poster="assets/images/reel/teaser-poster.jpg" width="1600" height="900"
+                    poster="assets/images/reel/teaser-poster.jpg" width="1920" height="1080"
                     aria-label="Showreel teaser: a selection of client work and personal R&amp;D in 3D and motion by Andrea Marcias">
+                    <source src="assets/images/reel/teaser-mobile-av1.mp4" type='video/mp4; codecs="av01.0.05M.10"' media="(max-width: 767px)">
                     <source src="assets/images/reel/teaser-mobile.mp4" type="video/mp4" media="(max-width: 767px)">
+                    <source src="assets/images/reel/teaser-av1.mp4" type='video/mp4; codecs="av01.0.08M.10"'>
                     <source src="assets/images/reel/teaser.mp4" type="video/mp4">
                 </video>
                 <div class="mt-4 flex justify-between items-center text-sm text-neutral-500">
