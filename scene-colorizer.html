@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en"
+    class="scroll-smooth bg-neutral-950 text-white antialiased selection:bg-white selection:text-neutral-950">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scene Colorizer - Free Cinema 4D Plugin | Andrea Marcias</title>
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <meta name="description" content="Scene Colorizer is a free Cinema 4D plugin that gives every object in your scene its own colour in one click, in the viewport and on the Object Manager icons.">
+    <meta name="author" content="Andrea Marcias">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.andreamarcias.com/scene-colorizer.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.andreamarcias.com/scene-colorizer.html">
+    <meta property="og:title" content="Scene Colorizer - Free Cinema 4D Plugin">
+    <meta property="og:description" content="One click, and every object in your Cinema 4D scene gets its own colour. Four palettes, by object or by group. Free.">
+    <meta property="og:image" content="https://www.andreamarcias.com/assets/images/scene-colorizer/scene-colorizer-og.jpg">
+    <meta property="og:site_name" content="Andrea Marcias">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Scene Colorizer - Free Cinema 4D Plugin">
+    <meta name="twitter:description" content="One click, and every object in your Cinema 4D scene gets its own colour. Four palettes, by object or by group. Free.">
+    <meta name="twitter:image" content="https://www.andreamarcias.com/assets/images/scene-colorizer/scene-colorizer-og.jpg">
+    <meta name="twitter:creator" content="@_waarp_">
+
+    <!-- Structured Data / JSON-LD -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Scene Colorizer",
+  "softwareVersion": "1.0",
+  "applicationCategory": "MultimediaApplication",
+  "applicationSubCategory": "Cinema 4D plugin",
+  "operatingSystem": "Windows, macOS",
+  "description": "Free Cinema 4D plugin that gives every object in a scene its own colour, in the viewport and on the Object Manager icons.",
+  "url": "https://www.andreamarcias.com/scene-colorizer.html",
+  "image": "https://www.andreamarcias.com/assets/images/scene-colorizer/scene-colorizer-og.jpg",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "author": {
+    "@type": "Person",
+    "@id": "https://www.andreamarcias.com/#person",
+    "name": "Andrea Marcias",
+    "alternateName": "Waarp",
+    "url": "https://www.andreamarcias.com/"
+  }
+}
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preload" href="assets/fonts/geist-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+    <style>
+        /* Hide Scrollbar */
+        ::-webkit-scrollbar {
+            width: 0px;
+            background: transparent;
+        }
+    </style>
+    <link rel="stylesheet" href="assets/css/tailwind.css">
+    <!-- Classi delle pagine R&D (assets/css/rnd.css, generato con Tailwind da rd.html, finisher.html e scene-colorizer.html) -->
+    <link rel="stylesheet" href="assets/css/rnd.css">
+</head>
+
+<body class="bg-neutral-950 text-neutral-200 relative overflow-x-hidden">
+
+    <!-- Top bar -->
+    <header class="fixed top-0 inset-x-0 z-50 px-6 py-4 flex justify-between items-center text-sm bg-neutral-950/85 backdrop-blur-md">
+        <a href="index.html" class="font-medium tracking-tight text-white hover:text-neutral-500 transition-colors">Andrea Marcias</a>
+        <nav class="flex gap-6">
+            <a href="index.html#work" class="text-neutral-500 hover:text-white transition-colors">Work</a>
+            <a href="index.html#about" class="text-neutral-500 hover:text-white transition-colors">About</a>
+            <a href="#contact" class="text-neutral-500 hover:text-white transition-colors">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="relative z-10 pt-24 pb-24">
+
+        <!-- Hero -->
+        <section class="border-b border-neutral-800">
+            <div class="px-6 py-12 md:p-12 lg:p-16 max-w-5xl">
+                <p class="text-sm text-neutral-500 mb-6">Free Cinema 4D plugin · <a href="rd.html" class="text-neutral-400 hover:text-white underline underline-offset-4 decoration-neutral-700 hover:decoration-neutral-400 transition-colors">R&amp;D</a></p>
+                <h1 class="text-5xl md:text-8xl font-semibold tracking-tighter leading-none text-white select-none">
+                    Scene Colorizer
+                </h1>
+                <p class="text-neutral-400 font-light text-lg md:text-xl mt-8 max-w-2xl">
+                    One click, and every object in your scene gets its own colour. Read a busy scene at a glance,
+                    in the viewport and in the Object Manager.
+                </p>
+                <div class="flex flex-col sm:flex-row sm:items-center gap-4 mt-10">
+                    <a href="assets/files/SceneColorizer_1.0.zip" id="download" download class="inline-flex items-center justify-center gap-3 px-8 py-4 bg-white text-neutral-950 font-medium tracking-tight rounded-full hover:bg-neutral-300 transition-colors">
+                        Download free
+                        <svg class="w-4 h-4" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v12"/><path d="m6 10 6 6 6-6"/><path d="M4 20h16"/></svg>
+                    </a>
+                    <span class="text-sm text-neutral-500">Version 1.0 · Zip, 70 KB · Free for personal and commercial work</span>
+                </div>
+            </div>
+            <div class="border-t border-neutral-800 bg-[#cccccc]">
+                <img src="assets/images/scene-colorizer/scene-colorizer-hero.jpg" width="1920" height="1080"
+                    alt="A living room scene in the Cinema 4D viewport: grey on the left, every object in its own colour on the right"
+                    class="block w-full h-auto max-w-6xl mx-auto">
+            </div>
+        </section>
+
+        <!-- Specifiche -->
+        <section class="border-b border-neutral-800">
+            <div class="grid grid-cols-2 md:grid-cols-4 divide-x divide-neutral-800">
+                <div class="p-6 md:p-8">
+                    <h2 class="text-sm text-neutral-500 mb-2">Version</h2>
+                    <p class="text-white text-lg">1.0</p>
+                </div>
+                <div class="p-6 md:p-8">
+                    <h2 class="text-sm text-neutral-500 mb-2">Cinema 4D</h2>
+                    <p class="text-white text-lg">2025 – 2027</p>
+                </div>
+                <div class="p-6 md:p-8 border-t md:border-t-0 border-neutral-800">
+                    <h2 class="text-sm text-neutral-500 mb-2">Tested on</h2>
+                    <p class="text-white text-lg">2027.0, Windows</p>
+                </div>
+                <div class="p-6 md:p-8 border-t md:border-t-0 border-neutral-800">
+                    <h2 class="text-sm text-neutral-500 mb-2">Renderer</h2>
+                    <p class="text-white text-lg">Any</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cosa fa -->
+        <section class="border-b border-neutral-800">
+            <div class="px-6 py-6 border-b border-neutral-800 flex justify-between items-center">
+                <h2 class="text-sm text-neutral-500">What it does</h2>
+                <span class="text-sm text-neutral-500">Colours saved in your scene</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-neutral-800">
+                <div class="bg-neutral-950 p-8">
+                    <h3 class="text-white text-xl font-medium tracking-tight mb-3">Four palettes</h3>
+                    <p class="text-neutral-400 font-light">Pastel, Vibrant, Dark and Light. Neighbouring objects never get similar colours.</p>
+                </div>
+                <div class="bg-neutral-950 p-8">
+                    <h3 class="text-white text-xl font-medium tracking-tight mb-3">By object or by group</h3>
+                    <p class="text-neutral-400 font-light">Give every object its own colour, or let children take a shade of their parent's colour.</p>
+                </div>
+                <div class="bg-neutral-950 p-8">
+                    <h3 class="text-white text-xl font-medium tracking-tight mb-3">Object Manager icons</h3>
+                    <p class="text-neutral-400 font-light">The same colours on the object icons, so the list matches what you see in the viewport.</p>
+                </div>
+                <div class="bg-neutral-950 p-8">
+                    <h3 class="text-white text-xl font-medium tracking-tight mb-3">Saved in the scene</h3>
+                    <p class="text-neutral-400 font-light">The colours are written on the objects, not a view mode: they stay in the file for whoever opens it.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Installazione e note -->
+        <section class="border-b border-neutral-800 bg-neutral-950/50">
+            <div class="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-neutral-800">
+                <div class="p-8 md:p-12">
+                    <h2 class="text-sm text-neutral-500 mb-6">Install in 3 steps</h2>
+                    <ol class="space-y-4 text-neutral-400 font-light text-lg">
+                        <li><span class="text-white font-medium">1.</span> Unzip the download.</li>
+                        <li><span class="text-white font-medium">2.</span> Copy the <span class="text-white">SceneColorizer</span> folder into your Cinema 4D <span class="text-white">plugins</span> folder: Preferences &gt; Open Preferences Folder, then plugins.</li>
+                        <li><span class="text-white font-medium">3.</span> Restart Cinema 4D and open Extensions &gt; Scene Colorizer.</li>
+                    </ol>
+                </div>
+                <div class="p-8 md:p-12">
+                    <h2 class="text-sm text-neutral-500 mb-6">Good to know</h2>
+                    <ul class="space-y-4 text-neutral-400 font-light">
+                        <li>It works on the selected objects, or on the whole scene if nothing is selected.</li>
+                        <li>Colorize replaces display colours you set by hand on those objects. Remove Colors takes them off, and everything can be undone.</li>
+                        <li>Sky, Background, Environment and Foreground objects are left alone.</li>
+                        <li>Cinema 4D 2027 has a Random Object Color view mode. Scene Colorizer is different: you choose the palette, the icons get coloured too, and the colours stay in the file.</li>
+                        <li>Made for Cinema 4D 2025 – 2027. It should also run on R23 – 2024, and on macOS, but those haven't been tested.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Download di nuovo + licenza -->
+        <section class="border-b border-neutral-800 px-6 py-16 md:p-24 text-center">
+            <h2 class="text-3xl md:text-6xl font-semibold tracking-tighter text-white">Goodbye, grey viewport.</h2>
+            <a href="assets/files/SceneColorizer_1.0.zip" download class="inline-flex items-center justify-center gap-3 px-8 py-4 bg-white text-neutral-950 font-medium tracking-tight rounded-full hover:bg-neutral-300 transition-colors mt-10">
+                Download Scene Colorizer 1.0
+            </a>
+            <p class="text-sm text-neutral-500 mt-8 max-w-2xl mx-auto">
+                Free for personal and commercial work. Please share this page instead of re-uploading the file.
+                Independent plugin, not affiliated with or endorsed by Maxon. Cinema 4D is a trademark of Maxon Computer GmbH.
+            </p>
+            <p class="text-sm text-neutral-500 mt-6">More free tools: <a href="finisher.html" class="text-neutral-400 hover:text-white underline underline-offset-4 decoration-neutral-700 hover:decoration-neutral-400 transition-colors">Finisher for OctaneRender</a> · <a href="rd.html" class="text-neutral-400 hover:text-white underline underline-offset-4 decoration-neutral-700 hover:decoration-neutral-400 transition-colors">R&amp;D</a></p>
+        </section>
+
+        <!-- Chi l'ha fatto: porta al portfolio -->
+        <section class="border-b border-neutral-800">
+            <div class="grid grid-cols-1 lg:grid-cols-3 lg:divide-x divide-neutral-800">
+                <div class="p-8 md:p-12 flex flex-col justify-between gap-8">
+                    <div>
+                        <h2 class="text-sm text-neutral-500 mb-6">Made by</h2>
+                        <p class="text-white text-3xl md:text-4xl font-semibold tracking-tighter leading-tight">Andrea Marcias</p>
+                        <p class="text-neutral-500 text-lg mt-2">3D Artist &amp; Motion Designer</p>
+                        <p class="text-neutral-400 font-light text-lg mt-6">
+                            I build small tools like this for my own work. The rest of the time I create 3D and motion
+                            for brands, labels, creative studios and agencies.
+                        </p>
+                    </div>
+                    <a href="index.html#work"
+                        class="self-start inline-flex items-center gap-3 px-6 py-3 border border-neutral-700 text-white rounded-full hover:bg-white hover:text-neutral-950 transition-colors">
+                        See my work →
+                    </a>
+                </div>
+                <div class="lg:col-span-2 grid grid-cols-1 sm:grid-cols-3 gap-2 p-2 bg-neutral-950">
+                    <a href="mayhem-ball.html" class="group block relative h-[220px] sm:h-[320px] overflow-hidden bg-black">
+                        <img loading="lazy" decoding="async" src="assets/images/thumbs/mayhem-ball.webp" alt="Lady Gaga The Mayhem Ball, 3D title card" width="900" height="900"
+                            class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-out">
+                        <div class="absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-black/70 to-black/0 pointer-events-none"></div>
+                        <div class="absolute inset-0 p-5 z-10">
+                            <h3 class="text-xl font-medium tracking-tight text-[#fff] drop-shadow-md">Lady Gaga</h3>
+                            <p class="mt-1 text-sm text-[#e5e5e5] drop-shadow-md">The Mayhem Ball</p>
+                        </div>
+                    </a>
+                    <a href="swarovski.html" class="group block relative h-[220px] sm:h-[320px] overflow-hidden bg-black">
+                        <img loading="lazy" decoding="async" src="assets/images/thumbs/swarovski.webp" alt="Swarovski, 3D and motion" width="900" height="900"
+                            class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-out">
+                        <div class="absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-black/70 to-black/0 pointer-events-none"></div>
+                        <div class="absolute inset-0 p-5 z-10">
+                            <h3 class="text-xl font-medium tracking-tight text-[#fff] drop-shadow-md">Swarovski</h3>
+                            <p class="mt-1 text-sm text-[#e5e5e5] drop-shadow-md">3D &amp; Motion</p>
+                        </div>
+                    </a>
+                    <a href="mahmood.html" class="group block relative h-[220px] sm:h-[320px] overflow-hidden bg-black">
+                        <img loading="lazy" decoding="async" src="assets/images/thumbs/mahmood.webp" alt="Mahmood, title animation" width="900" height="900"
+                            class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-out">
+                        <div class="absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-black/70 to-black/0 pointer-events-none"></div>
+                        <div class="absolute inset-0 p-5 z-10">
+                            <h3 class="text-xl font-medium tracking-tight text-[#fff] drop-shadow-md">Mahmood</h3>
+                            <p class="mt-1 text-sm text-[#e5e5e5] drop-shadow-md">Title Animation</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer / Contact -->
+        <section id="contact" class="min-h-[50vh] flex flex-col justify-between px-6 py-24 bg-neutral-950 relative">
+            <div class="max-w-4xl">
+                <h2 class="text-sm text-neutral-500 mb-6">Start a Project</h2>
+                <a href="mailto:andrea.marcias@hotmail.com"
+                    class="text-2xl md:text-4xl font-light tracking-tight text-white hover:text-neutral-400 transition-colors break-words">
+                    andrea.marcias@hotmail.com
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-24 pt-12 border-t border-neutral-800">
+                <div class="flex flex-col gap-4">
+                    <span class="text-sm text-neutral-500">Socials</span>
+                    <div class="flex gap-6">
+                        <a href="https://www.instagram.com/_waarp_/" target="_blank"
+                            class="flex items-center gap-2 text-sm text-white hover:text-neutral-400 transition-colors">
+                            <svg class="w-4 h-4" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></svg> Instagram
+                        </a>
+                        <a href="https://www.behance.net/waarp" target="_blank"
+                            class="flex items-center gap-2 text-sm text-white hover:text-neutral-400 transition-colors">
+                            <svg class="w-4 h-4" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.969 16.927a2.561 2.561 0 0 0 1.901.677 2.501 2.501 0 0 0 1.531-.475c.362-.235.636-.584.779-.99h2.585a5.091 5.091 0 0 1-1.9 2.896 5.292 5.292 0 0 1-3.091.88 5.839 5.839 0 0 1-2.284-.433 4.871 4.871 0 0 1-1.723-1.211 5.657 5.657 0 0 1-1.08-1.874 7.057 7.057 0 0 1-.383-2.393c-.005-.8.129-1.595.396-2.349a5.313 5.313 0 0 1 5.088-3.604 4.87 4.87 0 0 1 2.376.563c.661.362 1.231.87 1.668 1.485a6.2 6.2 0 0 1 .943 2.133c.194.821.263 1.666.205 2.508h-7.699c-.063.79.184 1.574.688 2.187ZM6.947 4.084a8.065 8.065 0 0 1 1.928.198 4.29 4.29 0 0 1 1.49.638c.418.303.748.711.958 1.182.241.579.357 1.203.341 1.83a3.506 3.506 0 0 1-.506 1.961 3.726 3.726 0 0 1-1.503 1.287 3.588 3.588 0 0 1 2.027 1.437c.464.747.697 1.615.67 2.494a4.593 4.593 0 0 1-.423 2.032 3.945 3.945 0 0 1-1.163 1.413 5.114 5.114 0 0 1-1.683.807 7.135 7.135 0 0 1-1.928.259H0V4.084h6.947Zm-.235 12.9c.308.004.616-.029.916-.099a2.18 2.18 0 0 0 .766-.332c.228-.158.411-.371.534-.619.142-.317.208-.663.191-1.009a2.08 2.08 0 0 0-.642-1.715 2.618 2.618 0 0 0-1.696-.505h-3.54v4.279h3.471Zm13.635-5.967a2.13 2.13 0 0 0-1.654-.619 2.336 2.336 0 0 0-1.163.259 2.474 2.474 0 0 0-.738.62 2.359 2.359 0 0 0-.396.792c-.074.239-.12.485-.137.734h4.769a3.239 3.239 0 0 0-.679-1.785l-.002-.001Zm-13.813-.648a2.254 2.254 0 0 0 1.423-.433c.399-.355.607-.88.56-1.413a1.916 1.916 0 0 0-.178-.891 1.298 1.298 0 0 0-.495-.533 1.851 1.851 0 0 0-.711-.274 3.966 3.966 0 0 0-.835-.073H3.241v3.631h3.293v-.014ZM21.62 5.122h-5.976v1.527h5.976V5.122Z"/></svg> Behance
+                        </a>
+                    </div>
+                </div>
+
+                <div class="flex flex-col md:items-end gap-1">
+                    <p class="text-sm text-neutral-500">© 2026 Andrea Marcias</p>
+                    <p class="text-sm text-neutral-500">P.IVA 02900950904</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- GSAP -->
+    <script src="assets/js/gsap.min.js"></script>
+    <script src="assets/js/ScrollTrigger.min.js"></script>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.from("h1", { y: 100, opacity: 0, duration: 1.5, ease: "power4.out", delay: 0.2 });
+
+    </script>
+
+    <script>
+        // Discourage saving images and videos: no right-click menu or dragging on media (links keep working)
+        document.addEventListener('contextmenu', function (e) {
+            if (e.target.closest && e.target.closest('img, video, picture')) e.preventDefault();
+        });
+        document.addEventListener('dragstart', function (e) {
+            if (e.target.closest && e.target.closest('img, video')) e.preventDefault();
+        });
+    </script>
+
+</body>
+
+</html>

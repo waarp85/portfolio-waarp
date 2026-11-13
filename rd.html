@@ -5,60 +5,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>R&amp;D - Personal Projects | Andrea Marcias</title>
+    <title>R&amp;D - Free Cinema 4D Plugins | Andrea Marcias</title>
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <meta name="description"
-        content="Research & Development - Personal projects, experiments, and free Cinema 4D plugins by Andrea Marcias (Waarp).">
-    <meta name="keywords"
-        content="R&D, personal projects, experiments, Cinema 4D plugin, Scene Colorizer Pro, Waarp, Andrea Marcias, 3D art">
+    <meta name="description" content="Free Cinema 4D plugins by Andrea Marcias, 3D artist and motion designer: Finisher for OctaneRender (live colour grading) and Scene Colorizer.">
     <meta name="author" content="Andrea Marcias">
-    <meta name="robots" content="noindex, follow">
+    <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.andreamarcias.com/rd.html">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.andreamarcias.com/rd.html">
-    <meta property="og:title" content="R&amp;D - Personal Projects | Andrea Marcias">
-    <meta property="og:description"
-        content="Research & Development - Personal projects, experiments, and free Cinema 4D plugins by Andrea Marcias (Waarp).">
-    <meta property="og:image" content="https://www.andreamarcias.com/assets/images/og-image.jpg">
+    <meta property="og:title" content="R&amp;D - Free Cinema 4D Plugins">
+    <meta property="og:description" content="Free Cinema 4D plugins: Finisher for OctaneRender and Scene Colorizer.">
+    <meta property="og:image" content="https://www.andreamarcias.com/assets/images/finisher/finisher-og.jpg">
     <meta property="og:site_name" content="Andrea Marcias">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://www.andreamarcias.com/rd.html">
-    <meta name="twitter:title" content="R&amp;D - Personal Projects | Andrea Marcias">
-    <meta name="twitter:description"
-        content="Research & Development - Personal projects, experiments, and free Cinema 4D plugins by Andrea Marcias (Waarp).">
-    <meta name="twitter:image" content="https://www.andreamarcias.com/assets/images/og-image.jpg">
+    <meta name="twitter:title" content="R&amp;D - Free Cinema 4D Plugins">
+    <meta name="twitter:description" content="Free Cinema 4D plugins: Finisher for OctaneRender and Scene Colorizer.">
+    <meta name="twitter:image" content="https://www.andreamarcias.com/assets/images/finisher/finisher-og.jpg">
     <meta name="twitter:creator" content="@_waarp_">
 
     <!-- Structured Data / JSON-LD -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "CollectionPage",
-      "name": "R&D - Personal Projects",
-      "description": "Research & Development - Personal projects, experiments, and free Cinema 4D plugins by Andrea Marcias (Waarp).",
-      "author": {
-        "@type": "Person",
-        "name": "Andrea Marcias",
-        "url": "https://www.andreamarcias.com"
-      },
-      "mainEntity": {
-        "@type": "SoftwareApplication",
-        "name": "Scene Colorizer Pro",
-        "applicationCategory": "MultimediaApplication",
-        "operatingSystem": "Windows, macOS",
-        "offers": {
-          "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "USD"
-        }
-      }
-    }
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "R&D - Free Cinema 4D Plugins",
+  "description": "Free Cinema 4D plugins by Andrea Marcias: Finisher for OctaneRender and Scene Colorizer.",
+  "url": "https://www.andreamarcias.com/rd.html",
+  "author": {
+    "@type": "Person",
+    "@id": "https://www.andreamarcias.com/#person",
+    "name": "Andrea Marcias",
+    "alternateName": "Waarp",
+    "url": "https://www.andreamarcias.com/"
+  },
+  "hasPart": [
+    { "@type": "SoftwareApplication", "name": "Finisher for OctaneRender", "url": "https://www.andreamarcias.com/finisher.html", "applicationCategory": "MultimediaApplication", "operatingSystem": "Windows", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" } },
+    { "@type": "SoftwareApplication", "name": "Scene Colorizer", "url": "https://www.andreamarcias.com/scene-colorizer.html", "applicationCategory": "MultimediaApplication", "operatingSystem": "Windows, macOS", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" } }
+  ]
+}
     </script>
 
     <!-- Fonts -->
@@ -72,6 +62,8 @@
         }
     </style>
     <link rel="stylesheet" href="assets/css/tailwind.css">
+    <!-- Classi delle pagine R&D (assets/css/rnd.css, generato con Tailwind da rd.html, finisher.html e scene-colorizer.html) -->
+    <link rel="stylesheet" href="assets/css/rnd.css">
 </head>
 
 <body class="bg-neutral-950 text-neutral-200 relative overflow-x-hidden">
@@ -80,82 +72,110 @@
     <header class="fixed top-0 inset-x-0 z-50 px-6 py-4 flex justify-between items-center text-sm bg-neutral-950/85 backdrop-blur-md">
         <a href="index.html" class="font-medium tracking-tight text-white hover:text-neutral-500 transition-colors">Andrea Marcias</a>
         <nav class="flex gap-6">
-            <a href="romancero.html" class="text-neutral-500 hover:text-white transition-colors">Previous</a>
-            <a href="index.html" class="text-neutral-500 hover:text-white transition-colors">Home</a>
-            <a href="mayhem-ball.html" class="text-neutral-500 hover:text-white transition-colors">Next</a>
+            <a href="index.html#work" class="text-neutral-500 hover:text-white transition-colors">Work</a>
+            <a href="index.html#about" class="text-neutral-500 hover:text-white transition-colors">About</a>
+            <a href="#contact" class="text-neutral-500 hover:text-white transition-colors">Contact</a>
         </nav>
     </header>
 
     <!-- Main Content -->
     <main class="relative z-10 pt-24 pb-24">
 
-        <!-- Project Hero -->
-        <section class="min-h-[60vh] flex flex-col justify-center items-center px-6 border-b border-neutral-800">
-            <div class="relative z-10 text-center">
-                <h1
-                    class="text-4xl md:text-8xl font-semibold tracking-tighter leading-none text-white select-none mb-4">
-                    R<span class="text-neutral-500">&</span>D
+        <!-- Hero -->
+        <section class="border-b border-neutral-800">
+            <div class="px-6 py-16 md:p-12 lg:p-16 max-w-5xl">
+                <p class="text-sm text-neutral-500 mb-6">Research &amp; Development</p>
+                <h1 class="text-6xl md:text-8xl font-semibold tracking-tighter leading-none text-white select-none">
+                    R<span class="text-neutral-500">&amp;</span>D
                 </h1>
-                <p class="text-sm text-neutral-500">Research & Development</p>
+                <p class="text-neutral-400 font-light text-lg md:text-xl mt-8 max-w-2xl">
+                    Tools I build for my own 3D work in Cinema 4D, shared for free with the community.
+                </p>
             </div>
         </section>
 
-        <!-- Project Meta & Description -->
-        <section class="border-b border-neutral-800 bg-neutral-950/50 backdrop-blur-sm">
-            <div class="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-neutral-800">
-
-                <!-- Meta Columns -->
-                <div class="p-8 md:p-12 space-y-8">
-                    <div>
-                        <h3 class="text-sm text-neutral-500 mb-2">My Corner</h3>
-                        <p class="text-white text-lg">Personal Projects</p>
+        <!-- Plugin -->
+        <section class="border-b border-neutral-800">
+            <div class="px-6 py-6 border-b border-neutral-800 flex justify-between items-center">
+                <h2 class="text-sm text-neutral-500">Free plugins</h2>
+                <span class="text-sm text-neutral-500">Cinema 4D</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-neutral-800">
+                <a href="finisher.html" class="group block bg-neutral-950">
+                    <div class="relative h-[300px] md:h-[420px] overflow-hidden bg-black">
+                        <img loading="lazy" decoding="async" src="assets/images/finisher/finisher-poster.jpg" alt="Finisher for OctaneRender panel next to the Octane Live Viewer"
+                            class="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-105 transition-all duration-700 ease-out">
                     </div>
-                    <div>
-                        <h3 class="text-sm text-neutral-500 mb-2">Category</h3>
-                        <p class="text-white text-lg">Experiments</p>
+                    <div class="p-8">
+                        <p class="text-sm text-neutral-500 mb-3">Cinema 4D + OctaneRender</p>
+                        <h2 class="text-3xl md:text-4xl font-semibold tracking-tighter text-white group-hover:text-neutral-500 transition-colors">Finisher for OctaneRender</h2>
+                        <p class="text-neutral-400 font-light text-lg mt-4">Live colour grading right in the Octane Live Viewer: curves, colour wheels, LUTs, object masks and finishing.</p>
+                        <p class="text-sm text-neutral-500 mt-6">Version 1.0 · Cinema 4D 2027 · OctaneRender 2026.6</p>
+                        <p class="text-white mt-6">Details and download →</p>
                     </div>
-                </div>
-
-                <!-- Description Column -->
-                <div class="p-8 md:p-12">
-                    <h3 class="text-sm text-neutral-500 mb-6">About</h3>
-                    <p class="text-neutral-400 font-light text-lg mb-8">
-                        Welcome to the section dedicated to my personal projects! Here, I've created a space where my
-                        creativity can roam free, beyond client requests. Personal projects are my most authentic form
-                        of artistic expression—a place where I experiment and innovate.
-                    </p>
-                    <p class="text-white font-medium text-xl">
-                        This section invites you to explore a more intimate side of my work.
-                    </p>
-                </div>
-
+                </a>
+                <a href="scene-colorizer.html" class="group block bg-neutral-950">
+                    <div class="relative h-[300px] md:h-[420px] overflow-hidden bg-black">
+                        <img loading="lazy" decoding="async" src="assets/images/scene-colorizer/scene-colorizer-thumb.jpg" alt="A Cinema 4D scene, grey on the left and with every object in its own colour on the right"
+                            class="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-all duration-700 ease-out">
+                    </div>
+                    <div class="p-8">
+                        <p class="text-sm text-neutral-500 mb-3">Cinema 4D</p>
+                        <h2 class="text-3xl md:text-4xl font-semibold tracking-tighter text-white group-hover:text-neutral-500 transition-colors">Scene Colorizer</h2>
+                        <p class="text-neutral-400 font-light text-lg mt-4">One click, and every object in your scene gets its own colour, in the viewport and in the Object Manager.</p>
+                        <p class="text-sm text-neutral-500 mt-6">Version 1.0 · Cinema 4D 2025 – 2027 · Any renderer</p>
+                        <p class="text-white mt-6">Details and download →</p>
+                    </div>
+                </a>
             </div>
         </section>
 
-        <!-- Plugin Section -->
-        <section class="border-b border-neutral-800 p-8 md:p-24 bg-neutral-900/50">
-            <div class="max-w-4xl mx-auto border border-neutral-800 bg-neutral-950 p-8 md:p-12 rounded-lg">
-                <div class="flex flex-col md:flex-row justify-between items-start gap-8">
+        <!-- Chi l'ha fatto: porta al portfolio -->
+        <section class="border-b border-neutral-800">
+            <div class="grid grid-cols-1 lg:grid-cols-3 lg:divide-x divide-neutral-800">
+                <div class="p-8 md:p-12 flex flex-col justify-between gap-8">
                     <div>
-                        <h2 class="text-sm text-neutral-500 mb-2">FREE C4D PLUGIN
-                        </h2>
-                        <h3 class="text-2xl md:text-4xl font-semibold text-white tracking-tight mb-4">SCENE COLORIZER
-                            PRO</h3>
-                        <p class="text-neutral-400 font-light mb-8 max-w-md">
-                            Say goodbye to grey viewports. Automatically assign random colors to objects and hierarchies
-                            with one click. Choose from Pastel, Vibrant, Dark or Light palettes to visualize your scene
-                            structure instantly.
+                        <h2 class="text-sm text-neutral-500 mb-6">Made by</h2>
+                        <p class="text-white text-3xl md:text-4xl font-semibold tracking-tighter leading-tight">Andrea Marcias</p>
+                        <p class="text-neutral-500 text-lg mt-2">3D Artist &amp; Motion Designer</p>
+                        <p class="text-neutral-400 font-light text-lg mt-6">
+                            I build these tools for my own work. The rest of the time I create 3D and motion
+                            for brands, labels, creative studios and agencies.
                         </p>
-                        <p class="text-sm text-neutral-500 mb-1">Compatibility</p>
-                        <p class="text-white text-sm mb-8">Cinema 4D R20 - 2026</p>
                     </div>
-
-                    <div class="flex flex-col gap-4">
-                        <span
-                            class="inline-flex items-center justify-center px-8 py-4 border border-neutral-700 text-neutral-400 font-bold tracking-tight rounded-sm">
-                            COMING SOON
-                        </span>
-                    </div>
+                    <a href="index.html#work"
+                        class="self-start inline-flex items-center gap-3 px-6 py-3 border border-neutral-700 text-white rounded-full hover:bg-white hover:text-neutral-950 transition-colors">
+                        See my work →
+                    </a>
+                </div>
+                <div class="lg:col-span-2 grid grid-cols-1 sm:grid-cols-3 gap-2 p-2 bg-neutral-950">
+                    <a href="mayhem-ball.html" class="group block relative h-[220px] sm:h-[320px] overflow-hidden bg-black">
+                        <img loading="lazy" decoding="async" src="assets/images/thumbs/mayhem-ball.webp" alt="Lady Gaga The Mayhem Ball, 3D title card" width="900" height="900"
+                            class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-out">
+                        <div class="absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-black/70 to-black/0 pointer-events-none"></div>
+                        <div class="absolute inset-0 p-5 z-10">
+                            <h3 class="text-xl font-medium tracking-tight text-[#fff] drop-shadow-md">Lady Gaga</h3>
+                            <p class="mt-1 text-sm text-[#e5e5e5] drop-shadow-md">The Mayhem Ball</p>
+                        </div>
+                    </a>
+                    <a href="swarovski.html" class="group block relative h-[220px] sm:h-[320px] overflow-hidden bg-black">
+                        <img loading="lazy" decoding="async" src="assets/images/thumbs/swarovski.webp" alt="Swarovski, 3D and motion" width="900" height="900"
+                            class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-out">
+                        <div class="absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-black/70 to-black/0 pointer-events-none"></div>
+                        <div class="absolute inset-0 p-5 z-10">
+                            <h3 class="text-xl font-medium tracking-tight text-[#fff] drop-shadow-md">Swarovski</h3>
+                            <p class="mt-1 text-sm text-[#e5e5e5] drop-shadow-md">3D &amp; Motion</p>
+                        </div>
+                    </a>
+                    <a href="mahmood.html" class="group block relative h-[220px] sm:h-[320px] overflow-hidden bg-black">
+                        <img loading="lazy" decoding="async" src="assets/images/thumbs/mahmood.webp" alt="Mahmood, title animation" width="900" height="900"
+                            class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-out">
+                        <div class="absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-black/70 to-black/0 pointer-events-none"></div>
+                        <div class="absolute inset-0 p-5 z-10">
+                            <h3 class="text-xl font-medium tracking-tight text-[#fff] drop-shadow-md">Mahmood</h3>
+                            <p class="mt-1 text-sm text-[#e5e5e5] drop-shadow-md">Title Animation</p>
+                        </div>
+                    </a>
                 </div>
             </div>
         </section>
@@ -163,14 +183,6 @@
         <!-- Footer / Contact -->
         <section id="contact" class="min-h-[50vh] flex flex-col justify-between px-6 py-24 bg-neutral-950 relative">
             <div class="max-w-4xl">
-                <h2 class="text-sm text-neutral-500 mb-8">Next Project</h2>
-                <a href="mayhem-ball.html"
-                    class="text-4xl md:text-6xl font-semibold tracking-tighter text-white hover:text-neutral-400 transition-colors">
-                    LADY GAGA<br>→
-                </a>
-            </div>
-
-            <div class="mt-24 max-w-4xl">
                 <h2 class="text-sm text-neutral-500 mb-6">Start a Project</h2>
                 <a href="mailto:andrea.marcias@hotmail.com"
                     class="text-2xl md:text-4xl font-light tracking-tight text-white hover:text-neutral-400 transition-colors break-words">
@@ -206,19 +218,9 @@
     <script src="assets/js/gsap.min.js"></script>
     <script src="assets/js/ScrollTrigger.min.js"></script>
 
-    <!-- Interactive Scripts -->
     <script>
-        // Register GSAP
         gsap.registerPlugin(ScrollTrigger);
-
-        // Title Animation
-        gsap.from("h1", {
-            y: 100,
-            opacity: 0,
-            duration: 1.5,
-            ease: "power4.out",
-            delay: 0.2
-        });
+        gsap.from("h1", { y: 100, opacity: 0, duration: 1.5, ease: "power4.out", delay: 0.2 });
 
     </script>
 
