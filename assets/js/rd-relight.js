@@ -29,8 +29,7 @@ void main(){
  vec3 F=f0+(1.-f0)*fr*.35;
  float sp=pow(ndh,70.)*3.5+pow(ndh,12.)*.45;
  vec3 col=(alb*ndl*.35+F*sp*ndl)*uCol*att+alb*.06;
- vec2 q=p.xy-uL.xy;float g=exp(-dot(q,q)*500.)*.14*(1.-m);
- col=col*m+uCol*g;
+ col*=m;
  vec3 o=pow(aces(col*1.15),vec3(1./2.2));
  if(uMode==3){vec2 c=floor(gl_FragCoord.xy/16.);vec3 ch=mix(vec3(.82),vec3(.64),mod(c.x+c.y,2.));o=mix(ch,o,m);}
  gl_FragColor=vec4(o,1.);
