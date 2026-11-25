@@ -68,6 +68,13 @@
             background: rgba(10, 10, 10, 0.6);
             backdrop-filter: blur(8px);
         }
+
+        /* Work grid: row height follows the screen, featured tile always fits in the viewport */
+        @media (min-width: 1024px) {
+            #work .grid {
+                grid-auto-rows: clamp(440px, min(calc((100vw - 32px) / 3), calc((100vh - 76px) / 2)), 680px);
+            }
+        }
     </style>
     <link rel="stylesheet" href="assets/css/tailwind.css">
 </head>
@@ -302,7 +309,7 @@
 
                 <!-- Work Item 8 -->
                 <a href="romancero.html"
-                    class="group block relative h-[400px] lg:h-auto overflow-hidden bg-black">
+                    class="group block relative h-[400px] md:col-span-2 lg:h-auto overflow-hidden bg-black">
                     <img loading="lazy" decoding="async" src="assets/images/thumbs/romancero.webp" alt="Romancero, 3D titles" width="900" height="900"
                         class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-out">
                     <video controlsList="nodownload" disablePictureInPicture class="card-loop absolute inset-0 w-full h-full object-cover pointer-events-none" src="assets/images/loops/romancero.mp4"
