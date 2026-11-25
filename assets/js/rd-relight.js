@@ -5,6 +5,7 @@
   const stage = document.getElementById('rl-stage');
   if (!stage) return;
   const cv = stage.querySelector('canvas');
+  const scope = stage.closest('section') || document.body;
   const gl = cv.getContext('webgl', { antialias: false, premultipliedAlpha: false });
   if (!gl) { stage.classList.add('rl-nogl'); return; }
 
@@ -73,7 +74,7 @@ void main(){
     slots.forEach((s, k) => { gl.activeTexture(gl.TEXTURE0 + s.i); gl.bindTexture(gl.TEXTURE_2D, s.t); gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, true); gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, imgs[k]); });
     gl.uniform1f(U('uImgAsp'), imgs[0].naturalWidth / imgs[0].naturalHeight);
     fadeTarget = 1;
-    const count = stage.querySelector('.rl-count');
+    const count = scope.querySelector('.rl-count');
     if (count) count.textContent = (index + 1) + ' / ' + pieces.length;
   }
 
@@ -127,8 +128,8 @@ void main(){
 
   // Arrows: hidden when there is only one piece
   if (pieces.length > 1) {
-    stage.classList.add('rl-multi');
-    const prev = stage.querySelector('.rl-prev'), next = stage.querySelector('.rl-next');
+    scope.classList.add('rl-multi');
+    const prev = scope.querySelector('.rl-prev'), next = scope.querySelector('.rl-next');
     if (prev) prev.addEventListener('click', () => show(index - 1));
     if (next) next.addEventListener('click', () => show(index + 1));
     document.addEventListener('keydown', e => {
