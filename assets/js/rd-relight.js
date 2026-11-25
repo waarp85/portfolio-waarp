@@ -78,7 +78,7 @@ void main(){
     if (count) count.textContent = (index + 1) + ' / ' + pieces.length;
   }
 
-  const ASP = 16 / 9; gl.uniform1f(U('uAsp'), ASP); gl.uniform1f(U('uImgAsp'), ASP);
+  let ASP = 16 / 9; gl.uniform1f(U('uAsp'), ASP); gl.uniform1f(U('uImgAsp'), 16 / 9);
   let mode = +((stage.querySelector('.rl-views [aria-pressed=true]') || {}).dataset || { m: 0 }).m || 0, col = [1, 1, 1], visible = true, running = false;
   const z = 0.45;
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -89,6 +89,7 @@ void main(){
     const r = Math.min(devicePixelRatio || 1, 2);
     const w = Math.round(cv.clientWidth * r), h = Math.round(cv.clientHeight * r);
     if (cv.width !== w || cv.height !== h) { cv.width = w; cv.height = h; gl.viewport(0, 0, w, h); }
+    if (h > 0) { ASP = w / h; gl.uniform1f(U('uAsp'), ASP); }
   }
   new ResizeObserver(resize).observe(cv);
 

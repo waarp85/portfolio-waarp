@@ -72,12 +72,18 @@
         .rl-cols button::before { content: ""; width: 12px; height: 12px; border-radius: 50%; background: var(--c); opacity: .45; transition: opacity .2s, transform .2s; }
         .rl-cols button[aria-pressed=true]::before { opacity: 1; transform: scale(1.25); }
         .rl-ui button:focus-visible { outline: 1px solid #e8e8e8; outline-offset: -8px; }
-        .rl-nav { display: none; align-items: center; margin: -12px -10px -12px 0; }
-        .rl-multi .rl-nav { display: flex; }
-        .rl-arrow { width: 44px; height: 44px; border: 0; background: none; color: #737373; font-size: 18px; cursor: pointer; transition: color .2s; }
+        .rl-frame { position: relative; }
+        .rl-multi .rl-frame { padding: 0 56px; }
+        .rl-nav { display: none; }
+        .rl-multi .rl-nav { display: inline; }
+        .rl-count { font-size: 14px; color: #737373; }
+        .rl-arrow { display: none; position: absolute; top: 50%; transform: translateY(-50%); width: 44px; height: 64px; border: 0; background: none; color: #8a8a8a; font-size: 22px; cursor: pointer; align-items: center; justify-content: center; transition: color .2s; }
         .rl-arrow:hover { color: #fff; }
         .rl-arrow:focus-visible { outline: 1px solid #e8e8e8; outline-offset: -8px; }
-        .rl-count { font-size: 14px; color: #737373; min-width: 3.5em; text-align: center; }
+        .rl-prev { left: 6px; }
+        .rl-next { right: 6px; }
+        .rl-multi .rl-arrow { display: flex; }
+        @media (max-width: 640px) { .rl-multi .rl-frame { padding: 0 34px; } .rl-arrow { width: 34px; font-size: 18px; } .rl-prev { left: 0; } .rl-next { right: 0; } }
         .rl-nogl .rl-ui { display: none; }
     </style>
     <link rel="stylesheet" href="assets/css/tailwind.css">
@@ -118,13 +124,12 @@
         <section class="border-b border-neutral-800">
             <div class="px-6 py-6 border-b border-neutral-800 flex justify-between items-center">
                 <h2 class="text-sm text-neutral-500">Experiment</h2>
-                <div class="rl-nav" role="group" aria-label="Images">
-                    <button class="rl-arrow rl-prev" aria-label="Previous image">&#8592;</button>
-                    <span class="rl-count" aria-live="polite"></span>
-                    <button class="rl-arrow rl-next" aria-label="Next image">&#8594;</button>
-                </div>
+                <span class="rl-nav rl-count" aria-live="polite"></span>
             </div>
             <div class="max-w-[1600px] mx-auto border-x border-neutral-800">
+                <div class="rl-frame">
+                <button class="rl-arrow rl-prev" aria-label="Previous image">&#8592;</button>
+                <button class="rl-arrow rl-next" aria-label="Next image">&#8594;</button>
                 <div class="rl-stage" id="rl-stage" data-pieces="head, ascent">
                     <canvas aria-label="Bronze sculpture lit by a light that follows the cursor"></canvas>
                     <div class="rl-ui rl-cols" role="group" aria-label="Light colour">
@@ -138,6 +143,7 @@
                         <button data-m="3" aria-pressed="true">Alpha</button>
                         <button data-m="2" aria-pressed="false">Normal</button>
                     </div>
+                </div>
                 </div>
             </div>
         </section>
